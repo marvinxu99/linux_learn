@@ -1,0 +1,29 @@
+The mount command is used to attach a filesystem (which can be local to the computer or on a network) somewhere 
+within the filesystem tree. The basic arguments are the device node and mount point.  For example,
+
+$ sudo mount /dev/sda5 /home
+
+will attach the filesystem contained in the disk partition associated with the /dev/sda5 device node, 
+into the filesystem tree at the /home mount point. There are other ways to specify the partition other 
+than the device node, such as using the disk label or UUID.
+
+To unmount the partition, the command would be:
+
+$ sudo umount /home
+
+Note the command is umount, not unmount! Only a root user (logged in as root, or using sudo) has the 
+privilege to run these commands, unless the system has been otherwise configured.
+
+If you want it to be automatically available every time the system starts up, you need to 
+edit /etc/fstab accordingly (the name is short for filesystem table). Looking at this file will 
+show you the configuration of all pre-configured filesystems. man fstab will display how this 
+file is used and how to configure it.
+
+Executing mount without any arguments will show all presently mounted filesystems.
+
+The command df -Th (disk-free) will display information about mounted filesystems, including the 
+filesystem type, and usage statistics about currently used and available space.
+
+The most common such filesystem is named simply NFS (the Network Filesystem). It has a very long history 
+and was first developed by Sun Microsystems. Another common implementation is CIFS (also termed SAMBA), 
+which has Microsoft roots. We will restrict our attention in what follows to NFS.

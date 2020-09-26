@@ -1,0 +1,10 @@
+The /etc directory is the home for system configuration files. It contains no binary programs, 
+although there are some executable scripts. For example, /etc/resolv.conf tells the system 
+where to go on the network to obtain host name to IP address mappings (DNS). 
+Files like passwd, shadow and group for managing user accounts are found in the /etc directory. 
+While some distributions have historically had their own extensive 
+infrastructure under /etc (for example, Red Hat and SUSE have used /etc/sysconfig), 
+with the advent of systemd there is much more uniformity among distributions today.
+
+Note that /etc is for system-wide configuration files and only the superuser can modify 
+files there. User-specific configuration files are always found under their home directory.
