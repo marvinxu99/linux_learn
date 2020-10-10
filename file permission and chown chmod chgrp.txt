@@ -1,0 +1,36 @@
+Files have three kinds of permissions: read (r), write (w), execute (x). 
+These are generally represented as in rwx. These permissions affect 
+three groups of owners: user/owner (u), group (g), and others (o).
+
+As a result, you have the following three groups of three permissions:
+
+rwx: rwx: rwx
+ u:   g:   o
+
+There are a number of different ways to use chmod. For instance, to give 
+the owner and others execute permission and remove the group write permission:
+
+$ ls -l somefile
+-rw-rw-r-- 1 student student 1601 Mar 9 15:04 somefile
+$ chmod uo+x,g-w somefile
+$ ls -l somefile
+-rwxr--r-x 1 student student 1601 Mar 9 15:04 somefile
+
+where u stands for user (owner), o stands for other (world), and g stands for group.
+
+This kind of syntax can be difficult to type and remember, so one often uses 
+a shorthand which lets you set all the permissions in one step. This is done with 
+a simple algorithm, and a single digit suffices to specify all three permission 
+bits for each entity. This digit is the sum of:
+
+4 if read permission is desired
+2 if write permission is desired
+1 if execute permission is desired.
+Thus, 7 means read/write/execute, 6 means read/write, and 5 means read/execute.
+
+When you apply this to the chmod command, you have to give three digits for 
+each degree of freedom, such as in:
+
+$ chmod 755 somefile
+$ ls -l somefile
+-rwxr-xr-x 1 student student 1601 Mar 9 15:04 somefile
