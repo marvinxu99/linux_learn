@@ -1,0 +1,23 @@
+Order of the Startup Files
+
+The standard prescription is that when you first login to Linux, /etc/profile is read and evaluated, 
+after which the following files are searched (if they exist) in the listed order:
+
+~/.bash_profile
+~/.bash_login
+~/.profile 
+
+where  ~/. denotes the user's home directory. The Linux login shell evaluates whatever startup file that 
+it comes across first and ignores the rest. This means that if it finds ~/.bash_profile, 
+it ignores ~/.bash_login and ~/.profile. Different distributions may use different startup files. 
+
+However, every time you create a new shell, or terminal window, etc., you do not perform a full system login; 
+only a file named ~/.bashrc file is read and evaluated. Although this file is not read and evaluated along with 
+the login shell, most distributions and/or users include the ~/.bashrc file from within one of the three user-owned startup files.
+
+Most commonly, users only fiddle with ~/.bashrc, as it is invoked every time a new command line shell initiates, 
+or another program is launched from a terminal window, while the other files are read and executed 
+only when the user first logs onto the system.
+
+Recent distributions sometimes do not even have .bash_profile  and/or .bash_login , and some just 
+do little more than include .bashrc.
