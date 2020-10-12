@@ -1,0 +1,11 @@
+Remember from our earlier discussion, a shell is a command line interpreter which provides 
+the user interface for terminal windows. It can also be used to run scripts, even in non-interactive sessions 
+without a terminal window, as if the commands were being directly typed in. For example, 
+typing find . -name "*.c" -ls at the command line accomplishes the same thing as executing a script file containing the lines:
+
+#!/bin/bash
+find . -name "*.c" -ls
+
+The first line of the script, which starts with #!, contains the full path of the command interpreter 
+(in this case /bin/bash) that is to be used on the file. As we have noted, you have quite a few choices 
+for the scripting language you can use, such as /usr/bin/perl, /bin/csh, /usr/bin/python, etc.
