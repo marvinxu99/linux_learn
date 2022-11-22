@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/ -->
+<html lang="en-US" class=" spai_has_js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<link rel="dns-prefetch" href="https://linuxiac.b-cdn.net/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v19.5 (Yoast SEO v19.10) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide</title>
+<link rel="preconnect" href="https://linuxiac.b-cdn.net/" crossorigin="">
+<style id="flying-press-css">@charset "UTF-8";.wp-block-image img{height:auto;max-width:100%;vertical-align:bottom}.wp-block-image img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.aligncenter{display:table}ul{box-sizing:border-box}@keyframes overlay-menu__fade-in-animation{to{opacity:1;transform:translateY(0)}}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){margin-left:.5em;margin-right:.5em;font-size:.65em}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.aligncenter{clear:both}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(img[class*=wp-image-]){height:auto;max-width:100%}figure{margin:0 0 1em}#baguetteBox-overlay{display:none;opacity:0;position:fixed;overflow:hidden;top:0;left:0;width:100%;height:100%;z-index:1000000;background-color:#222;background-color:rgba(0,0,0,.8);-webkit-transition:opacity .5s ease;transition:opacity .5s ease}#baguetteBox-slider{position:absolute;left:0;top:0;height:100%;width:100%;white-space:nowrap;-webkit-transition:left .4s ease,-webkit-transform .4s ease;transition:left .4s ease,-webkit-transform .4s ease;transition:left .4s ease,transform .4s ease;transition:left .4s ease,transform .4s ease,-webkit-transform .4s ease,-moz-transform .4s ease}.baguetteBox-button#next-button,.baguetteBox-button#previous-button{top:50%;top:calc(50% - 30px);width:44px;height:60px}.baguetteBox-button{position:absolute;cursor:pointer;outline:0;padding:0;margin:0;border:0;-moz-border-radius:15%;border-radius:15%;background-color:#323232;background-color:rgba(50,50,50,.5);color:#ddd;font:1.6em sans-serif;-webkit-transition:background-color .4s ease;transition:background-color .4s ease}.baguetteBox-button:focus,.baguetteBox-button:hover{background-color:rgba(50,50,50,.9)}.baguetteBox-button#next-button{right:2%}.baguetteBox-button#previous-button{left:2%}.baguetteBox-button#close-button{top:20px;right:2%;right:calc(2% + 6px);width:30px;height:30px}.baguetteBox-button svg{position:absolute;left:0;top:0}:root{--default-editor:var(--true);--border:none;--transition:all 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);--listIndent:2.5em;--listItemSpacing:0.3em;--true:initial;--false:"";--has-link-decoration:var(--true);--has-transparent-header:0;--container-width:min(100%, var(--container-width-base))}@media (max-width:689.98px){:root{--container-width-base:calc(88vw - var(--frame-size, 0px) * 2)}}@media (min-width:690px){:root{--container-width-base:calc(90vw - var(--frame-size, 0px) * 2)}}@supports not (aspect-ratio:auto){.ct-image-container img{position:absolute;width:100%;height:100%}.ct-image-container:before{display:block;content:"";width:100%;padding-bottom:100%}}html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;scroll-behavior:smooth}body{overflow-x:hidden;overflow-wrap:break-word;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}*,::before,::after{box-sizing:border-box}body,p,h1,h2,ul,li,img,form,figure,button{margin:0;padding:0;border:0;font-size:inherit;text-align:inherit;line-height:inherit}input{margin:0}strong{font-weight:700}a{transition:var(--transition)}a:focus,button:focus{transition:none;outline-offset:var(--outline-offset,3px);outline-color:var(--paletteColor2)}img{height:auto;max-width:100%;vertical-align:middle}figure{display:block}figure{max-width:100%}svg>*{transition:none}ul{list-style-type:var(--listStyleType,disc)}body{color:var(--color)}body ::selection{color:var(--selectionTextColor);background-color:var(--selectionBackgroundColor)}h1{color:var(--heading-color,var(--heading-1-color,var(--headings-color)))}h2{color:var(--heading-color,var(--heading-2-color,var(--headings-color)))}@media (max-width:689.98px){.ct-hidden-sm{display:none!important}}@media (min-width:690px)and (max-width:999.98px){.ct-hidden-md{display:none!important}}@media (min-width:1000px){.ct-hidden-lg{display:none!important}}[hidden]{display:none}.aligncenter{clear:both;display:block;text-align:center}.sticky,.wp-caption,.bypostauthor,.wp-caption-text,.gallery-caption,.screen-reader-text{background:0 0}html,h1,h2,.menu a,.ct-label,.entry-meta,.widget-title,.ct-post-title,.mobile-menu a,.ct-widget>*{font-family:var(--fontFamily);font-size:var(--fontSize);font-weight:var(--fontWeight);font-style:var(--fontStyle,inherit);line-height:var(--lineHeight);letter-spacing:var(--letterSpacing);text-transform:var(--textTransform);-webkit-text-decoration:var(--textDecoration);text-decoration:var(--textDecoration)}.menu,.entry-meta,.mobile-menu ul{margin-bottom:0;--listIndent:0;--listItemSpacing:0;--listStyleType:none}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal}.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;clip-path:none;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;right:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.skip-link{background-color:#24292e;color:#fff;padding:10px 20px}.show-on-focus{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(1px,1px,1px,1px);top:0;left:0}.show-on-focus:focus{z-index:100;width:auto;height:auto;clip:auto}p{margin-bottom:var(--content-spacing)}h1,h2{margin-bottom:calc(.3em + 10px)}ul{padding-inline-start:var(--listIndent);margin-bottom:var(--content-spacing)}ul li{margin-bottom:var(--listItemSpacing)}ul li:last-child{margin-bottom:0}ul ul{margin-top:var(--listItemSpacing);margin-bottom:0}.entry-content>*{margin-bottom:var(--content-spacing)}.entry-content>:last-child{margin-bottom:0}.entry-content *+:is(h1,h2,h3,h4,h5,h6){margin-top:var(--content-spacing)}.entry-content h2{margin-bottom:calc(var(--has-content-spacing, 1)*(.3em + 10px))}#main-container{padding-bottom:calc(var(--shortcuts-bar-spacer, 0px) + var(--floating-cart-spacer, 0px))}.ct-icon,.ct-icon-container svg{width:var(--icon-size,15px);height:var(--icon-size,15px);fill:var(--icon-color,var(--color));transition:var(--icon-transition,fill 0.12s cubic-bezier(.455,.03,.515,.955))}.ct-icon,.ct-icon-container{position:relative}.ct-icon-container{display:flex;align-items:center;justify-content:center}[data-icons-type]>*{transition:none}[data-icons-type]>:hover svg{fill:var(--icon-hover-color,var(--paletteColor2))}[class*=ct-image-container]{display:inline-flex;overflow:hidden;-webkit-mask-image:-webkit-radial-gradient(#fff,#000)}.ct-image-container{position:relative;width:100%}.ct-image-container img{width:inherit;border-radius:inherit;object-fit:var(--object-fit,cover);object-position:var(--object-position,50% 50%)}a{color:var(--linkInitialColor);-webkit-text-decoration:var(--has-link-decoration,var(--textDecoration,none));text-decoration:var(--has-link-decoration,var(--textDecoration,none))}a:hover{color:var(--linkHoverColor)}[data-loader]{position:absolute;z-index:0;top:0;left:0;right:0;bottom:0;margin:auto;color:var(--loaderColor,#c5cbd0)}[data-loader=circles]{max-width:var(--loaderSize,40px);max-height:var(--loaderSize,40px);animation-play-state:paused}[data-loader=circles]>span{position:absolute;top:0;left:0;opacity:0;width:100%;height:100%;background:currentColor;border-radius:100%}@media (prefers-reduced-motion:no-preference){[data-loader=circles]{animation-play-state:paused}[data-loader=circles]>span{animation:circles 1.5s linear infinite}[data-loader=circles]>span:nth-child(1){animation-delay:0s}[data-loader=circles]>span:nth-child(2){animation-delay:.8s}[data-loader=circles]>span:nth-child(3){animation-delay:.4s}}[data-label=left] .ct-label{margin-inline-end:.7em}[data-label=right] .ct-label{order:2;margin-inline-start:.7em}.ct-widget>:last-child{margin-bottom:0}input[type=search]{-webkit-appearance:none;appearance:none;width:var(--form-field-width,100%);height:var(--form-field-height,40px);font-family:inherit;font-size:var(--form-font-size,16px);color:var(--form-text-initial-color,var(--color));padding:var(--has-classic-forms,var(--form-field-padding,0 12px));border-width:var(--form-field-border-width,1px);border-style:var(--form-field-border-style,solid);border-color:var(--form-field-border-initial-color);border-radius:var(--has-classic-forms,var(--form-field-border-radius,3px));background-color:var(--has-classic-forms,var(--form-field-initial-background));transition:all .12s cubic-bezier(.455,.03,.515,.955)}input[type=search]:focus{outline:0;color:var(--form-text-focus-color,var(--color));border-color:var(--form-field-border-focus-color);background-color:var(--has-classic-forms,var(--form-field-focus-background))}.entry-meta{--items-spacing:9px}.entry-meta li{display:inline-block}.entry-meta li:not(:last-of-type){margin-inline-end:var(--items-spacing)}.entry-meta li:after{margin-inline-start:var(--items-spacing)}.entry-meta li:after{position:relative;top:-.1em;vertical-align:var(--vertical-align,middle)}.entry-meta li>span{margin-inline-end:5px}.entry-meta[data-type*=circle] li:not(:last-of-type):after{content:"●";font-size:.35em}@font-face{font-family:"star";src:url(https://linuxiac.b-cdn.net/wp-content/themes/blocksy/static/fonts/stars.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}[type=submit]{display:var(--display,inline-flex);align-items:center;justify-content:center;min-height:var(--buttonMinHeight);padding:var(--button-padding);border:0;-webkit-appearance:none;appearance:none;cursor:pointer;-webkit-user-select:none;user-select:none;text-align:center;border-radius:var(--buttonBorderRadius,3px);transition:all .2s ease;--has-link-decoration:var(--false)}[type=submit]:disabled{opacity:.5;cursor:not-allowed}@media (max-width:479.98px){[type=submit]{--padding:5px 15px}}[type=submit]{position:relative;color:var(--buttonTextInitialColor);border:var(--button-border);background-color:var(--buttonInitialColor)}[type=submit]:hover{border-color:var(--button-border-hover-color);color:var(--buttonTextHoverColor);background-color:var(--buttonHoverColor)}@media (hover:hover){@supports (filter:blur()){[type=submit]:before{display:var(--buttonShadow,block);position:absolute;z-index:-1;content:"";top:12px;left:10px;right:10px;bottom:0;opacity:0;border-radius:inherit;background:inherit;transition:opacity .2s ease;filter:blur(11px)}@media (hover:hover)and (prefers-reduced-motion:no-preference){[type=submit]:hover{transform:var(--buttonTransform,translate3d(0,-3px,0))}[type=submit]:hover:before{opacity:.8}}}}[type=submit]{font-family:var(--buttonFontFamily,var(--fontFamily));font-size:var(--buttonFontSize);font-weight:var(--buttonFontWeight);font-style:var(--buttonFontStyle);line-height:var(--buttonLineHeight);letter-spacing:var(--buttonLetterSpacing);text-transform:var(--buttonTextTransform);-webkit-text-decoration:var(--buttonTextDecoration);text-decoration:var(--buttonTextDecoration)}[class*=ct-toggle]{display:flex;align-items:center;justify-content:center;position:var(--toggle-button-position,relative);z-index:var(--toggle-button-z-index,initial);cursor:pointer;-webkit-appearance:none;appearance:none;width:var(--toggle-button-size);height:var(--toggle-button-size);margin-inline-start:var(--toggle-button-margin-start,auto);margin-inline-end:var(--toggle-button-margin-end,initial);transition:all .12s cubic-bezier(.455,.03,.515,.955);padding:var(--toggle-button-padding,0)!important;box-shadow:var(--toggle-button-shadow,none)!important;border-radius:var(--toggle-button-radius,0)!important;border-width:var(--toggle-button-border-width,0)!important;border-style:var(--toggle-button-border-style,solid)!important;border-color:var(--toggle-button-border-color,transparent)!important;background:var(--toggle-button-background,transparent)!important}[class*=ct-toggle] svg{transform:var(--toggle-icon-transform);--icon-transition:transform 0.15s ease-out, fill 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955)}[class*=ct-toggle-close]{top:var(--toggle-button-top,initial);right:var(--toggle-button-inset-end,0);--icon-size:12px;--icon-color:rgba(255, 255, 255, 0.7)}[class*=ct-toggle-close]:hover{--toggle-icon-transform:rotate(90deg)}[class*=ct-toggle-close][data-type=type-1]{--outline-offset:5px}.hero-section[data-type=type-2]>figure>.ct-image-container:after{position:absolute;z-index:2;content:"";top:0;left:0;right:0;bottom:0}nav[class*=menu] li a{color:var(--linkInitialColor);--icon-color:var(--linkInitialColor)}nav[class*=menu] li:hover>a,nav[class*=menu] li:hover>.ct-sub-menu-parent{color:var(--linkHoverColor)}nav[class*=menu] li:hover>a svg,nav[class*=menu] li:hover>.ct-sub-menu-parent svg{fill:var(--icon-hover-color,var(--linkHoverColor))}nav[class*=menu] li[class*=current-menu-]>a,nav[class*=menu] li[class*=current-menu-]>.ct-sub-menu-parent{color:var(--linkActiveColor,var(--linkHoverColor))}nav[class*=menu] li[class*=current-menu-]>a svg,nav[class*=menu] li[class*=current-menu-]>.ct-sub-menu-parent svg{fill:var(--icon-active-color,var(--icon-hover-color,var(--linkActiveColor,var(--linkHoverColor))))}.menu{display:flex}.menu li.menu-item{display:flex;align-items:center}.menu>li>.ct-menu-link{white-space:nowrap;justify-content:var(--menu-item-alignment,center);height:var(--menu-item-height,100%);--menu-item-padding:0 calc(var(--menu-items-spacing, 25px) / 2)}.ct-menu-link{display:flex;align-items:center;position:relative;width:100%;padding:var(--menu-item-padding,0);border-radius:var(--menu-item-radius,inherit)}[data-menu]>ul>li>a:before,[data-menu]>ul>li>a:after{position:absolute;left:var(--menu-indicator-left,0);right:var(--menu-indicator-right,0);margin:var(--menu-indicator-margin,0);height:var(--menu-indicator-height,2px);opacity:var(--menu-indicator-opacity,0);background-color:var(--menu-indicator-active-color,var(--paletteColor2));transition:opacity .12s cubic-bezier(.455,.03,.515,.955),width .12s cubic-bezier(.455,.03,.515,.955),height .12s cubic-bezier(.455,.03,.515,.955),top .12s cubic-bezier(.455,.03,.515,.955),bottom .12s cubic-bezier(.455,.03,.515,.955)}[data-menu]>ul>li>a:before{top:var(--menu-indicator-y-position,0)}[data-menu]>ul>li>a:after{bottom:var(--menu-indicator-y-position,0)}.animated-submenu>.sub-menu{position:var(--dropdown-position,absolute);top:var(--top,100%);z-index:10;min-width:100px;margin-top:var(--sticky-state-dropdown-top-offset,var(--dropdown-top-offset,0));border-radius:var(--border-radius);width:var(--dropdown-width,200px);background-color:var(--dropdown-background-color,var(--paletteColor4));box-shadow:var(--box-shadow)}.animated-submenu>.sub-menu:before{position:absolute;content:"";top:0;left:0;width:100%;height:var(--dropdown-top-offset,0);transform:translateY(-100%)}.ct-toggle-dropdown-desktop{--icon-size:8px;--toggle-button-size:18px;--toggle-button-margin-end:-5px;--toggle-button-margin-start:var(--dropdown-toggle-margin-start, 0.2em)}.ct-toggle-dropdown-desktop-ghost{pointer-events:none;flex:0 0 var(--toggle-button-size,18px);right:var(--toggle-ghost-inset-end,calc(var(--menu-items-spacing, 25px) / 2 + 13px));--toggle-button-size:18px;--toggle-button-margin-end:-18px}.sub-menu{--dropdown-toggle-margin-start:auto;--toggle-ghost-inset-end:calc(var(--dropdown-items-spacing, 13px) * 1.5 + 13px)}.sub-menu{--menu-item-padding:var(--dropdown-items-spacing, 13px) calc(var(--dropdown-items-spacing, 13px) * 1.5)}.sub-menu li{border-top:var(--dropdown-divider)}.animated-submenu>.sub-menu{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease,transform .2s ease,margin .2s ease,height .2s ease}.animated-submenu:not(.ct-active):not([class*=ct-mega-menu])>.sub-menu{overflow:hidden;max-height:calc(100vh - var(--header-height) - var(--admin-bar, 0px) - var(--frame-size, 0px) - 10px)}[data-dropdown*=type-4] .animated-submenu>.sub-menu{transition:none}.mobile-menu{width:100%}.mobile-menu li{display:flex;flex-direction:column;align-items:var(--horizontal-alignment)}.mobile-menu .ct-menu-link{text-align:var(--text-horizontal-alignment);justify-content:var(--horizontal-alignment);--menu-item-padding:var(--items-vertical-spacing, 5px) 0}.mobile-menu .ct-sub-menu-parent{display:flex;align-items:center;column-gap:10px}.mobile-menu [class*=children]>ul{position:relative;width:calc(100% + 10px);margin-inline-end:-10px;padding-inline-end:10px;overflow:hidden;padding-inline-start:calc(30px*var(--has-indentation, 1))}.mobile-menu[data-interaction=click] [class*=children]:not(.dropdown-active)>ul{display:none}#header{position:relative;z-index:50}@media (max-width:999.98px){#header [data-device=desktop]{display:none}}@media (min-width:1000px){#header [data-device=mobile]{display:none}}#header [data-row]{position:var(--position,relative);box-shadow:var(--box-shadow);border-top:var(--borderTop);border-bottom:var(--borderBottom)}#header [data-row]>div{min-height:var(--shrink-height,var(--height));border-top:var(--borderTop);border-bottom:var(--borderBottom)}#header [data-row*=middle]{z-index:2}#header [data-column]{min-height:inherit}#header [data-column=start],#header [data-column=end]{min-width:0}#header [data-column-set="2"]>div{display:grid;grid-template-columns:auto auto}[data-placements]{display:grid}[data-column=end]>[data-items=primary]{justify-content:flex-end}#header [data-items]{display:flex;align-items:center;min-width:0}#header [data-items]>*{margin:var(--margin,0 10px)}[data-column=start] [data-items=primary]>:first-child{--margin:0 10px 0 0}[data-column=end] [data-items=primary]>:last-child{--margin:0 0 0 10px}.ct-social-box,.ct-header-search,.ct-header-trigger{--linkInitialColor:var(--color)}.ct-social-box a:hover svg,.ct-header-search:hover svg,.ct-header-trigger:hover svg{fill:var(--icon-hover-color,var(--paletteColor2))}.ct-header-search .ct-label,.ct-header-trigger .ct-label{transition:inherit;color:var(--linkInitialColor)}.ct-header-search:hover .ct-label,.ct-header-trigger:hover .ct-label{color:var(--linkHoverColor)}[class*=header-menu]{display:flex;align-items:center;height:100%;min-width:0}[class*=header-menu] .menu{height:inherit}#search-modal{--vertical-alignment:initial}#search-modal input{--has-classic-forms:var(--false);--form-field-border-width:0 0 1px 0;--form-field-border-initial-color:rgba(255, 255, 255, 0.2);--search-input-additional-padding:10px}@media (max-width:689.98px){#search-modal input{--form-font-size:22px;--form-field-height:70px;--form-field-padding:0px;margin-bottom:25px}}@media (min-width:690px){#search-modal input{--form-font-size:35px;--form-field-height:90px;--form-field-padding:0 50px 0 0;margin-bottom:35px}}#search-modal form{width:100%;margin:auto;max-width:var(--max-width,800px)}@media (max-width:999.98px){#search-modal form{--max-width:90%;--search-button-size:40px}}@media (min-width:690px){#search-modal form{--search-button-size:48px}}#search-modal form button{--icon-color:rgba(255, 255, 255, 0.7);--icon-focus-color:#fff;--icon-size:calc(100% / 3);--search-button-border-radius:100%;--search-button-background:var(--paletteColor1);--search-button-focus-background:var(--paletteColor1)}@media (max-width:689.98px){#search-modal form button{top:15px}}@media (min-width:690px){#search-modal form button{top:21px}}#search-modal form button [data-loader]{--loaderColor:#fff}.ct-header-trigger .ct-icon{transition:none}.ct-header-trigger .ct-icon rect{transform-origin:50% 50%;transition:all .12s cubic-bezier(.455,.03,.515,.955)}.site-branding{display:flex;text-align:var(--horizontal-alignment)}.site-branding:not([data-logo=top]){align-items:center}.site-branding img{max-width:initial}.site-logo-container{height:var(--logo-shrink-height,var(--logo-max-height,50px))}.site-logo-container img{width:auto;object-fit:contain}.site-logo-container img{height:inherit;vertical-align:initial}#offcanvas .ct-panel-content{--margin:20px 0}#offcanvas .ct-panel-content>*{margin:var(--margin)}#offcanvas .ct-panel-content>:first-child{margin-top:0}#offcanvas .ct-panel-content>:last-child{margin-bottom:0}@media (max-width:999.98px){#offcanvas [data-device=desktop]{display:none}}@media (min-width:1000px){#offcanvas [data-device=mobile]{display:none}}@media (max-width:999.98px){[data-device=mobile][data-transparent]{position:absolute;top:0;left:0;right:0}}@media (min-width:1000px){[data-device=desktop][data-transparent]{position:absolute;top:0;left:0;right:0}}.ct-widget ul{--listIndent:0;--listStyleType:none;--content-spacing:0}.ct-widget li .ct-entry-meta{font-size:13px;line-height:normal;opacity:.7;margin-top:5px}form.search-form{position:relative}form.search-form input{position:relative;padding-inline-end:calc(var(--search-button-size, var(--form-field-height, 40px)) + var(--search-input-additional-padding, 0px))}form.search-form button{position:absolute;top:0;right:0;padding:initial;width:var(--search-button-size,var(--form-field-height,40px));min-height:var(--search-button-size,var(--form-field-height,40px));border:0;box-shadow:none;border-radius:var(--search-button-border-radius,0);background:var(--search-button-background);transition:background .12s cubic-bezier(.455,.03,.515,.955);--buttonShadow:none;--buttonTransform:none}form.search-form button [data-loader]{opacity:0;visibility:hidden;--loaderSize:30px;--loaderColor:rgba(44, 62, 80, 0.2)}form.search-form button:focus{outline:0}form.search-form button:hover,form.search-form input:focus+button{border:0;box-shadow:none;background:var(--search-button-focus-background)}form.search-form button:hover svg,form.search-form input:focus+button svg{fill:var(--icon-focus-color,var(--color))}[data-behaviour*=side] .ct-panel-inner{position:absolute;top:0;bottom:0;max-width:var(--side-panel-width,500px);box-shadow:var(--box-shadow);transition:transform .25s ease-in-out}[data-behaviour*=right-side] .ct-panel-inner{right:0;transform:translate3d(20%,0,0)}.ct-panel{display:flex;flex-direction:column;position:fixed;z-index:999999;top:var(--admin-bar,0);left:0;right:0;bottom:0;opacity:0;visibility:hidden;pointer-events:none;content-visibility:auto}.ct-panel .ct-panel-inner{display:flex;flex-direction:column;width:100%;height:100%;box-shadow:var(--box-shadow)}@media (max-width:689.98px){.ct-panel{--panel-padding:25px}}.ct-panel-actions{display:flex;align-items:center;padding:var(--panel-padding,35px);padding-bottom:0}@media (max-width:689.98px){.ct-panel-actions{padding-top:20px}}@media (min-width:690px){.ct-panel-actions{padding-top:30px}}.ct-panel-content{flex:1;display:flex;flex-direction:column;justify-content:var(--vertical-alignment,flex-start);align-items:var(--horizontal-alignment,flex-start);overflow:var(--overflow,auto);padding:var(--panel-padding,35px);box-sizing:border-box}.ct-social-box{display:flex;flex-direction:var(--items-direction,row);flex-wrap:var(--wrap,wrap);gap:var(--spacing,15px)}.ct-social-box a{display:flex;align-items:center}#main-container{display:flex;flex-direction:column;position:relative;min-height:calc(100vh - var(--admin-bar, 0px) - var(--frame-size, 0px)*2)}@media (max-width:999.98px){#main-container{overflow-x:hidden}}#main-container .site-main{flex-grow:1}[class*=ct-container]{margin-left:auto;margin-right:auto}.ct-container{width:var(--container-width)}.ct-container{max-width:var(--normal-container-max-width)}[data-vertical-spacing*=top]{padding-top:var(--content-vertical-spacing)}[data-vertical-spacing*=bottom]{padding-bottom:var(--content-vertical-spacing)}[class*=ct-container]>article{--has-background:var(--has-boxed);--has-boxed-structure:var(--has-boxed);--wp--style--global--content-size:var(--block-max-width);--wp--style--global--wide-size:var(--block-wide-max-width);box-shadow:var(--has-boxed,var(--box-shadow));border:var(--has-boxed,var(--boxed-content-border));border-radius:var(--has-boxed,var(--border-radius));padding:var(--has-boxed,var(--boxed-content-spacing));margin-left:var(--has-boxed-structure,auto);margin-right:var(--has-boxed-structure,auto);width:var(--has-boxed-structure,var(--container-width));max-width:var(--has-boxed-structure,var(--boxed-content-max-width))}article>.entry-content>*{margin-left:var(--default-editor,auto);margin-right:var(--default-editor,auto)}article>.entry-content>:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright){max-width:var(--default-editor,var(--block-max-width))}article>.entry-content>:not(.alignfull):not(.alignleft):not(.alignright){width:var(--default-editor,var(--block-width))}.aligncenter{margin-left:auto;margin-right:auto}.entry-content:after{display:table;clear:both;content:""}.wp-block-image:last-child{margin-bottom:0}.ct-posts-widget ul{--listItemSpacing:20px}.ct-posts-widget ul a{display:flex;gap:var(--items-gap,20px)}.ct-posts-widget ul .ct-image-container{align-self:start}.ct-posts-widget ul .ct-entry-content{align-self:center}.ct-posts-widget ul .ct-post-title{--fontSize:15px;--lineHeight:1.5;--fontWeight:500;word-break:break-word}.ct-posts-widget ul .ct-entry-meta{color:var(--color)}.ct-posts-widget ul[data-type=rounded] .ct-image-container{flex:0 0 25%}.ct-posts-widget ul[data-type=rounded] .ct-image-container{border-radius:100%}@font-face{font-family:'PT Sans Narrow';font-style:normal;font-weight:700;font-display:swap;src:url(https://linuxiac.b-cdn.net/wp-content/cache/flying-press/linuxiac.com/BngSUXNadjH0qYEzV7ab-oWlsbg95AiIW_3CRs-2UEU.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Sans Narrow';font-style:normal;font-weight:700;font-display:swap;src:url(https://linuxiac.b-cdn.net/wp-content/cache/flying-press/linuxiac.com/BngSUXNadjH0qYEzV7ab-oWlsbg95AiBW_3CRs-2UEU.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Sans Narrow';font-style:normal;font-weight:700;font-display:swap;src:url(https://linuxiac.b-cdn.net/wp-content/cache/flying-press/linuxiac.com/BngSUXNadjH0qYEzV7ab-oWlsbg95AiLW_3CRs-2UEU.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Sans Narrow';font-style:normal;font-weight:700;font-display:swap;src:url(https://linuxiac.b-cdn.net/wp-content/cache/flying-press/linuxiac.com/BngSUXNadjH0qYEzV7ab-oWlsbg95AiFW_3CRs-2.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}.hero-section[data-type=type-2]{position:relative;z-index:1;padding-top:calc(var(--has-transparent-header)*var(--header-height))}.hero-section[data-type=type-2]>[class*=ct-container]{display:flex;flex-direction:column;justify-content:var(--vertical-alignment,center);text-align:var(--alignment,center);position:relative;z-index:2;padding:var(--container-padding,50px 0);min-height:var(--min-height,250px)}.hero-section[data-type=type-2]>figure{position:absolute;overflow:hidden;z-index:1;top:0;left:0;width:100%;height:100%;background-color:inherit}.hero-section[data-type=type-2]>figure .ct-image-container{height:100%;vertical-align:top}.entry-header>:not(:first-child){margin-top:var(--itemSpacing,20px)}.entry-header .page-title{margin-bottom:0}.entry-header .entry-meta{color:var(--color);--linkInitialColor:var(--color)}[data-sidebar]{display:grid;grid-template-columns:var(--grid-template-columns,100%);grid-column-gap:var(--sidebar-gap,4%);grid-row-gap:50px}[data-sidebar]>aside{order:var(--sidebar-order)}@media (min-width:1000px){[data-sidebar=right]{--grid-template-columns:minmax(100px, 1fr) var(--sidebar-width, 27%)}}[data-prefix] div[data-sidebar]>article{--has-wide:var(--false);--has-boxed-structure:var(--false)}.ct-sidebar{position:relative;z-index:1}.ct-sidebar .widget-title:not(:empty){display:block;margin-bottom:20px}.ct-sidebar .ct-widget{color:var(--color)}.ct-sidebar .ct-widget:not(:last-child){margin-bottom:var(--sidebar-widgets-spacing,40px)}aside{position:relative}@media (max-width:999.98px){aside[data-type=type-4] .ct-sidebar{padding:var(--sidebar-inner-spacing,35px);background:var(--sidebar-background-color,var(--paletteColor8))}}@media (min-width:1000px){aside[data-type=type-4]{position:relative}aside[data-type=type-4]:after{position:absolute;content:"";top:var(--sidebar-helper-top,0);height:var(--sidebar-helper-height,100%)}aside[data-type=type-4]:after{background:var(--sidebar-background-color,var(--paletteColor8));width:calc((100% + (max(100vw - var(--frame-size, 0px)*2 - var(--normal-container-max-width),10vw) - var(--scrollbar-width, 0px))/2)*var(--has-scrollbar, 0))}[data-sidebar=right] [data-type=type-4]{padding-inline-start:var(--sidebar-inner-spacing,35px)}[data-sidebar=right] [data-type=type-4]:after{left:0}}@media (min-width:1000px){[data-vertical-spacing="top:bottom"]{--sidebar-helper-top:calc(var(--content-vertical-spacing) * -1);--sidebar-helper-height:calc(100% + var(--content-vertical-spacing) * 2)}}a{transition:none!important}</style>
+	<meta name="description" content="This guide will walk you through the steps of installing Visual Studio Code on Ubuntu 22.04, following the official recommended way.">
+	<link rel="canonical" href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide">
+	<meta property="og:description" content="This guide will walk you through the steps of installing Visual Studio Code on Ubuntu 22.04, following the official recommended way.">
+	<meta property="og:url" content="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/">
+	<meta property="og:site_name" content="Linuxiac">
+	<meta property="article:publisher" content="https://www.facebook.com/my.linuxiac">
+	<meta property="article:published_time" content="2022-08-12T17:21:37+00:00">
+	<meta property="article:modified_time" content="2022-08-12T17:33:02+00:00">
+	<meta property="og:image" content="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-ubuntu.jpg">
+	<meta property="og:image:width" content="960">
+	<meta property="og:image:height" content="540">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Bobby Borisov">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@linuxiac">
+	<meta name="twitter:site" content="@linuxiac">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Bobby Borisov">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="6 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#article","isPartOf":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/"},"author":{"name":"Bobby Borisov","@id":"https://linuxiac.com/#/schema/person/e7101fdfc673491d62d5ed05054342a5"},"headline":"How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide","datePublished":"2022-08-12T17:21:37+00:00","dateModified":"2022-08-12T17:33:02+00:00","mainEntityOfPage":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/"},"wordCount":682,"commentCount":1,"publisher":{"@id":"https://linuxiac.com/#organization"},"image":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#primaryimage"},"thumbnailUrl":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-ubuntu.jpg","keywords":["development","ide","microsoft","visual studio code"],"articleSection":["Linux Knowledge","Tutorials"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#respond"]}],"copyrightYear":"2022","copyrightHolder":{"@id":"https://linuxiac.com/#organization"}},{"@type":"WebPage","@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/","url":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/","name":"How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide","isPartOf":{"@id":"https://linuxiac.com/#website"},"primaryImageOfPage":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#primaryimage"},"image":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#primaryimage"},"thumbnailUrl":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-ubuntu.jpg","datePublished":"2022-08-12T17:21:37+00:00","dateModified":"2022-08-12T17:33:02+00:00","description":"This guide will walk you through the steps of installing Visual Studio Code on Ubuntu 22.04, following the official recommended way.","breadcrumb":{"@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#primaryimage","url":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-ubuntu.jpg","contentUrl":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-ubuntu.jpg","width":960,"height":540,"caption":"How to Install Visual Studio Code on Ubuntu"},{"@type":"BreadcrumbList","@id":"https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://linuxiac.com/"},{"@type":"ListItem","position":2,"name":"Linux Knowledge","item":"https://linuxiac.com/category/linux-knowledge/"},{"@type":"ListItem","position":3,"name":"Tutorials","item":"https://linuxiac.com/category/linux-knowledge/tutorials/"},{"@type":"ListItem","position":4,"name":"How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide"}]},{"@type":"WebSite","@id":"https://linuxiac.com/#website","url":"https://linuxiac.com/","name":"Linuxiac","description":"Linux News, Tutorials, Tips &amp; Tricks, and More","publisher":{"@id":"https://linuxiac.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://linuxiac.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://linuxiac.com/#organization","name":"Linuxiac","url":"https://linuxiac.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://linuxiac.com/#/schema/logo/image/","url":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon.png","contentUrl":"https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon.png","width":512,"height":512,"caption":"Linuxiac"},"image":{"@id":"https://linuxiac.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/my.linuxiac","https://twitter.com/linuxiac"]},{"@type":"Person","@id":"https://linuxiac.com/#/schema/person/e7101fdfc673491d62d5ed05054342a5","name":"Bobby Borisov","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://linuxiac.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/93a7d3337e370f69b3d608b1ae522618?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/93a7d3337e370f69b3d608b1ae522618?s=96&d=mm&r=g","caption":"Bobby Borisov"},"description":"Bobby is a Linux professional with over 20 years of experience. With a strong focus on Linux and open-source software, Bobby has worked as a Linux System Administrator, Software Developer, and DevOps Engineer for small and large multinational companies.","knowsAbout":["Linux"],"knowsLanguage":["English"],"url":"https://linuxiac.com/author/bobby-borisov/"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Linuxiac » Feed" href="https://linuxiac.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Linuxiac » Comments Feed" href="https://linuxiac.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Linuxiac » How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide Comments Feed" href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/feed/">
+<link rel="stylesheet" id="wp-block-library-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/71d925864153.style.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-color-1: var(--paletteColor1, #2872fa);--wp--preset--color--palette-color-2: var(--paletteColor2, #1559ed);--wp--preset--color--palette-color-3: var(--paletteColor3, #3A4F66);--wp--preset--color--palette-color-4: var(--paletteColor4, #192a3d);--wp--preset--color--palette-color-5: var(--paletteColor5, #e1e8ed);--wp--preset--color--palette-color-6: var(--paletteColor6, #f2f5f7);--wp--preset--color--palette-color-7: var(--paletteColor7, #FAFBFC);--wp--preset--color--palette-color-8: var(--paletteColor8, #ffffff);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--juicy-peach: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);--wp--preset--gradient--young-passion: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);--wp--preset--gradient--true-sunset: linear-gradient(to right, #fa709a 0%, #fee140 100%);--wp--preset--gradient--morpheus-den: linear-gradient(to top, #30cfd0 0%, #330867 100%);--wp--preset--gradient--plum-plate: linear-gradient(135deg, #667eea 0%, #764ba2 100%);--wp--preset--gradient--aqua-splash: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);--wp--preset--gradient--love-kiss: linear-gradient(to top, #ff0844 0%, #ffb199 100%);--wp--preset--gradient--new-retrowave: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);--wp--preset--gradient--plum-bath: linear-gradient(to top, #cc208e 0%, #6713d2 100%);--wp--preset--gradient--high-flight: linear-gradient(to right, #0acffe 0%, #495aff 100%);--wp--preset--gradient--teen-party: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);--wp--preset--gradient--fabled-sunset: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);--wp--preset--gradient--arielle-smile: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);--wp--preset--gradient--itmeo-branding: linear-gradient(180deg, #2af598 0%, #009efd 100%);--wp--preset--gradient--deep-blue: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);--wp--preset--gradient--strong-bliss: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);--wp--preset--gradient--sweet-period: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);--wp--preset--gradient--purple-division: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);--wp--preset--gradient--cold-evening: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);--wp--preset--gradient--mountain-rock: linear-gradient(to right, #868f96 0%, #596164 100%);--wp--preset--gradient--desert-hump: linear-gradient(to top, #c79081 0%, #dfa579 100%);--wp--preset--gradient--ethernal-constance: linear-gradient(to top, #09203f 0%, #537895 100%);--wp--preset--gradient--happy-memories: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);--wp--preset--gradient--grown-early: linear-gradient(to top, #0ba360 0%, #3cba92 100%);--wp--preset--gradient--morning-salad: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);--wp--preset--gradient--night-call: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);--wp--preset--gradient--mind-crawl: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);--wp--preset--gradient--angel-care: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);--wp--preset--gradient--juicy-cake: linear-gradient(to top, #e14fad 0%, #f9d423 100%);--wp--preset--gradient--rich-metal: linear-gradient(to right, #d7d2cc 0%, #304352 100%);--wp--preset--gradient--mole-hall: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);--wp--preset--gradient--cloudy-knoxville: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);--wp--preset--gradient--soft-grass: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);--wp--preset--gradient--saint-petersburg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);--wp--preset--gradient--everlasting-sky: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);--wp--preset--gradient--kind-steel: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);--wp--preset--gradient--over-sun: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);--wp--preset--gradient--premium-white: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);--wp--preset--gradient--clean-mirror: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);--wp--preset--gradient--wild-apple: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);--wp--preset--gradient--snow-again: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);--wp--preset--gradient--confident-cloud: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);--wp--preset--gradient--glass-water: linear-gradient(to top, #dfe9f3 0%, white 100%);--wp--preset--gradient--perfect-white: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}body { margin: 0;--wp--style--global--content-size: var(--block-max-width);--wp--style--global--wide-size: var(--block-wide-max-width); }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }.wp-site-blocks > * { margin-block-start: 0; margin-block-end: 0; }.wp-site-blocks > * + * { margin-block-start: var(--content-spacing); }body { --wp--style--block-gap: var(--content-spacing); }body .is-layout-flow > *{margin-block-start: 0;margin-block-end: 0;}body .is-layout-flow > * + *{margin-block-start: var(--content-spacing);margin-block-end: 0;}body .is-layout-constrained > *{margin-block-start: 0;margin-block-end: 0;}body .is-layout-constrained > * + *{margin-block-start: var(--content-spacing);margin-block-end: 0;}body .is-layout-flex{gap: var(--content-spacing);}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-color{color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-color{color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-color{color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-color{color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-color{color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-color{color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-color{color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-color{color: var(--wp--preset--color--palette-color-8) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-background-color{background-color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-background-color{background-color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-background-color{background-color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-background-color{background-color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-background-color{background-color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-background-color{background-color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-background-color{background-color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-background-color{background-color: var(--wp--preset--color--palette-color-8) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-border-color{border-color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-border-color{border-color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-border-color{border-color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-border-color{border-color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-border-color{border-color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-border-color{border-color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-border-color{border-color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-border-color{border-color: var(--wp--preset--color--palette-color-8) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-juicy-peach-gradient-background{background: var(--wp--preset--gradient--juicy-peach) !important;}.has-young-passion-gradient-background{background: var(--wp--preset--gradient--young-passion) !important;}.has-true-sunset-gradient-background{background: var(--wp--preset--gradient--true-sunset) !important;}.has-morpheus-den-gradient-background{background: var(--wp--preset--gradient--morpheus-den) !important;}.has-plum-plate-gradient-background{background: var(--wp--preset--gradient--plum-plate) !important;}.has-aqua-splash-gradient-background{background: var(--wp--preset--gradient--aqua-splash) !important;}.has-love-kiss-gradient-background{background: var(--wp--preset--gradient--love-kiss) !important;}.has-new-retrowave-gradient-background{background: var(--wp--preset--gradient--new-retrowave) !important;}.has-plum-bath-gradient-background{background: var(--wp--preset--gradient--plum-bath) !important;}.has-high-flight-gradient-background{background: var(--wp--preset--gradient--high-flight) !important;}.has-teen-party-gradient-background{background: var(--wp--preset--gradient--teen-party) !important;}.has-fabled-sunset-gradient-background{background: var(--wp--preset--gradient--fabled-sunset) !important;}.has-arielle-smile-gradient-background{background: var(--wp--preset--gradient--arielle-smile) !important;}.has-itmeo-branding-gradient-background{background: var(--wp--preset--gradient--itmeo-branding) !important;}.has-deep-blue-gradient-background{background: var(--wp--preset--gradient--deep-blue) !important;}.has-strong-bliss-gradient-background{background: var(--wp--preset--gradient--strong-bliss) !important;}.has-sweet-period-gradient-background{background: var(--wp--preset--gradient--sweet-period) !important;}.has-purple-division-gradient-background{background: var(--wp--preset--gradient--purple-division) !important;}.has-cold-evening-gradient-background{background: var(--wp--preset--gradient--cold-evening) !important;}.has-mountain-rock-gradient-background{background: var(--wp--preset--gradient--mountain-rock) !important;}.has-desert-hump-gradient-background{background: var(--wp--preset--gradient--desert-hump) !important;}.has-ethernal-constance-gradient-background{background: var(--wp--preset--gradient--ethernal-constance) !important;}.has-happy-memories-gradient-background{background: var(--wp--preset--gradient--happy-memories) !important;}.has-grown-early-gradient-background{background: var(--wp--preset--gradient--grown-early) !important;}.has-morning-salad-gradient-background{background: var(--wp--preset--gradient--morning-salad) !important;}.has-night-call-gradient-background{background: var(--wp--preset--gradient--night-call) !important;}.has-mind-crawl-gradient-background{background: var(--wp--preset--gradient--mind-crawl) !important;}.has-angel-care-gradient-background{background: var(--wp--preset--gradient--angel-care) !important;}.has-juicy-cake-gradient-background{background: var(--wp--preset--gradient--juicy-cake) !important;}.has-rich-metal-gradient-background{background: var(--wp--preset--gradient--rich-metal) !important;}.has-mole-hall-gradient-background{background: var(--wp--preset--gradient--mole-hall) !important;}.has-cloudy-knoxville-gradient-background{background: var(--wp--preset--gradient--cloudy-knoxville) !important;}.has-soft-grass-gradient-background{background: var(--wp--preset--gradient--soft-grass) !important;}.has-saint-petersburg-gradient-background{background: var(--wp--preset--gradient--saint-petersburg) !important;}.has-everlasting-sky-gradient-background{background: var(--wp--preset--gradient--everlasting-sky) !important;}.has-kind-steel-gradient-background{background: var(--wp--preset--gradient--kind-steel) !important;}.has-over-sun-gradient-background{background: var(--wp--preset--gradient--over-sun) !important;}.has-premium-white-gradient-background{background: var(--wp--preset--gradient--premium-white) !important;}.has-clean-mirror-gradient-background{background: var(--wp--preset--gradient--clean-mirror) !important;}.has-wild-apple-gradient-background{background: var(--wp--preset--gradient--wild-apple) !important;}.has-snow-again-gradient-background{background: var(--wp--preset--gradient--snow-again) !important;}.has-confident-cloud-gradient-background{background: var(--wp--preset--gradient--confident-cloud) !important;}.has-glass-water-gradient-background{background: var(--wp--preset--gradient--glass-water) !important;}.has-perfect-white-gradient-background{background: var(--wp--preset--gradient--perfect-white) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="mkaz-code-syntax-prism-css-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/50f6585abe40.prism-a11y-dark.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="baguettebox-css-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/7be3ed1f9a44.baguetteBox.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="ct-main-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/b4be79a4e647.main.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="blocksy-ext-widgets-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/043d68121f05.main.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="blocksy-fonts-font-source-google-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/6276e5280475.2a2a187de113.google-font.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="ct-page-title-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/b1f95f59e1d7.page-title.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="ct-sidebar-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/fd04e7682b06.sidebar.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="ct-comments-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/4d3c44616376.comments.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<link rel="stylesheet" id="ct-author-box-styles-css" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/364abbcd3e03.author-box.min.css" media="all" onload="this.media=&#39;all&#39;" fetchpriority="low">
+<script data-noptimize="1" data-cfasync="false" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/linuxiac-dot-com.js.download" id="mv-script-wrapper-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://linuxiac.com/wp-json/">
+<link rel="alternate" type="application/json" href="https://linuxiac.com/wp-json/wp/v2/posts/48442">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://linuxiac.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://linuxiac.b-cdn.net/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://linuxiac.com/?p=48442">
+<link rel="alternate" type="application/json+oembed" href="https://linuxiac.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flinuxiac.com%2Finstall-visual-studio-code-on-ubuntu-22-04%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://linuxiac.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flinuxiac.com%2Finstall-visual-studio-code-on-ubuntu-22-04%2F&amp;format=xml">
+<style>img{height:auto}</style>
+<noscript><link rel="stylesheet" href="https://linuxiac.b-cdn.net/wp-content/cache/flying-press/linuxiac.com/69b5fef640b8.no-scripts.min.css" type="text/css" media="print" onload="this.media='all'" fetchpriority="low"></noscript>
+<style id="ct-main-styles-inline-css">[data-header*="type-1"] .ct-header [data-id="logo"] .site-logo-container {--logo-max-height:41px;} [data-header*="type-1"] .ct-header [data-id="logo"] .site-title {--fontWeight:700;--fontSize:25px;--lineHeight:1.5;--linkInitialColor:var(--paletteColor4);} [data-header*="type-1"] .ct-header [data-id="menu"] > ul > li > a {--fontWeight:700;--textTransform:uppercase;--fontSize:16px;--lineHeight:1.3;--linkInitialColor:var(--color);--linkHoverColor:#019ee9;--linkActiveColor:#019ee9;} [data-header*="type-1"] .ct-header [data-id="menu"][data-menu*="type-3"] > ul > li > a {--linkHoverColor:#ffffff;--linkActiveColor:#ffffff;} [data-header*="type-1"] .ct-header [data-id="menu"] .sub-menu {--linkInitialColor:#ffffff;--fontWeight:500;--textTransform:uppercase;--fontSize:16px;--dropdown-divider:1px dashed rgba(255, 255, 255, 0.1);--box-shadow:0px 10px 20px rgba(41, 51, 61, 0.1);--border-radius:0px 0px 2px 2px;} [data-header*="type-1"] .ct-header [data-transparent-row="yes"] [data-id="menu"] > ul > li > a {--linkInitialColor:var(--paletteColor8);--linkHoverColor:var(--paletteColor8);--linkActiveColor:var(--paletteColor8);} [data-header*="type-1"] .ct-header [data-row*="middle"] {--height:100px;background-color:#fafbfc;background-image:none;--borderTop:none;--borderBottom:none;--box-shadow:0px 10px 20px rgba(44,62,80,0.05);} [data-header*="type-1"] .ct-header [data-row*="middle"] > div {--borderTop:none;--borderBottom:none;} [data-header*="type-1"] .ct-header [data-transparent-row="yes"][data-row*="middle"] {background-color:rgba(255,255,255,0);background-image:none;--borderTop:none;--borderBottom:none;--box-shadow:none;} [data-header*="type-1"] .ct-header [data-transparent-row="yes"][data-row*="middle"] > div {--borderTop:none;--borderBottom:none;} [data-header*="type-1"] [data-id="mobile-menu"] {--fontWeight:700;--fontSize:20px;--linkInitialColor:#ffffff;--mobile-menu-divider:none;} [data-header*="type-1"] #offcanvas .ct-panel-inner {background-color:rgba(18, 21, 25, 0.98);} [data-header*="type-1"] #offcanvas {--side-panel-width:500px;} [data-header*="type-1"] [data-behaviour*="side"] {--box-shadow:0px 0px 70px rgba(0, 0, 0, 0.35);} [data-header*="type-1"] [data-id="search"] {--icon-size:16px;--icon-color:var(--paletteColor4);--icon-hover-color:#019ee9;} [data-header*="type-1"] [data-transparent-row="yes"] [data-id="search"] {--icon-color:var(--paletteColor7);--icon-hover-color:var(--paletteColor8);} [data-header*="type-1"] #search-modal .ct-search-results a {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:22px;--lineHeight:1.4;} [data-header*="type-1"] #search-modal {--linkInitialColor:#ffffff;--form-text-initial-color:#ffffff;--form-text-focus-color:#ffffff;background-color:rgba(18, 21, 25, 0.98);} [data-header*="type-1"] #search-modal form button {--search-button-background:#019ee9;--search-button-focus-background:#0086c4;} [data-header*="type-1"] [data-id="socials"].ct-header-socials {--icon-size:18px;--spacing:16px;} [data-header*="type-1"] [data-id="socials"].ct-header-socials [data-color="custom"] {--icon-color:var(--paletteColor4);--icon-hover-color:#019ee9;--background-color:rgba(218, 222, 228, 0.3);--background-hover-color:var(--paletteColor1);} [data-header*="type-1"] [data-id="socials"].ct-header-socials .ct-label {--visibility:none;} [data-header*="type-1"] [data-transparent-row="yes"] [data-id="socials"].ct-header-socials [data-color="custom"] {--icon-color:var(--paletteColor6);--icon-hover-color:var(--paletteColor8);} [data-header*="type-1"] [data-id="trigger"] {--icon-size:18px;} [data-header*="type-1"] {--header-height:100px;} [data-footer*="type-1"] [data-id="copyright"] {--fontWeight:400;--fontSize:18px;--lineHeight:1.3;} [data-footer*="type-1"] .ct-footer [data-column="menu"] {--horizontal-alignment:flex-end;} [data-footer*="type-1"] .ct-footer [data-id="menu"] ul {--fontWeight:700;--textTransform:uppercase;--fontSize:14px;--lineHeight:1.3;} [data-footer*="type-1"] .ct-footer [data-id="menu"] > ul > li > a {--linkInitialColor:var(--color);} [data-footer*="type-1"] .ct-footer [data-row*="top"] > div {--container-spacing:30px;--border:none;--border-top:none;--grid-template-columns:repeat(2, 1fr);} [data-footer*="type-1"] .ct-footer [data-row*="top"] .widget-title {--fontSize:16px;} [data-footer*="type-1"] .ct-footer [data-row*="top"] {--border-top:1px solid #dddddd;background-color:transparent;} [data-footer*="type-1"] footer.ct-footer {background-color:var(--paletteColor6);}:root {--fontFamily:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';--fontWeight:400;--textTransform:none;--textDecoration:none;--fontSize:22px;--lineHeight:1.8;--letterSpacing:0em;--buttonFontWeight:500;--buttonFontSize:22px;--has-classic-forms:var(--true);--has-modern-forms:var(--false);--form-field-border-initial-color:var(--border-color);--form-field-border-focus-color:var(--paletteColor1);--form-selection-control-initial-color:var(--border-color);--form-selection-control-accent-color:var(--paletteColor1);--paletteColor1:#2872fa;--paletteColor2:#1559ed;--paletteColor3:#3A4F66;--paletteColor4:#192a3d;--paletteColor5:#e1e8ed;--paletteColor6:#f2f5f7;--paletteColor7:#FAFBFC;--paletteColor8:#ffffff;--color:var(--paletteColor4);--linkInitialColor:#019ee9;--linkHoverColor:#019ee9;--selectionTextColor:#ffffff;--selectionBackgroundColor:var(--paletteColor1);--border-color:var(--paletteColor5);--headings-color:var(--paletteColor4);--heading-2-color:var(--paletteColor4);--content-spacing:1.5em;--buttonMinHeight:40px;--buttonShadow:none;--buttonTransform:none;--buttonTextInitialColor:#ffffff;--buttonTextHoverColor:#ffffff;--buttonInitialColor:#019ee9;--buttonHoverColor:#0086c4;--button-border:none;--buttonBorderRadius:3px;--button-padding:5px 20px;--normal-container-max-width:1290px;--content-vertical-spacing:60px;--narrow-container-max-width:750px;--wide-offset:130px;}h1 {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:2.8em;--lineHeight:1.5;}h2 {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:2em;--lineHeight:1.5;}h3 {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:1.4em;--lineHeight:1.5;}h4 {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:25px;--lineHeight:1.5;}h5 {--fontWeight:700;--fontSize:20px;--lineHeight:1.5;}h6 {--fontWeight:700;--fontSize:16px;--lineHeight:1.5;}.wp-block-quote.is-style-large p, .wp-block-pullquote p, .ct-quote-widget blockquote {--fontFamily:Georgia;--fontWeight:600;--fontSize:25px;}code, kbd, samp, pre {--fontFamily:monospace;--fontWeight:400;--fontSize:16px;}.ct-sidebar .widget-title {--fontSize:26px;}.ct-sidebar .ct-widget > *:not(.widget-title):not(blockquote) {--fontSize:16px;}.ct-breadcrumbs {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;}body {background-color:#ffffff;} [data-prefix="single_blog_post"] .entry-header .page-title {--fontFamily:'PT Sans Narrow', Sans-Serif;--fontWeight:700;--fontSize:2.8em;--lineHeight:1.3;--heading-color:rgba(255, 255, 255, 0.9);} [data-prefix="single_blog_post"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;--color:var(--paletteColor5);} [data-prefix="single_blog_post"] .entry-header .page-description {--color:var(--paletteColor5);} [data-prefix="single_blog_post"] .hero-section[data-type="type-2"] {--alignment:left;--vertical-alignment:center;--min-height:280px;background-color:var(--paletteColor3);background-image:none;--container-padding:0px 0;} [data-prefix="single_blog_post"] .hero-section[data-type="type-2"] > figure .ct-image-container:after {background-color:rgba(25, 42, 61, 0.5);} [data-prefix="single_blog_post"] .hero-section .entry-meta {--itemSpacing:20px;} [data-prefix="categories"] .entry-header .page-title {--fontSize:30px;} [data-prefix="categories"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;} [data-prefix="categories"] .entry-header .ct-breadcrumbs {--fontSize:16px;} [data-prefix="search"] .entry-header .page-title {--fontSize:30px;} [data-prefix="search"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;} [data-prefix="author"] .entry-header .page-title {--fontSize:30px;} [data-prefix="author"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;} [data-prefix="author"] .hero-section[data-type="type-2"] {--alignment:center;background-color:var(--paletteColor6);background-image:none;--container-padding:50px 0;} [data-prefix="single_page"] .entry-header .page-title {--fontSize:30px;} [data-prefix="single_page"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;} [data-prefix="blog"] .entry-card .entry-title {--fontSize:36px;--lineHeight:1.3;--heading-color:var(--paletteColor4);} [data-prefix="blog"] .entry-excerpt {--fontSize:18px;--color:#7a7e93;} [data-prefix="blog"] .entry-card .entry-meta {--fontWeight:400;--textTransform:uppercase;--fontSize:12px;--color:#7a7e93;} [data-prefix="blog"] [data-cards="simple"] .entry-card {--card-border:1px solid rgba(224, 229, 235, 0.8);} [data-prefix="blog"] .entries {--grid-columns-gap:20px;} [data-prefix="blog"] .entry-card {--horizontal-alignment:left;} [data-prefix="blog"] .entry-card .ct-image-container {--borderRadius:8px;} [data-prefix="categories"] .entry-card .entry-title {--fontSize:36px;--lineHeight:1.3;--heading-color:var(--paletteColor4);} [data-prefix="categories"] .entry-excerpt {--fontSize:18px;--color:#7a7e93;} [data-prefix="categories"] .entry-card .entry-meta {--fontWeight:400;--textTransform:uppercase;--fontSize:12px;--color:#7a7e93;} [data-prefix="categories"] [data-cards="simple"] .entry-card {--card-border:1px solid rgba(224, 229, 235, 0.8);} [data-prefix="categories"] .entries {--grid-columns-gap:20px;} [data-prefix="categories"] .entry-card {--horizontal-alignment:left;} [data-prefix="categories"] .entry-card .ct-image-container {--borderRadius:8px;} [data-prefix="author"] .entry-card .entry-title {--fontSize:36px;--lineHeight:1.3;} [data-prefix="author"] .entry-excerpt {--fontSize:18px;--color:#7a7e93;} [data-prefix="author"] .entry-card .entry-meta {--fontWeight:400;--textTransform:uppercase;--fontSize:12px;--color:#7a7e93;} [data-prefix="author"] [data-cards="simple"] .entry-card {--card-border:1px solid rgba(224, 229, 235, 0.8);} [data-prefix="author"] .entries {--grid-columns-gap:20px;} [data-prefix="author"] .entry-card .ct-image-container {--borderRadius:8px;} [data-prefix="search"] .entry-card .entry-title {--fontSize:36px;--lineHeight:1.3;} [data-prefix="search"] .entry-excerpt {--fontSize:18px;--color:#7a7e93;} [data-prefix="search"] .entry-card .entry-meta {--fontWeight:400;--textTransform:uppercase;--fontSize:12px;--color:#7a7e93;} [data-prefix="search"] [data-cards="simple"] .entry-card {--card-border:1px solid rgba(224, 229, 235, 0.8);} [data-prefix="search"] .entries {--grid-columns-gap:20px;} [data-prefix="search"] .entry-card .ct-image-container {--borderRadius:8px;}form textarea {--form-field-height:170px;} [data-sidebar] {--sidebar-width:27%;--sidebar-width-no-unit:27;--sidebar-gap:7%;}.ct-sidebar {--linkInitialColor:var(--color);} [data-sidebar] > aside {--sidebar-background-color:var(--paletteColor8);} [data-prefix="single_blog_post"] .author-box {--spacing:40px;} [data-prefix="single_blog_post"] .author-box .author-box-bio {--fontSize:18px;--color:var(--paletteColor3);} [data-prefix="single_blog_post"] .author-box[data-type="type-1"] {background-color:var(--paletteColor5);--box-shadow:0px 50px 90px rgba(210, 213, 218, 0.4);--border:none;--border-radius:10px;} [data-prefix="single_blog_post"] .ct-related-posts-container {--padding:50px;background-color:var(--paletteColor4);background-image:linear-gradient(to top, #dfe9f3 0%, white 100%);} [data-prefix="single_blog_post"] .ct-related-posts-container .ct-block-title {--heading-color:var(--paletteColor4);} [data-prefix="single_blog_post"] .related-entry-title {--heading-color:var(--paletteColor4);} [data-prefix="single_blog_post"] .ct-related-posts .entry-meta {--color:var(--paletteColor3);} [data-prefix="single_blog_post"] .ct-related-posts .ct-image-container {--borderRadius:8px;} [data-prefix="single_blog_post"] .ct-related-posts {--grid-template-columns:repeat(4, 1fr);} [data-prefix="single_blog_post"] [class*="ct-container"] > article[class*="post"] {--has-boxed:var(--false);--has-wide:var(--true);} [data-prefix="single_page"] [class*="ct-container"] > article[class*="post"] {--has-boxed:var(--false);--has-wide:var(--true);}[data-header*="type-1"] {--has-transparent-header:1;}[data-prefix="single_blog_post"] .entry-header .page-title {--fontSize:2.8em;} [data-prefix="single_blog_post"] .entry-header .entry-meta {--fontWeight:600;--textTransform:uppercase;--fontSize:12px;--lineHeight:1.3;} [data-prefix="single_blog_post"] .hero-section[data-type="type-2"] {background-color:var(--paletteColor6);background-image:none;--container-padding:50px 0;}@media (max-width: 999.98px) {[data-header*="type-1"] .ct-header [data-id="logo"] .site-logo-container {--logo-max-height:40px;} [data-header*="type-1"] .ct-header [data-row*="middle"] {--height:70px;} [data-header*="type-1"] #offcanvas {--side-panel-width:65vw;} [data-header*="type-1"] {--header-height:70px;} [data-footer*="type-1"] [data-column="copyright"] {--horizontal-alignment:center;} [data-footer*="type-1"] .ct-footer [data-column="menu"] {--horizontal-alignment:center;} [data-footer*="type-1"] .ct-footer [data-row*="top"] > div {--grid-template-columns:initial;} [data-prefix="blog"] .entry-card .entry-title {--fontSize:30px;} [data-prefix="categories"] .entry-card .entry-title {--fontSize:30px;} [data-prefix="author"] .entry-card .entry-title {--fontSize:30px;} [data-prefix="search"] .entry-card .entry-title {--fontSize:20px;} [data-prefix="single_blog_post"] .ct-related-posts {--grid-template-columns:repeat(2, 1fr);}}@media (max-width: 689.98px) {[data-header*="type-1"] #offcanvas {--side-panel-width:90vw;} [data-footer*="type-1"] .ct-footer [data-row*="top"] > div {--grid-template-columns:initial;} [data-prefix="single_blog_post"] .entry-header .page-title {--fontSize:2em;} [data-prefix="search"] .entry-card .entry-title {--fontSize:18px;}:root {--content-vertical-spacing:50px;} [data-prefix="single_blog_post"] .ct-related-posts {--grid-template-columns:repeat(1, 1fr);}}</style>
+            <script type="text/javascript" id="spai_js" data-cfasync="false" src="data:text/javascript,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.documentElement.className%20%2B%3D%20%22%20spai_has_js%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%28function%28w%2C%20d%29%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20b%20%3D%20d.getElementsByTagName%28%27head%27%29%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20s%20%3D%20d.createElement%28%22script%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20v%20%3D%20%28%22IntersectionObserver%22%20in%20w%29%20%3F%20%22%22%20%3A%20%22-compat%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20s.async%20%3D%20true%3B%20%2F%2F%20This%20includes%20the%20script%20as%20async.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20s.src%20%3D%20%22https%3A%2F%2Fcdn.shortpixel.ai%2Fassets%2Fjs%2Fbundles%2Fspai-lib-bg%22%20%2B%20v%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22.1.0.min.js%3Fv%3D3.5.5%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20w.spaiDomain%20%3D%20%22cdn.shortpixel.ai%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20w.spaiData%20%3D%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20version%3A%20%223.5.5%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20key%3A%20%22spai%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20quality%3A%20%22glossy%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20convert%3A%20%22auto%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lqip%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20rootMargin%3A%20%22500px%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20crop%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sizeBreakpoints%3A%20%7B%22on%22%3Afalse%2C%22base%22%3A50%2C%22rate%22%3A10%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20backgroundsMaxWidth%3A%201920%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20resizeStyleBackgrounds%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20nativeLazyLoad%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20safeLazyBackgrounds%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20debug%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20doSelectors%3A%20%5B%7B%22selectors%22%3A%22img%22%2C%22type%22%3A%22attr%22%2C%22targetAttr%22%3A%22src%22%2C%22attrType%22%3A%22url%22%2C%22lazy%22%3Atrue%7D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20exclusions%3A%20%7B%22selectors%22%3A%5B%5D%2C%22urls%22%3A%7B%22regex%3A%5C%2F%5C%5C%5C%2F%5C%5C%5C%2F%28%5B%5E%5C%5C%5C%2F%5D%2A%5C%5C.%7C%29gravatar.com%5C%5C%5C%2F%5C%2F%22%3A%7B%22lazy%22%3A0%2C%22cdn%22%3A0%2C%22resize%22%3A0%2C%22lqip%22%3A0%2C%22crop%22%3A-1%7D%7D%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20watchClasses%3A%20%5B%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20sizeFromImageSuffix%3A%20true%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20b.appendChild%28s%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%28window%2C%20document%29%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20" defer=""></script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/js" defer=""></script>
+<script src="data:text/javascript,%0A%20%20window.dataLayer%20%3D%20window.dataLayer%20%7C%7C%20%5B%5D%3B%0A%20%20function%20gtag%28%29%7BdataLayer.push%28arguments%29%3B%7D%0A%20%20gtag%28%27js%27%2C%20new%20Date%28%29%29%3B%0A%0A%20%20gtag%28%27config%27%2C%20%27UA-170875329-1%27%29%3B%0A" type="text/javascript" defer=""></script><link rel="icon" href="https://cdn.shortpixel.ai/spai/q_glossy+ret_img+to_auto/https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon-32x32.png" data-spai-egr="1" sizes="32x32">
+<link rel="icon" href="https://cdn.shortpixel.ai/spai/q_glossy+ret_img+to_auto/https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon-192x192.png" data-spai-egr="1" sizes="192x192">
+<link rel="apple-touch-icon" href="https://cdn.shortpixel.ai/spai/q_glossy+ret_img+to_auto/https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon-180x180.png" data-spai-egr="1">
+<meta name="msapplication-TileImage" content="https://linuxiac.b-cdn.net/wp-content/uploads/2022/02/cropped-favicon-270x270.png">
+		<style id="wp-custom-css">
+			code, pre {font-size:inherit;}
+.ct-comment-author {font-size:inherit;}
+[data-sidebar] { --sidebar-width:320px !important; }
+#sidebar {padding:0 !important;}
+/* mv mobile fix */
+@media only screen and (max-width: 359px) {
+.ct-container {
+width: calc(100% - 20px);
+}
+}
+/* end mv fix */		</style>
+			<link href="https://cdn.shortpixel.ai/" rel="preconnect" crossorigin="">
+
+<script async="" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/spai-lib-bg.1.0.min.js.download"></script></head>
+
+<body class="post-template-default single single-post postid-48442 single-format-standard wp-custom-logo wp-embed-responsive" data-link="type-2" data-prefix="single_blog_post" data-header="type-1" data-footer="type-1" itemscope="itemscope" itemtype="https://schema.org/Blog">
+
+<a class="skip-link show-on-focus" href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#main">
+	Skip to content</a>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div class="ct-drawer-canvas">
+		<div id="search-modal" class="ct-panel" data-behaviour="modal">
+			<div class="ct-panel-actions">
+				<button class="ct-toggle-close" data-type="type-1" aria-label="Close search modal">
+					<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15"><path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"></path></svg>				</button>
+			</div>
+
+			<div class="ct-panel-content">
+				
+
+<form role="search" method="get" class="search-form" action="https://linuxiac.com/" aria-haspopup="listbox" data-live-results="thumbs">
+
+	<input type="search" class="modal-field" placeholder="Search" value="" name="s" autocomplete="off" title="Search for..." aria-label="Search for...">
+
+	<button type="submit" class="search-submit" aria-label="Search button">
+		<svg class="ct-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"></path></svg>
+		<span data-loader="circles"><span></span><span></span><span></span></span>
+	</button>
+
+			<input type="hidden" name="post_type" value="post">
+	
+	
+	
+			<div class="screen-reader-text" aria-live="polite" role="status">
+			No results		</div>
+	
+</form>
+
+
+			</div>
+		</div>
+
+		<div id="offcanvas" class="ct-panel ct-header" data-behaviour="right-side"><div class="ct-panel-inner">
+		<div class="ct-panel-actions">
+			<button class="ct-toggle-close" data-type="type-1" aria-label="Close drawer">
+				<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15"><path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"></path></svg>
+			</button>
+		</div>
+		<div class="ct-panel-content" data-device="desktop"></div>
+<div class="ct-panel-content" data-device="mobile">
+<nav class="mobile-menu has-submenu" data-id="mobile-menu" data-interaction="click" data-toggle-type="type-1" aria-label="Off Canvas Menu">
+	<ul id="menu-primary-1" class="">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2697"><a href="https://linuxiac.com/" class="ct-menu-link">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10653">
+<span class="ct-sub-menu-parent"><a href="https://linuxiac.com/category/news/" class="ct-menu-link">News</a><button class="ct-toggle-dropdown-mobile" aria-label="Expand dropdown menu" aria-expanded="false"><svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z"></path></svg></button></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10671"><a href="https://linuxiac.com/category/news/os/" class="ct-menu-link">OS</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10662"><a href="https://linuxiac.com/category/news/software/" class="ct-menu-link">Software</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10680"><a href="https://linuxiac.com/category/news/hardware/" class="ct-menu-link">Hardware</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-38470">
+<span class="ct-sub-menu-parent"><a href="https://linuxiac.com/category/linux-knowledge/" class="ct-menu-link">Linux Knowledge</a><button class="ct-toggle-dropdown-mobile" aria-label="Expand dropdown menu" aria-expanded="false"><svg class="ct-icon toggle-icon-1" width="15" height="15" viewBox="0 0 15 15"><path d="M3.9,5.1l3.6,3.6l3.6-3.6l1.4,0.7l-5,5l-5-5L3.9,5.1z"></path></svg></button></span>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38485"><a href="https://linuxiac.com/category/linux-knowledge/general/" class="ct-menu-link">General</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38473"><a href="https://linuxiac.com/category/linux-knowledge/tutorials/" class="ct-menu-link">Tutorials</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10689"><a href="https://linuxiac.com/category/linux-knowledge/tips/" class="ct-menu-link">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10707"><a href="https://linuxiac.com/category/distributions/" class="ct-menu-link">Linux Distros</a></li>
+</ul></nav>
+
+</div>
+</div></div>
+</div>
+<div id="main-container">
+	<header id="header" class="ct-header" data-id="type-1" itemscope="" itemtype="https://schema.org/WPHeader"><div data-device="desktop" data-transparent=""><div data-row="middle" data-column-set="2" data-transparent-row="yes"><div class="ct-container">
+<div data-column="start" data-placements="1"><div data-items="primary">
+<div class="site-branding" data-id="logo" itemscope="itemscope" itemtype="https://schema.org/Organization">
+
+			<a href="https://linuxiac.com/" class="site-logo-container" rel="home"><img width="225" height="41" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/logo-white.png" data-spai="1" class="default-logo" alt="Linux News, Tutorials, Tips &amp; Tricks, and More" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/02/logo-white.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="225" data-spai-height="41"></a>	
+	</div>
+
+</div></div>
+<div data-column="end" data-placements="1"><div data-items="primary">
+<nav id="header-menu-1" class="header-menu-1" data-id="menu" data-interaction="hover" data-menu="type-1" data-dropdown="type-4:simple" data-responsive="yes" itemscope="" itemtype="https://schema.org/SiteNavigationElement" aria-label="Header Menu">
+
+	<ul id="menu-primary" class="menu">
+<li id="menu-item-2697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2697"><a href="https://linuxiac.com/" class="ct-menu-link">Home</a></li>
+<li id="menu-item-10653" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-10653 animated-submenu" data-submenu="right">
+<a href="https://linuxiac.com/category/news/" class="ct-menu-link">News<span class="ct-toggle-dropdown-desktop"><svg class="ct-icon" width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a><button class="ct-toggle-dropdown-desktop-ghost" aria-label="Expand dropdown menu" aria-expanded="false"></button>
+<ul class="sub-menu">
+	<li id="menu-item-10671" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10671"><a href="https://linuxiac.com/category/news/os/" class="ct-menu-link">OS</a></li>
+	<li id="menu-item-10662" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10662"><a href="https://linuxiac.com/category/news/software/" class="ct-menu-link">Software</a></li>
+	<li id="menu-item-10680" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10680"><a href="https://linuxiac.com/category/news/hardware/" class="ct-menu-link">Hardware</a></li>
+</ul>
+</li>
+<li id="menu-item-38470" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-38470 animated-submenu" data-submenu="right">
+<a href="https://linuxiac.com/category/linux-knowledge/" class="ct-menu-link">Linux Knowledge<span class="ct-toggle-dropdown-desktop"><svg class="ct-icon" width="8" height="8" viewBox="0 0 15 15"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"></path></svg></span></a><button class="ct-toggle-dropdown-desktop-ghost" aria-label="Expand dropdown menu" aria-expanded="false"></button>
+<ul class="sub-menu">
+	<li id="menu-item-38485" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38485"><a href="https://linuxiac.com/category/linux-knowledge/general/" class="ct-menu-link">General</a></li>
+	<li id="menu-item-38473" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-38473"><a href="https://linuxiac.com/category/linux-knowledge/tutorials/" class="ct-menu-link">Tutorials</a></li>
+	<li id="menu-item-10689" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10689"><a href="https://linuxiac.com/category/linux-knowledge/tips/" class="ct-menu-link">Tips &amp; Tricks</a></li>
+</ul>
+</li>
+<li id="menu-item-10707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10707"><a href="https://linuxiac.com/category/distributions/" class="ct-menu-link">Linux Distros</a></li>
+</ul></nav>
+
+
+<div class="ct-header-socials " data-id="socials">
+
+	
+		<div class="ct-social-box" data-icon-size="custom" data-color="custom" data-icons-type="simple">
+			
+			
+							
+				<a href="https://www.facebook.com/my.linuxiac" data-network="facebook" aria-label="Facebook" target="_blank" rel="noopener">
+					<span class="ct-icon-container">
+				<svg width="20px" height="20px" viewBox="0 0 20 20" aria-hidden="true">
+					<path d="M20,10.1c0-5.5-4.5-10-10-10S0,4.5,0,10.1c0,5,3.7,9.1,8.4,9.9v-7H5.9v-2.9h2.5V7.9C8.4,5.4,9.9,4,12.2,4c1.1,0,2.2,0.2,2.2,0.2v2.5h-1.3c-1.2,0-1.6,0.8-1.6,1.6v1.9h2.8L13.9,13h-2.3v7C16.3,19.2,20,15.1,20,10.1z"></path>
+				</svg>
+			</span><span class="ct-label" hidden="">Facebook</span>				</a>
+							
+				<a href="https://twitter.com/linuxiac" data-network="twitter" aria-label="Twitter" target="_blank" rel="noopener">
+					<span class="ct-icon-container">
+				<svg width="20px" height="20px" viewBox="0 0 20 20" aria-hidden="true">
+					<path d="M20,3.8c-0.7,0.3-1.5,0.5-2.4,0.6c0.8-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1c-0.7-0.8-1.8-1.3-3-1.3c-2.3,0-4.1,1.8-4.1,4.1c0,0.3,0,0.6,0.1,0.9C6.4,6.7,3.4,5.1,1.4,2.6C1,3.2,0.8,3.9,0.8,4.7c0,1.4,0.7,2.7,1.8,3.4C2,8.1,1.4,7.9,0.8,7.6c0,0,0,0,0,0.1c0,2,1.4,3.6,3.3,4c-0.3,0.1-0.7,0.1-1.1,0.1c-0.3,0-0.5,0-0.8-0.1c0.5,1.6,2,2.8,3.8,2.8c-1.4,1.1-3.2,1.8-5.1,1.8c-0.3,0-0.7,0-1-0.1c1.8,1.2,4,1.8,6.3,1.8c7.5,0,11.7-6.3,11.7-11.7c0-0.2,0-0.4,0-0.5C18.8,5.3,19.4,4.6,20,3.8z"></path>
+				</svg>
+			</span><span class="ct-label" hidden="">Twitter</span>				</a>
+			
+			
+					</div>
+
+	
+</div>
+
+<button data-toggle-panel="#search-modal" class="ct-header-search ct-toggle " aria-label="Open search form" data-label="left" data-id="search">
+
+	<span class="ct-label ct-hidden-sm ct-hidden-md ct-hidden-lg">Search</span>
+
+	<svg class="ct-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"></path></svg></button>
+</div></div>
+</div></div></div>
+<div data-device="mobile" data-transparent=""><div data-row="middle" data-column-set="2" data-transparent-row="yes"><div class="ct-container">
+<div data-column="start" data-placements="1"><div data-items="primary">
+<div class="site-branding" data-id="logo" itemscope="itemscope" itemtype="https://schema.org/Organization">
+
+			<a href="https://linuxiac.com/" class="site-logo-container" rel="home"><img width="225" height="41" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjUgNDEiIHdpZHRoPSIyMjUiIGhlaWdodD0iNDEiIGRhdGEtdT0iaHR0cHMlM0ElMkYlMkZsaW51eGlhYy5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjIlMkYwMiUyRmxvZ28td2hpdGUucG5nIiBkYXRhLXc9IjIyNSIgZGF0YS1oPSI0MSIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" class="default-logo" alt="Linux News, Tutorials, Tips &amp; Tricks, and More" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/02/logo-white.png" data-spai-exclude="none" data-spai-orig-obs="true"></a>	
+	</div>
+
+</div></div>
+<div data-column="end" data-placements="1"><div data-items="primary">
+<button data-toggle-panel="#offcanvas" class="ct-header-trigger ct-toggle " data-design="simple" data-label="right" aria-label="Open off canvas" data-id="trigger">
+
+	<span class="ct-label ct-hidden-sm ct-hidden-md ct-hidden-lg">Menu</span>
+
+	<svg class="ct-icon" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" data-type="type-1">
+
+		<rect y="0.00" width="18" height="1.7" rx="1"></rect>
+		<rect y="6.15" width="18" height="1.7" rx="1"></rect>
+		<rect y="12.3" width="18" height="1.7" rx="1"></rect>
+	</svg>
+</button>
+</div></div>
+</div></div></div></header>
+	<main id="main" class="site-main hfeed" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+		
+<div class="hero-section" data-type="type-2">
+			<figure>
+			<div class="ct-image-container"><img width="1900" height="440" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode-ubuntu-header.jpg" data-spai="1" class="attachment-full size-full" alt="How to Install Visual Studio Code on Ubuntu" decoding="async" itemprop="image" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode-ubuntu-header.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="1519.2" data-spai-height="430.15"></div>		</figure>
+	
+			<header class="entry-header ct-container">
+			<h1 class="page-title" title="How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide" itemprop="headline">How to Install VS Code on Ubuntu 22.04: A Step-by-Step Guide</h1>
+<ul class="entry-meta" data-type="simple:circle">
+<li class="meta-author" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<a href="https://linuxiac.com/author/bobby-borisov/" tabindex="-1" class="ct-image-container-static"><img src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/93a7d3337e370f69b3d608b1ae522618.jpeg" width="50" height="50" style="height:50px" alt="Bobby Borisov" data-spai-target="src" data-spai-orig="" data-spai-exclude="nocdn"></a><a class="ct-meta-element-author" href="https://linuxiac.com/author/bobby-borisov/" title="Posts by Bobby Borisov" rel="author" itemprop="url"><span itemprop="name">Bobby Borisov</span></a>
+</li>
+<li class="meta-date" itemprop="datePublished"><time class="ct-meta-element-date" datetime="2022-08-12T17:21:37+00:00">August 12, 2022</time></li>
+<li class="meta-comments"><a href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#comments">1 Comment</a></li>
+</ul>		</header>
+	</div>
+
+
+
+	<div class="ct-container" data-sidebar="right" data-vertical-spacing="top:bottom">
+
+		
+		
+	<article id="post-48442" class="post-48442 post type-post status-publish format-standard has-post-thumbnail hentry category-linux-knowledge category-tutorials tag-development tag-ide tag-microsoft tag-visual-studio-code mv-content-wrapper">
+
+		
+		
+		
+		<div class="entry-content">
+			
+<p><strong>This guide will walk you through the steps of installing Visual Studio Code on Ubuntu 22.04, following the official recommended way.</strong></p>
+
+
+
+<p><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer noopener">Visual Studio Code</a> (often abbreviated as VS Code) is a free, cross-platform, and open-source code editor developed by Microsoft that is available for Windows, Linux, and macOS.</p>
+
+
+
+<p>The combination of a lightweight editor and powerful functionality has contributed to VS Code’s rise as one of the most popular integrated development environment (IDE) tools in recent years.</p>
+
+
+
+<p>Its key features include syntax highlighting, built-in debugging support, embedded Git control, code completion, an integrated terminal, snippets, and code refactoring.</p>
+
+
+
+<p>This guide will walk you through the steps for installing Visual Studio Code on your <a href="https://linuxiac.com/ubuntu-22-04-lts-jammy-jellyfish/">Ubuntu 22.04</a> system using the officially approved method.</p>
+
+
+
+<p>In addition, we will also show you how to install it as a Snap package, a software distribution format recommended and enforced by <a href="https://linuxiac.com/ubuntu/">Ubuntu</a>. So, let’s get started!</p>
+
+
+<h2 id="h-install-visual-studio-code-on-ubuntu-22-04">Install Visual Studio Code on Ubuntu 22.04</h2>
+
+
+<p>The methods below show how to install Visual Studio Code on Ubuntu from the official Microsoft repository.</p>
+
+
+<h3 id="1-install-prerequisites">1. Install Prerequisites</h3>
+
+
+<p>Before we begin the installation, we must first install some packages that will be required to be available on our Ubuntu 22.04 system for the next steps. To accomplish this, type:</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> software-properties-common apt-transport-https <span class="token function">wget</span> gpg</code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vstudio7.png"><img decoding="async" width="968" height="379" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vstudio7.png" data-spai="1" alt="Install Prerequisites" class="wp-image-48694" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vstudio7.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="879.7" data-spai-height="344.425"></a></figure>
+
+
+<h3 id="2-import-microsofts-gpg-key">2. Import Microsoft’s GPG Key</h3>
+
+
+<p>Next, to ensure that the&nbsp;<a href="https://linuxiac.com/list-installed-packages-in-ubuntu/">packages we receive to install</a>&nbsp;the Visual Studio Code are genuine, we should download and import the Microsoft signed GPG keys on our Ubuntu 22.04 system.</p>
+
+
+
+<p>To do so, type the following commands:</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">wget</span> -qO- https://packages.microsoft.com/keys/microsoft.asc <span class="token operator">|</span> gpg --dearmor <span class="token operator">&gt;</span> packages.microsoft.gpg
+<span class="token function">sudo</span> <span class="token function">install</span> -D -o root -g root -m <span class="token number">644</span> packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg</code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode3.png"><img decoding="async" width="1024" height="112" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode3.png" data-spai="1" alt="Import Microsoft&#39;s GPG Key" class="wp-image-48697" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode3.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="879.7" data-spai-height="96.0875"></a></figure>
+
+
+<h3 id="3-add-microsofts-visual-studio-code-repository">3. Add Microsoft’s Visual Studio Code Repository</h3>
+
+
+<p>After importing the GPG keys, we’ll add the official Visual Studio Code repository to our Ubuntu 22.04 system. This implies that the update package will be made available with the rest of your system’s regular updates if a new version is released.</p>
+
+
+
+<p>To accomplish it, type the command shown below.</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">sudo</span> <span class="token function">sh</span> -c <span class="token string">'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" &gt; /etc/apt/sources.list.d/vscode.list'</span></code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode4(1).png"><img decoding="async" width="1024" height="148" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode4.png" data-spai="1" alt="Add Microsoft&#39;s Visual Studio Code Repository" class="wp-image-48700" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode4.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="879.7" data-spai-height="126.812"></a></figure>
+
+
+<h3 id="4-run-system-update">4. Run System Update</h3>
+
+
+<p>Before we proceed with VS Code installation on our Ubuntu 22.04 system, we should update the list of available packages. So, run the below&nbsp;<a href="https://linuxiac.com/apt-command-in-linux/">command to update the APT</a>&nbsp;repositories index.</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update</code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode5.jpg"><img decoding="async" width="971" height="492" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode5.jpg" data-spai="1" alt="Run System Update" class="wp-image-48703" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode5.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="349.85"></a></figure>
+
+
+
+<p>As you can see, our new Microsoft Visual Studio Code repository is now available and ready to be used.</p>
+
+
+<h3 id="5-install-vs-code-on-ubuntu-2204">5. Install VS Code on Ubuntu 22.04</h3>
+
+
+<p>Everything is already prepared for the actual installation. Now, to install VS Code on Ubuntu 22.04, run the following commands:</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> code</code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode6.png"><img decoding="async" width="1024" height="500" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode6.png" data-spai="1" alt="Install VS Code on Ubuntu 22.04" class="wp-image-48706" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode6.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="337.3"></a></figure>
+
+
+<h3 id="6-run-visual-studio-code-on-ubuntu-2204">6. Run Visual Studio Code on Ubuntu 22.04</h3>
+
+
+<p>You can start using VS Code by launching it from the desktop application menu. Search for “code,” and when its icon appears, click to run the same.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode8.jpg"><img decoding="async" width="818" height="297" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode8.jpg" data-spai="1" alt="Run Visual Studio Code on Ubuntu 22.04" class="wp-image-48709" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode8.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="250.688"></a></figure>
+
+
+
+<p>When you start VS Code for the first time, a window like the following should appear:</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode-app.png"><img decoding="async" width="1024" height="656" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode-app.png" data-spai="1" alt="Visual Studio Code App" class="wp-image-48712" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode-app.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="442.638"></a></figure>
+
+
+<h2 id="nbspinstall-visual-studio-code-with-snap"> Install Visual Studio Code with Snap</h2>
+
+
+<p>Snap is an approach to distributing software encapsulated in a Snap package that offers compatibility in its use between various Linux distributions.</p>
+
+
+
+<p>Since Snap is a technology developed by Canonical, the company behind Ubuntu, it is not surprising that it is attempting to force the usage of Snap packages.</p>
+
+
+
+<p>However, Snap packages have some drawbacks, one being speed compared to applications <a href="https://linuxiac.com/install-deb-file-in-ubuntu/">installed natively from a DEB package</a>.</p>
+
+
+
+<p>The entire process of installing Visual Studio Code as a Snap package on Ubuntu 22.04 is wrapped in the execution of a single command. So if you want to install it from a Snap package, run:</p>
+
+
+
+<pre class="wp-block-code language-bash" tabindex="0"><code lang="bash" class="language-bash"><span class="token function">sudo</span> snap <span class="token function">install</span> --classic code</code></pre>
+
+
+
+<figure class="wp-block-image aligncenter size-full"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode9.png"><img decoding="async" width="841" height="163" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode9.png" data-spai="1" alt="Install Visual Studio Code with Snap" class="wp-image-48715" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode9.png" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="133.825"></a></figure>
+
+
+
+<p>That’s all. The application can then be run as outlined in the previous section.</p>
+
+
+
+<p>However, if you are not comfortable with the command line, you can achieve the same result by installing VS Code as a Snap package through Ubuntu’s graphical applications manager.</p>
+
+
+
+<p>Run the Ubuntu Software app and search for “code,” then select it from the results list.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode10.jpg"><img decoding="async" width="1024" height="690" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode10.jpg" data-spai="1" alt="Install Visual Studio Code as a Snap Package on Ubuntu 22.04" class="wp-image-48721" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode10.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="690.475" data-spai-height="465.138"></a></figure>
+
+
+
+<p>Next, click the “Install” button to install Visual Studio Code as a Snap package.</p>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://linuxiac.b-cdn.net/wp-content/uploads/2022/08/vscode11.jpg"><img decoding="async" width="1024" height="693" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTgxIDc5OSIgd2lkdGg9IjExODEiIGhlaWdodD0iNzk5IiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGbGludXhpYWMuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIyJTJGMDglMkZ2c2NvZGUxMS5qcGciIGRhdGEtdz0iMTE4MSIgZGF0YS1oPSI3OTkiIGRhdGEtYmlwPSIiPjwvc3ZnPg==" data-spai="1" alt="Install Visual Studio Code as a Snap Package on Ubuntu 22.04" class="wp-image-48718" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/08/vscode11.jpg" data-spai-exclude="none" data-spai-orig-obs="true"></a></figure>
+
+
+<h2 id="conclusion">Conclusion</h2>
+
+
+<p>This guide showed how to install Visual Studio Code on Ubuntu 22.04 using two techniques: a native DEB application and a Snap package. Which option you choose is dependent entirely on your personal preferences.</p>
+
+
+
+<p>If you have any questions, please leave them in the comments section below. To learn more about Visual Studio Code, visit their official&nbsp;<a href="https://code.visualstudio.com/docs/" target="_blank" rel="noreferrer noopener">documentation</a>&nbsp;page.</p>
+		</div>
+
+		
+		
+		
+		
+	<div class="author-box " data-type="type-1">
+		<a href="https://linuxiac.com/author/bobby-borisov/" class="ct-image-container"><img src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/93a7d3337e370f69b3d608b1ae522618(1).jpeg" width="60" height="60" alt="Bobby Borisov" style="aspect-ratio: 1/1;" data-spai-target="src" data-spai-orig="" data-spai-exclude="nocdn">
+						<svg width="18px" height="13px" viewBox="0 0 20 15">
+							<polygon points="14.5,2 13.6,2.9 17.6,6.9 0,6.9 0,8.1 17.6,8.1 13.6,12.1 14.5,13 20,7.5 "></polygon>
+						</svg>
+					</a>
+		<section>
+			<h5 class="author-box-name">
+				Bobby Borisov			</h5>
+
+			<div class="author-box-bio">
+				
+				<p>Bobby is a Linux professional with over 20 years of experience. With a strong focus on Linux and open-source software, Bobby has worked as a Linux System Administrator, Software Developer, and DevOps Engineer for small and large multinational companies.</p>
+			</div>
+
+			
+					</section>
+	</div>
+
+	
+	</article>
+
+	
+		
+	<aside data-type="type-4" id="sidebar" itemtype="https://schema.org/WPSideBar" itemscope="itemscope" style="--scrollbar-width:17px; --has-scrollbar:1;">
+
+		
+		<div class="ct-sidebar">
+			
+			<div class="ct-widget ct-posts-widget" id="blocksy_ct_posts-2">
+<h2 class="widget-title">Popular</h2>
+	<ul data-type="rounded">
+					
+			<li>
+				<a href="https://linuxiac.com/ubuntu-22-10-kinetic-kudu/">
+					<div class="ct-image-container"><img width="150" height="150" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/ubuntu-22-10-150x150.jpg" data-spai="1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Ubuntu 22.10 ‘Kinetic Kudu’ Is Here, GNOME 43 Is the Main Accent" style="aspect-ratio: 1/1" loading="eager" decoding="sync" fetchpriority="high" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/10/ubuntu-22-10-150x150.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="80" data-spai-height="80"></div>
+					<div class="ct-entry-content">
+						<div class="ct-post-title">
+							Ubuntu 22.10 ‘Kinetic Kudu’ Is Here, GNOME 43 Is the Main Accent						</div>
+
+						
+													<div class="ct-entry-meta">
+																	<span>
+										October 20, 2022
+									</span>
+								
+															</div>
+											</div>
+				</a>
+			</li>
+					
+			<li>
+				<a href="https://linuxiac.com/fedora-and-opensuse-are-dropping-support-for-some-video-codecs/">
+					<div class="ct-image-container"><img width="150" height="150" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/fedora-opensuse-drops-h264-h265-150x150.jpg" data-spai="1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Fedora and openSUSE Are Dropping Support for Some Video Codecs" style="aspect-ratio: 1/1" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/09/fedora-opensuse-drops-h264-h265-150x150.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="80" data-spai-height="80"></div>
+					<div class="ct-entry-content">
+						<div class="ct-post-title">
+							Fedora and openSUSE Are Dropping Support for Some Video Codecs						</div>
+
+						
+													<div class="ct-entry-meta">
+																	<span>
+										October 5, 2022
+									</span>
+								
+															</div>
+											</div>
+				</a>
+			</li>
+					
+			<li>
+				<a href="https://linuxiac.com/how-to-install-aur-packages-in-arch-linux/">
+					<div class="ct-image-container"><img width="150" height="150" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/arch-aur-yay-150x150.jpg" data-spai="1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="How to Install AUR Packages in Arch Linux" style="aspect-ratio: 1/1" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/10/arch-aur-yay-150x150.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="80" data-spai-height="80"></div>
+					<div class="ct-entry-content">
+						<div class="ct-post-title">
+							How to Install AUR Packages in Arch Linux						</div>
+
+						
+													<div class="ct-entry-meta">
+																	<span>
+										October 25, 2022
+									</span>
+								
+															</div>
+											</div>
+				</a>
+			</li>
+					
+			<li>
+				<a href="https://linuxiac.com/torvalds-sees-no-reason-to-keep-i486-support-in-the-linux-kernel/">
+					<div class="ct-image-container"><img width="150" height="150" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/torvalds-i486-150x150.jpg" data-spai="1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Torvalds Sees No Reason to Keep i486 Support in the Linux Kernel" style="aspect-ratio: 1/1" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/10/torvalds-i486-150x150.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="80" data-spai-height="80"></div>
+					<div class="ct-entry-content">
+						<div class="ct-post-title">
+							Torvalds Sees No Reason to Keep i486 Support in the Linux Kernel						</div>
+
+						
+													<div class="ct-entry-meta">
+																	<span>
+										October 24, 2022
+									</span>
+								
+															</div>
+											</div>
+				</a>
+			</li>
+					
+			<li>
+				<a href="https://linuxiac.com/set-up-automatic-security-updates-on-ubuntu/">
+					<div class="ct-image-container"><img width="150" height="150" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/ubuntu-autoupdate-150x150.jpg" data-spai="1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="How to Set up Automatic Security Updates on Ubuntu" style="aspect-ratio: 1/1" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/06/ubuntu-autoupdate-150x150.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="80" data-spai-height="80"></div>
+					<div class="ct-entry-content">
+						<div class="ct-post-title">
+							How to Set up Automatic Security Updates on Ubuntu (Complete Guide)						</div>
+
+						
+													<div class="ct-entry-meta">
+																	<span>
+										June 17, 2022
+									</span>
+								
+															</div>
+											</div>
+				</a>
+			</li>
+			</ul>
+
+
+</div>
+<div class="ct-widget widget_block widget_media_image" id="block-5">
+<figure class="wp-block-image aligncenter size-full"><a href="https://subscribe.linuxiac.com/?p=subscribe&amp;id=1"><img decoding="async" width="315" height="420" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/subscribe.jpg" data-spai="1" alt="Subscribe to our newsletters!" class="wp-image-47680" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/07/subscribe.jpg" data-spai-exclude="none" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="315" data-spai-height="420"></a></figure>
+</div>
+					</div>
+
+			</aside>
+
+	
+			</div>
+
+
+		<div class="ct-related-posts-container">
+		<div class="ct-container">
+	
+		<div class="ct-related-posts">
+			
+											<h3 class="ct-block-title">
+					Related Posts				</h3>
+							
+			<div class="ct-related-posts-items" data-layout="grid">
+							
+				<article itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+					<a class="ct-image-container" href="https://linuxiac.com/linux-users-can-now-enjoy-ms-teams-as-pwa-app/" aria-label="Linux Users Can Now Enjoy MS Teams as a Progressive Web App" tabindex="-1"><img width="768" height="576" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDk2MCIgd2lkdGg9IjEyODAiIGhlaWdodD0iOTYwIiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGbGludXhpYWMuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIyJTJGMTElMkZ0ZWFtcy5qcGciIGRhdGEtdz0iMTI4MCIgZGF0YS1oPSI5NjAiIGRhdGEtYmlwPSIiPjwvc3ZnPg==" data-spai="1" class="attachment-medium_large size-medium_large wp-post-image" alt="Linux Users Can Now Enjoy MS Teams as a Progressive Web App" decoding="async" itemprop="image" style="aspect-ratio: 4/3;" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/11/teams.jpg" data-spai-exclude="none" data-spai-orig-obs="true"></a>
+											<h4 class="related-entry-title" itemprop="name">
+							<a href="https://linuxiac.com/linux-users-can-now-enjoy-ms-teams-as-pwa-app/" itemprop="url" rel="bookmark">Linux Users Can Now Enjoy MS Teams as a Progressive Web App</a>
+						</h4>
+					
+					<ul class="entry-meta" data-type="simple:slash">
+<li class="meta-updated-date" itemprop="dateModified"><time class="ct-meta-element-date" datetime="2022-11-11T14:39:18+00:00">November 11, 2022</time></li>
+<li class="meta-comments"><a href="https://linuxiac.com/linux-users-can-now-enjoy-ms-teams-as-pwa-app/#comments">3 Comments</a></li>
+</ul>				</article>
+							
+				<article itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+					<a class="ct-image-container" href="https://linuxiac.com/best-free-linux-gui-code-editors/" aria-label="6 Best Free Linux GUI Code Editors for Programming" tabindex="-1"><img width="768" height="576" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDk2MCIgd2lkdGg9IjEyODAiIGhlaWdodD0iOTYwIiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGbGludXhpYWMuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIyJTJGMTAlMkZiZXN0LWNvZGUtZWRpdG9ycy5qcGciIGRhdGEtdz0iMTI4MCIgZGF0YS1oPSI5NjAiIGRhdGEtYmlwPSIiPjwvc3ZnPg==" data-spai="1" class="attachment-medium_large size-medium_large wp-post-image" alt="Best Free Linux GUI Code Editors for Programming" decoding="async" itemprop="image" style="aspect-ratio: 4/3;" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/10/best-code-editors.jpg" data-spai-exclude="none" data-spai-orig-obs="true"></a>
+											<h4 class="related-entry-title" itemprop="name">
+							<a href="https://linuxiac.com/best-free-linux-gui-code-editors/" itemprop="url" rel="bookmark">6 Best Free Linux GUI Code Editors for Programming</a>
+						</h4>
+					
+					<ul class="entry-meta" data-type="simple:slash">
+<li class="meta-updated-date" itemprop="dateModified"><time class="ct-meta-element-date" datetime="2022-10-31T17:54:56+00:00">October 31, 2022</time></li>
+<li class="meta-comments"><a href="https://linuxiac.com/best-free-linux-gui-code-editors/#comments">1 Comment</a></li>
+</ul>				</article>
+							
+				<article itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+					<a class="ct-image-container" href="https://linuxiac.com/how-to-install-vs-code-on-fedora-linux/" aria-label="How to Install VS Code on Fedora Linux: A Step-by-Step Guide" tabindex="-1"><img width="768" height="576" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjgwIDk2MCIgd2lkdGg9IjEyODAiIGhlaWdodD0iOTYwIiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGbGludXhpYWMuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIyJTJGMTAlMkZ2c2NvZGUtZmVkb3JhLmpwZyIgZGF0YS13PSIxMjgwIiBkYXRhLWg9Ijk2MCIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" class="attachment-medium_large size-medium_large wp-post-image" alt="How to Install VS Code on Fedora Linux: A Step-by-Step Guide" decoding="async" itemprop="image" style="aspect-ratio: 4/3;" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/10/vscode-fedora.jpg" data-spai-exclude="none" data-spai-orig-obs="true"></a>
+											<h4 class="related-entry-title" itemprop="name">
+							<a href="https://linuxiac.com/how-to-install-vs-code-on-fedora-linux/" itemprop="url" rel="bookmark">How to Install VS Code on Fedora Linux: A Step-by-Step Guide</a>
+						</h4>
+					
+					<ul class="entry-meta" data-type="simple:slash"><li class="meta-updated-date" itemprop="dateModified"><time class="ct-meta-element-date" datetime="2022-10-17T12:01:24+00:00">October 17, 2022</time></li></ul>				</article>
+							
+				<article itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+					<a class="ct-image-container" href="https://linuxiac.com/how-to-set-up-lemp-stack-with-docker-compose/" aria-label="How to Set Up Nginx, MariaDB, and PHP with Docker Compose" tabindex="-1"><img width="768" height="432" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NjAgNTQwIiB3aWR0aD0iOTYwIiBoZWlnaHQ9IjU0MCIgZGF0YS11PSJodHRwcyUzQSUyRiUyRmxpbnV4aWFjLmNvbSUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAyMiUyRjA5JTJGbGVtcC1kb2NrZXItY29tcG9zZS5qcGciIGRhdGEtdz0iOTYwIiBkYXRhLWg9IjU0MCIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" class="attachment-medium_large size-medium_large wp-post-image" alt="How to Set Up Nginx, MariaDB, PHP with Docker Compose" decoding="async" itemprop="image" style="aspect-ratio: 4/3;" data-spai-target="src" data-spai-orig="https://linuxiac.com/wp-content/uploads/2022/09/lemp-docker-compose.jpg" data-spai-exclude="none" data-spai-orig-obs="true"></a>
+											<h4 class="related-entry-title" itemprop="name">
+							<a href="https://linuxiac.com/how-to-set-up-lemp-stack-with-docker-compose/" itemprop="url" rel="bookmark">How to Set Up Nginx, MariaDB, and PHP with Docker Compose</a>
+						</h4>
+					
+					<ul class="entry-meta" data-type="simple:slash">
+<li class="meta-updated-date" itemprop="dateModified"><time class="ct-meta-element-date" datetime="2022-10-12T21:01:36+00:00">October 12, 2022</time></li>
+<li class="meta-comments"><a href="https://linuxiac.com/how-to-set-up-lemp-stack-with-docker-compose/#comments">4 Comments</a></li>
+</ul>				</article>
+						</div>
+
+					</div>
+
+			</div>
+	</div>
+	
+	<div class="ct-comments-container"><div class="ct-container">
+
+<div class="ct-comments" id="comments" style="content-visibility:auto;contain-intrinsic-size:1px 1000px;">
+	
+			<h3 class="ct-comments-title">
+			One comment		</h3>
+	
+	
+			<ol class="ct-comment-list">
+			
+	<li id="comment-27901" class="comment even thread-even depth-1 ct-has-avatar">
+		<article class="ct-comment-inner" id="ct-comment-inner-27901">
+
+			<footer class="ct-comment-meta">
+				<figure class="ct-image-container"><img src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/b8b3b9a15f1ac462c9a3241a147e29d5.png" width="100" height="100" alt="Bobby Borisov" style="aspect-ratio: 1/1;" data-spai-target="src" data-spai-orig="" data-spai-exclude="nocdn"></figure>
+				<h4 class="ct-comment-author">
+					t				</h4>
+
+				<div class="ct-comment-meta-data">
+					<a href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#comment-27901">
+						August 22, 2022 / 4:55 am					</a>
+
+					
+					<a rel="nofollow" class="comment-reply-link" href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#comment-27901" data-commentid="27901" data-postid="48442" data-belowelement="ct-comment-inner-27901" data-respondelement="respond" data-replyto="Reply to t" aria-label="Reply to t">Reply</a>				</div>
+			</footer>
+
+
+			<div class="ct-comment-content entry-content">
+				<p>I recommend using Viscodium. It is the same as VS Code but without telemetry.<br>
+<a href="https://vscodium.com/" rel="nofollow ugc">https://vscodium.com/</a></p>
+
+							</div>
+
+		</article>
+	</li>		</ol>
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply<span class="ct-cancel-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="https://linuxiac.com/install-visual-studio-code-on-ubuntu-22-04/#respond" style="display:none;">Cancel Reply</a></span>
+</h2>
+<form action="https://linuxiac.com/wp-comments-post.php" method="post" id="commentform" class="comment-form  has-labels-inside" novalidate="">
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+<p class="comment-form-field-input-author">
+			<label for="author">Name <b class="required">&nbsp;*</b></label>
+			<input id="author" name="author" type="text" value="" size="30">
+			</p>
+<p class="comment-form-field-input-email">
+				<label for="email">Email <b class="required">&nbsp;*</b></label>
+				<input id="email" name="email" type="text" value="" size="30">
+			</p>
+
+
+<p class="comment-form-field-textarea">
+			<label for="comment">Add Comment</label>
+			<textarea id="comment" name="comment" cols="45" rows="8" required="required"></textarea>
+		</p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><button type="submit" name="submit" id="submit" class="submit" value="Post Comment">Post Comment</button> <input type="hidden" name="comment_post_ID" value="48442" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ea7c41c721"></p>
+<p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1669094917954"><script src="data:text/javascript,document.getElementById%28%20%22ak_js_1%22%20%29.setAttribute%28%20%22value%22%2C%20%28%20new%20Date%28%29%20%29.getTime%28%29%20%29%3B" type="text/javascript" defer=""></script></p>
+</form>	</div>
+<!-- #respond -->
+	
+	
+</div>
+
+</div></div>	</main>
+
+	<footer id="footer" class="ct-footer" data-id="type-1" itemscope="" itemtype="https://schema.org/WPFooter"><div data-row="top"><div class="ct-container">
+<div data-column="copyright">
+<div class="ct-footer-copyright" data-id="copyright">
+
+	<p>Copyright © 2022 Linuxiac</p>
+</div>
+</div>
+<div data-column="menu">
+<nav id="footer-menu" class="footer-menu-inline " data-id="menu" itemscope="" itemtype="https://schema.org/SiteNavigationElement" aria-label="Footer Menu">
+
+	<ul id="menu-footer" class="menu">
+<li id="menu-item-41805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-41805"><a href="https://linuxiac.com/privacy-policy/" class="ct-menu-link">Privacy</a></li>
+<li id="menu-item-41802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41802"><a href="https://linuxiac.com/about-us/" class="ct-menu-link">About us</a></li>
+<li id="menu-item-41808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41808"><a href="https://linuxiac.com/contact/" class="ct-menu-link">Contact us</a></li>
+</ul></nav>
+</div>
+</div></div></footer>
+</div>
+
+<script id="mkaz-code-syntax-prism-js-js-extra" src="data:text/javascript,%0Avar%20prism_settings%20%3D%20%7B%22pluginUrl%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.com%5C%2Fwp-content%5C%2Fplugins%5C%2Fcode-syntax-block%5C%2F%22%7D%3B%0A" type="text/javascript" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/prism.js.download" id="mkaz-code-syntax-prism-js-js" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/preload.min.js.download" id="flying_press_preload-js" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/baguetteBox.min.js.download" id="baguettebox-js" defer=""></script>
+<script id="baguettebox-js-after" src="data:text/javascript,%0Awindow.addEventListener%28%22load%22%2C%20function%28%29%20%7BbaguetteBox.run%28%22.wp-block-gallery%2C%3Anot%28.wp-block-gallery%29%3E.wp-block-image%2C.wp-block-media-text__media%2C.gallery%2C.wp-block-coblocks-gallery-masonry%2C.wp-block-coblocks-gallery-stacked%2C.wp-block-coblocks-gallery-collage%2C.wp-block-coblocks-gallery-offset%2C.wp-block-coblocks-gallery-stacked%2C.mgl-gallery%22%2C%7Bcaptions%3Afunction%28t%29%7Bvar%20e%3Dt.parentElement.classList.contains%28%22wp-block-image%22%29%7C%7Ct.parentElement.classList.contains%28%22wp-block-media-text__media%22%29%3Ft.parentElement.querySelector%28%22figcaption%22%29%3At.parentElement.parentElement.querySelector%28%22figcaption%2Cdd%22%29%3Breturn%21%21e%26%26e.innerHTML%7D%2Cfilter%3A%2F.%2B%5C.%28gif%7Cjpe%3Fg%7Cpng%7Cwebp%7Csvg%7Cavif%7Cheif%7Cheic%7Ctif%3Ff%7C%29%28%24%7C%5C%3F%29%2Fi%7D%29%3B%7D%29%3B%0A" type="text/javascript" defer=""></script>
+<script id="wpil-frontend-script-js-extra" src="data:text/javascript,%0Avar%20wpilFrontend%20%3D%20%7B%22ajaxUrl%22%3A%22%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22postId%22%3A%2248442%22%2C%22postType%22%3A%22post%22%2C%22openInternalInNewTab%22%3A%220%22%2C%22openExternalInNewTab%22%3A%221%22%2C%22disableClicks%22%3A%220%22%2C%22openLinksWithJS%22%3A%220%22%2C%22trackAllElementClicks%22%3A%220%22%2C%22clicksI18n%22%3A%7B%22imageNoText%22%3A%22Image%20in%20link%3A%20No%20Text%22%2C%22imageText%22%3A%22Image%20Title%3A%20%22%2C%22noText%22%3A%22No%20Anchor%20Text%20Found%22%7D%7D%3B%0A" type="text/javascript" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/3bbda04d595e.frontend.js.download" id="wpil-frontend-script-js" defer=""></script>
+<script id="ct-scripts-js-extra" src="data:text/javascript,%0Avar%20ct_localizations%20%3D%20%7B%22ajax_url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.com%5C%2Fwp-admin%5C%2Fadmin-ajax.php%22%2C%22nonce%22%3A%220839d45bf0%22%2C%22public_url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fthemes%5C%2Fblocksy%5C%2Fstatic%5C%2Fbundle%5C%2F%22%2C%22rest_url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.com%5C%2Fwp-json%5C%2F%22%2C%22search_url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.com%5C%2Fsearch%5C%2FQUERY_STRING%5C%2F%22%2C%22show_more_text%22%3A%22Show%20more%22%2C%22more_text%22%3A%22More%22%2C%22search_live_results%22%3A%22Search%20results%22%2C%22search_live_no_result%22%3A%22No%20results%22%2C%22search_live_one_result%22%3A%22You%20got%20%25s%20result.%20Please%20press%20Tab%20to%20select%20it.%22%2C%22search_live_many_results%22%3A%22You%20got%20%25s%20results.%20Please%20press%20Tab%20to%20select%20one.%22%2C%22expand_submenu%22%3A%22Expand%20dropdown%20menu%22%2C%22collapse_submenu%22%3A%22Collapse%20dropdown%20menu%22%2C%22dynamic_js_chunks%22%3A%5B%7B%22id%22%3A%22blocksy_pro_micro_popups%22%2C%22selector%22%3A%22.ct-popup%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fplugins%5C%2Fblocksy-companion-pro%5C%2Fframework%5C%2Fpremium%5C%2Fstatic%5C%2Fbundle%5C%2Fmicro-popups.js%22%7D%2C%7B%22id%22%3A%22blocksy_dark_mode%22%2C%22selector%22%3A%22%5Bdata-id%3D%5C%22dark-mode-switcher%5C%22%5D%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fplugins%5C%2Fblocksy-companion-pro%5C%2Fstatic%5C%2Fbundle%5C%2Fdark-mode.js%22%2C%22trigger%22%3A%22click%22%7D%2C%7B%22id%22%3A%22blocksy_sticky_header%22%2C%22selector%22%3A%22header%20%5Bdata-sticky%5D%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fplugins%5C%2Fblocksy-companion-pro%5C%2Fstatic%5C%2Fbundle%5C%2Fsticky.js%22%7D%5D%2C%22dynamic_styles%22%3A%7B%22lazy_load%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fthemes%5C%2Fblocksy%5C%2Fstatic%5C%2Fbundle%5C%2Fnon-critical-styles.min.css%22%2C%22search_lazy%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fthemes%5C%2Fblocksy%5C%2Fstatic%5C%2Fbundle%5C%2Fnon-critical-search-styles.min.css%22%7D%2C%22dynamic_styles_selectors%22%3A%5B%7B%22selector%22%3A%22%23account-modal%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Flinuxiac.b-cdn.net%5C%2Fwp-content%5C%2Fplugins%5C%2Fblocksy-companion-pro%5C%2Fstatic%5C%2Fbundle%5C%2Faccount-lazy.min.css%22%7D%5D%7D%3B%0A" type="text/javascript" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/main.js.download" id="ct-scripts-js" defer=""></script>
+<script src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/comment-reply.min.js.download" id="comment-reply-js" defer=""></script>
+<script defer="" src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/670400ecee85.akismet-frontend.js.download" id="akismet-frontend-js"></script>
+
+<script>(function(){const dpi=window.devicePixelRatio>1?2:1;const images=document.querySelectorAll("img[data-origin-src]");images.forEach(function(image){const image_width=image.offsetWidth*dpi;const render_width=Math.ceil(image_width/100)*100;const origin_src=image.getAttribute("data-origin-src");image.src=`${origin_src}?width=${render_width}`})})();(function(){const events=["mouseover","keydown","touchstart","touchmove","wheel"];const elements=document.querySelectorAll("[data-lazy-method='interaction']");if(!elements.length)return;function load_elements(){clearTimeout(timeout);events.forEach(function(event){window.removeEventListener(event,load_elements,{passive:true})});elements.forEach(function(element){element.getAttribute("data-lazy-attributes").split(",").forEach(function(attribute){const value=element.getAttribute("data-lazy-".concat(attribute));element.setAttribute(attribute,value)})})}const timeout=setTimeout(load_elements,1e4);events.forEach(function(event){window.addEventListener(event,load_elements,{passive:true})})})();(function(){const observer=new IntersectionObserver(function(elements){elements.forEach(function(element){if(element.isIntersecting){observer.unobserve(element.target);element.target.getAttribute("data-lazy-attributes").split(",").forEach(function(attribute){const value=element.target.getAttribute("data-lazy-".concat(attribute));element.target.setAttribute(attribute,value)})}})},{rootMargin:"300px"});document.querySelectorAll("[data-lazy-method='viewport']").forEach(function(element){observer.observe(element)})})();</script>
+
+<div role="dialog" id="baguetteBox-overlay" aria-labelledby="baguetteBox-figure-0" aria-describedby="baguetteBox-figcaption-0" style="background-color: rgba(0, 0, 0, 0.8); display: none;" class=""><div id="baguetteBox-slider" style="transform: translate3d(0%, 0px, 0px);"><div class="full-image" id="baguette-img-0"><figure id="baguetteBox-figure-0"><img src="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/vscode4(1).png" alt="Add Microsoft&#39;s Visual Studio Code Repository" data-spai-target="src" data-spai-orig="" data-spai-exclude="nocdn"></figure></div></div><button type="button" id="previous-button" aria-label="Previous" class="baguetteBox-button" style="display: none;"><svg width="44" height="60"><polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button><button type="button" id="next-button" aria-label="Next" class="baguetteBox-button" style="display: none;"><svg width="44" height="60"><polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="butt" fill="none" stroke-linejoin="round"></polyline></svg></button><button type="button" id="close-button" aria-label="Close" class="baguetteBox-button"><svg width="30" height="30"><g stroke="rgb(160,160,160)" stroke-width="4"><line x1="5" y1="5" x2="25" y2="25"></line><line x1="5" y1="25" x2="25" y2="5"></line></g></svg></button></div><link rel="stylesheet" href="./How to Install VS Code on Ubuntu 22.04_ A Step-by-Step Guide_files/non-critical-styles.min.css"></body></html>

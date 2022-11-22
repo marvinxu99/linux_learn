@@ -1,0 +1,34 @@
+Building a Local Version of Python
+If the Python version you need is not available on the CS systems, it is straightforward to download source code 
+and build a local Python interpreter in project space.
+
+Navigate to the Download Python page, navigate to the version of your choice, download the corresponding “XZ 
+compressed source tarball,” and put it in a temporary directory in your project space. For example (assuming your project space is at /n/fs/myproject):
+
+ $ mkdir /n/fs/myproject/temp
+ $ cd /n/fs/myproject/temp
+ $ wget https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tar.xz
+Un-tar the tarball and build Python. The --prefix option to the configure script sets the location where Python will be installed. For example:
+
+ $ tar xJf Python-3.10.6.tar.xz
+ $ cd Python-3.10.6
+ $ ./configure --prefix=/n/fs/myproject/py310
+ $ make
+Note that you may get output that includes this:
+
+ Python build finished successfully!
+ The necessary bits to build these optional modules were not found:
+ nis
+The nis module is not useful in the CS environment and is deprecated in Python 3.11 and so this warning can be safely ignored.
+
+Install the Python you just built into the location specified by --prefix above:
+
+ $ make install
+Your newly build Python interpreter is available in the bin subdirectory of the --prefix path set above:
+
+ $ /n/fs/myproject/py310/bin/python3.10 --version
+ Python 3.10.6
+(Optional) Remove the source tarball and the build directory.
+
+ $ cd /n/fs/myproject/temp
+ $ rm -rf Python-3.10.6.tar.xz Python-3.10.6

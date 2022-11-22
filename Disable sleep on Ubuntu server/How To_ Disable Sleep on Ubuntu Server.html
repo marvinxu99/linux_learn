@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    How To: Disable Sleep on Ubuntu Server
+  </title>
+<meta name="description" content="Unix/Linux tutorials for beginners: how-tos and troubleshooting techniques, latest news and technical projects.">
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/V9ZlepNSal-kNn5vc_vQ1RCMlrQ.js.download"></script><link rel="canonical" href="https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/">
+<link type="application/atom+xml" rel="alternate" href="https://www.unixtutorial.org/atom.xml" title="Unix Tutorial">
+
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/">
+<meta property="og:title" content="How To: Disable Sleep on Ubuntu Server">
+<meta property="og:description" content="Unix/Linux tutorials for beginners: how-tos and troubleshooting techniques, latest news and technical projects.">
+<meta property="og:image" content="https://www.unixtutorial.org/images/posts/ubuntu-19-10-wallpaper.png">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+<meta property="og:site_name" content="Unix Tutorial">
+<style>
+    
+
+    @import url(/css/monokai.css);.keycombo{white-space:pre}.keycombo.combined{padding:0 0 3px;border-radius:4px;background:#eceff4;border:solid 1px #d8dee9}.keycombo kbd{font-family:Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:300}.keycombo kbd.symbol{background:#f6f7fa;border-radius:4px;border:solid 1px #e5e9f0;color:#000;display:inline-block;font-size:0.85em;line-height:1.4;margin:0;min-width:2.4ch;padding:0 2px;text-align:center}.keycombo kbd.symbol.key{background:#fcfdfd;color:#2e3440}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}article{padding:8px}h1{font-size:2em;margin:0.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:Monaco;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:Monaco;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,blockquote,p,pre,dl,dd,ol,ul,figure,hr,fieldset,legend{margin:0;padding:0}li>ol,li>ul{margin-bottom:0}table{border-collapse:collapse;border-spacing:0}address,h1,h2,h3,h4,h5,h6,blockquote,p,pre,dl,ol,ul,figure,hr,table,fieldset{margin-bottom:16px}dd,ol,ul{margin-left:16px}@-webkit-keyframes spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.icon{position:relative;display:inline-block;width:40px;height:40px;overflow:hidden;fill:currentColor}.icon__cnt{width:100%;height:100%;background:inherit;fill:inherit;pointer-events:none;transform:translateX(0);-ms-transform:translate(0.5px, -0.3px)}.icon--m{width:50px;height:50px}.icon--l{width:100px;height:100px}.icon--xl{width:150px;height:150px}.icon--xxl{width:200px;height:200px}.icon__spinner{position:absolute;top:0;left:0;width:100%;height:100%}.icon--ei-spinner .icon__spinner,.icon--ei-spinner-2 .icon__spinner{-webkit-animation:spin 1s steps(12) infinite;animation:spin 1s steps(12) infinite}.icon--ei-spinner-3 .icon__spinner{-webkit-animation:spin 1.5s linear infinite;animation:spin 1.5s linear infinite}.icon--ei-sc-facebook{fill:#3b5998}.icon--ei-sc-github{fill:#333}.icon--ei-sc-google-plus{fill:#dd4b39}.icon--ei-sc-instagram{fill:#3f729b}.icon--ei-sc-linkedin{fill:#0976b4}.icon--ei-sc-odnoklassniki{fill:#ed812b}.icon--ei-sc-skype{fill:#00aff0}.icon--ei-sc-soundcloud{fill:#f80}.icon--ei-sc-tumblr{fill:#35465c}.icon--ei-sc-twitter{fill:#55acee}.icon--ei-sc-vimeo{fill:#1ab7ea}.icon--ei-sc-vk{fill:#45668e}.icon--ei-sc-youtube{fill:#e52d27}.icon--ei-sc-pinterest{fill:#bd081c}.icon--ei-sc-telegram{fill:#0088cc}#carbonads{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif}#carbonads{display:flex;max-width:330px;background-color:#fafafa;box-shadow:0 1px 4px 1px rgba(0,0,0,0.1)}#carbonads a{color:inherit;text-decoration:none}#carbonads a:hover{color:inherit}#carbonads span{position:relative;display:block;overflow:hidden}#carbonads .carbon-wrap{display:flex}.carbon-img{display:block;margin:0;line-height:1}.carbon-img img{display:block}.carbon-text{font-size:13px;padding:10px;line-height:1.5;text-align:left}.carbon-poweredby{display:block;padding:8px 10px;background:repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(0,0,0,0.025) 5px, rgba(0,0,0,0.025) 10px) rgba(241,243,244,0.4);text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:9px;line-height:1}.highlight{margin:0;background:#fff}.highlighter-rouge .highlight{background:#fafafa}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .NOgo{color:#888}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0085b3;font-weight:bold}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#0085b3}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb;font-weight:bold}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}body{color:#323232;font-size:17px;font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:300;line-height:26px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*::selection{color:#fff;background:#cf4344}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/0eC6fl06luXEYWpBSJvXCIX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/Fl4y0QdOxyyTHEGMXX8kcYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/-L14Jk06m6pUHB-5mXQQnYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/I3S1wsgSg9YCurV6PUkTOYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/NYDWBdD4gIq26G5XYbHsFIX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+0102-0103, U+1EA0-1EF9, U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/Pru33qjShpZSmG3z6VYwnYX0hVgzZQUfRDuZrPvH3D8.woff2) format("woff2");unicode-range:U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local("Roboto Light"),local("Roboto-Light"),url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/sTdaA6j0Psb920Vjv-mrzH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/uYECMKoHcO9x1wdmbyHIm3-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/tnj4SB6DNbdaQnsM8CFqBX-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/_VYFx-s824kXq_Ul2BHqYH-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/NJ4vxlgWwWbEsv18dAhqnn-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+0102-0103, U+1EA0-1EF9, U+20AB}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/Ks_cVxiCiwUWVsFWFA3Bjn-_kf6ByYO6CLYdB4HQE-Y.woff2) format("woff2");unicode-range:U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400;src:local("Libre Baskerville"),local("LibreBaskerville-Regular"),url(https://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsK56jerHLVJWaC-9Ja-RK4Ug.woff2) format("woff2");unicode-range:U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400;src:local("Libre Baskerville"),local("LibreBaskerville-Regular"),url(https://fonts.gstatic.com/s/librebaskerville/v4/pR0sBQVcY0JZc_ciXjFsK8j0T1k_tV7QYhgnOhA2764.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000}a{color:#cf4344;text-decoration:none;transition:500ms}a:hover,a:active,a:focus{color:#cf4344;text-decoration:none}img{display:block;max-width:100%;padding-top:10px;padding-bottom:10px;font-style:italic}img+em{font-weight:bold}.flag{max-width:100%;display:inline;padding-top:0px;padding-bottom:0px}hr{height:1px;margin:32px 0;border:0;background-color:#ECF0F1}p.hidden{display:none}h1,h2,h3,h4,h5,h6{font-weight:inherit;line-height:initial}@media (min-width: 64em){h1{font-size:32px}}@media (min-width: 20em){h1{font-size:24px}}@media (min-width: 64em){h2{font-size:24px}}@media (min-width: 20em) and (max-width: 39.99em){h2{font-size:20px}}h3{font-size:20px}h4{font-size:18px}h5{font-size:18px}h6{font-size:16px}b,strong{font-weight:700}ul{margin-left:32px}ol{margin-left:32px}blockquote{padding-left:16px;border-left:3px solid #323232;font-style:italic}p code{font-family:Monaco,Courier;background-color:#141414}code.language-plaintext{font-family:Monaco,Courier;background-color:lightgray}code.language-console{font-family:Monaco,Courier;background-color:#141414;overflow:auto;font-size:17px;line-height:26px;white-space:pre-wrap;word-wrap:break-word;word-break:break-all}p code{padding:4px 7px}input[type='text'],input[type='password'],input[type='date'],input[type='month'],input[type='week'],input[type='email'],input[type='number'],input[type='search'],input[type='tel'],input[type='time'],input[type='url'],input[type='color'],input[type='datetime'],input[type='datetime-local'],select,textarea{width:100%;border:1px solid #ECF0F1;border-radius:0;outline:none;line-height:initial;background-color:#fff;font-size:17px;transition:500ms}input[type='text']:focus,input[type='password']:focus,input[type='date']:focus,input[type='month']:focus,input[type='week']:focus,input[type='email']:focus,input[type='number']:focus,input[type='search']:focus,input[type='tel']:focus,input[type='time']:focus,input[type='url']:focus,input[type='color']:focus,input[type='datetime']:focus,input[type='datetime-local']:focus,select:focus,textarea:focus{border:1px solid #707070}.o-grid{display:flex;flex-wrap:wrap;margin:0 auto;max-width:1200px}.o-grid:after{content:'';display:table;clear:both}.o-grid .o-grid{margin-right:-8px;margin-left:-8px;padding:8px}.o-grid__col{width:100%;padding-right:8px;padding-left:8px}.o-grid__col--1-3-s{width:33.3333333333%}.o-grid__col--2-3-s{width:66.6666666667%}.o-grid__col--1-4-s{width:25%}.o-grid__col--2-4-s{width:50%}.o-grid__col--3-4-s{width:75%}.o-grid__col--4-4-s{width:100%}@media (min-width: 40em){.o-grid__col--1-3-m{width:33.3333333333%}.o-grid__col--2-3-m{width:66.6666666667%}.o-grid__col--1-4-m{width:25%}.o-grid__col--2-4-m{width:50%}.o-grid__col--3-4-m{width:75%}}@media (min-width: 64em){.o-grid__col--1-3-l{width:33.3333333333%}.o-grid__col--2-3-l{width:66.6666666667%}.o-grid__col--1-4-l{width:25%}.o-grid__col--2-4-l{width:50%}.o-grid__col--3-4-l{width:75%}}.o-grid__col--full{width:100%}.o-grid__col--center{margin:0 auto}.o-grid__col--end{margin-left:auto}.o-wrapper{padding:32px 0 24px 0}.c-off-canvas-container{display:flex;min-height:100vh;flex-direction:column}.c-off-canvas-container .o-wrapper{flex:1 0 auto}.o-plain-list{margin:0;padding-top:5px;list-style:none}.c-header{height:60px;padding:4px;background-color:#000;border-bottom:1px solid #ECF0F1}.page-template-tags .c-header{border-bottom:1px solid #ECF0F1}.c-header--has-cover{border-bottom:0}.c-logo__link{font-size:19px;font-weight:400;color:#fff}.c-logo__img{max-height:50px;padding-top:0px;padding-bottom:0px}@media (min-width: 64em){.c-nav{text-align:center}}.c-nav__item{font-size:17px;font-weight:bolder}@media (min-width: 64em){.c-nav__item{display:inline-block}.c-nav__item:not(:last-child){margin-right:16px}}@media (max-width: 63.99em){.c-nav__item{display:block}}.c-nav__link{display:block;transition:500ms;color:#fff}@media (max-width: 63.99em){.c-nav__link{margin-bottom:8px;padding:4px 0}}.c-nav__link--current{color:#cf4344}.home-template .c-nav__link--current:not(:hover){color:#cf4344}.c-nav__link:hover,.c-nav__link:active,.c-nav__link:focus{color:#cf4344}.c-search{position:absolute;top:0;right:0;bottom:0;left:0;padding-top:80px;background:#fff;z-index:-1;opacity:0;transform:scale(0.96);transition:transform 250ms cubic-bezier(0.694, 0, 0.335, 1),opacity 250ms cubic-bezier(0.8, 0, 0.55, 0.94),z-index 250ms step-end}@media (min-width: 40em){.c-search{padding-top:64px}}.c-search.is-active{z-index:10;opacity:1;height:220vh;transform:scale(1);transition:transform 250ms cubic-bezier(0.8, 0, 0.55, 0.94),opacity 250ms cubic-bezier(0.8, 0, 0.55, 0.94),z-index 250ms step-start}.c-search__form{display:flex;justify-content:center;align-items:center;position:relative;margin-left:16px;padding-right:16px}.c-search__icon{position:absolute;left:16px;fill:#707070;width:32px;height:32px}.c-search__input[type='search']{width:100%;outline:none;margin-bottom:0;padding-left:56px;font-weight:300;font-size:19px;border:0;border-radius:4px;background-color:#F9FAFB}.c-search__input[type='search']::placeholder{opacity:1;color:#707070}.c-search__input[type='search']:focus{border:0}@media (min-width: 40em){.c-search__input[type='search']{font-size:24px}}.c-search__close{display:flex;justify-content:center;align-items:center;position:absolute;top:16px;right:32px;width:48px;height:48px;cursor:pointer;border-radius:100%;background-color:#F9FAFB}@media (min-width: 40em){.c-search__close{top:32px}}.c-search__close .icon{fill:#707070;transition:500ms}.c-search__close:hover .icon{fill:#323232;transform:rotate(90deg)}.c-search-results{display:none;height:calc(100vh - 168px);overflow:auto;white-space:normal;margin-top:16px;margin-left:16px;padding-right:16px;counter-reset:search}@media (min-width: 40em){.c-search-results{height:calc(100vh - 160px)}}.c-search-result{display:flex;align-items:center;line-height:1;padding:16px 16px 16px 32px;background-color:#F9FAFB;border-radius:4px}.c-search-result:not(:last-child){margin-bottom:16px}.c-search-result:before{counter-increment:search;content:counter(search) ". ";position:relative;left:-16px;font-size:19px;font-style:italic;font-family:Lora,"Libre Baskerville",serif;color:#cf4344}.c-search-result__content{flex:1}.c-search-result__title{margin-bottom:0;font-size:14px;font-weight:700}.c-off-canvas-toggle{float:right;position:relative;top:16px;z-index:10;height:24px;width:24px;cursor:pointer}@media (min-width: 64em){.c-off-canvas-toggle{display:none}}.c-off-canvas-toggle__icon{position:absolute;left:0;height:1px;width:25px;background:#fff;cursor:pointer}.c-off-canvas-toggle__icon:before,.c-off-canvas-toggle__icon:after{content:'';display:block;height:100%;background-color:inherit;transition:500ms}.c-off-canvas-toggle__icon:before{transform:translateY(16px)}.c-off-canvas-toggle__icon:after{transform:translateY(7px)}.c-off-canvas-toggle--close .c-off-canvas-toggle__icon{height:2px;background-color:transparent}.c-off-canvas-toggle--close .c-off-canvas-toggle__icon:before,.c-off-canvas-toggle--close .c-off-canvas-toggle__icon:after{position:relative;visibility:visible;background:#000}.c-off-canvas-toggle--close .c-off-canvas-toggle__icon:before{top:11px;transform:rotate(-45deg)}.c-off-canvas-toggle--close .c-off-canvas-toggle__icon:after{top:9px;transform:rotate(45deg)}@media (max-width: 63.99em){.c-off-canvas-toggle--close{top:0;float:none;display:block;margin-left:auto}}html,body{overflow-x:hidden}@media (min-width: 64em){.c-off-canvas-content{position:relative}}@media (max-width: 63.99em){.c-off-canvas-content{position:fixed;top:0;right:0;z-index:1;width:300px;height:100vh;overflow-y:auto;padding:24px 32px;background-color:#000;transform:translate3d(300px, 0, 0)}}@media screen and (max-width: 63.99em) and (-ms-high-contrast: active),(max-width: 63.99em) and (-ms-high-contrast: none){.c-off-canvas-content.is-active{right:300px}}@media (max-width: 63.99em){.c-off-canvas-container{-webkit-perspective:1000;transition:transform 500ms cubic-bezier(0.565, 1.65, 0.765, 0.88)}.c-off-canvas-container.is-active{transform:translate3d(-300px, 0, 0)}.c-off-canvas-container.is-active:after{position:fixed;top:0;right:0;bottom:0;left:0;content:'';background-color:rgba(0,0,0,0.2)}}@media (min-width: 64em){.c-social-nav{text-align:right;padding-top:0px}}.c-social-nav__item{display:inline-block}.c-social-nav__icon{fill:#fff;vertical-align:middle;transition:500ms}.c-social-nav__icon:hover,.c-social-nav__icon:active,.c-social-nav__icon:focus{fill:#cf4344}.c-archive{padding:32px;margin-bottom:32px;background-color:#F9FAFB}.c-archive__title{margin-bottom:0;font-size:18px}.c-archive__description{margin-top:8px;margin-bottom:0;font-size:14px;line-height:22px}.c-post-card{position:relative;display:flex;width:100%;flex-direction:column;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #ECF0F1}.c-post-card-wrap{display:flex}.c-post-card-wrap--first{width:75%}.c-post-card__image{position:relative;background-repeat:no-repeat;background-position:center;background-size:contain;background-color:#F9FAFB;margin-bottom:16px}@media (min-width: 40em){.c-post-card__image{transition:opacity 500ms ease-in-out}.c-post-card__image.js-fadein{opacity:0}}@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 0){.c-post-card__image.js-fadein{opacity:1}}@media (min-width: 40em){.c-post-card__image.is-inview{opacity:1}}.c-post-card__image:before{transition:500ms;position:absolute;top:0;height:100%;width:100%;content:'';background-color:#000;opacity:0}.c-post-card__image:after{display:block;content:'';width:100%;padding-bottom:56.25%}.c-post-card__title{margin-bottom:0;font-weight:400;font-size:19px;line-height:26px;transition:500ms}.c-post-card__link{display:block}.c-post-card--featured__icon{position:absolute;bottom:7px;left:7px;fill:#fff}.c-post-card__date{display:inline-block;color:#707070;font-size:14px}.c-post-card:hover .c-post-card__image:before,.c-post-card:active .c-post-card__image:before,.c-post-card:focus .c-post-card__image:before{opacity:.1}.c-post-card:hover .c-post-card__title,.c-post-card:active .c-post-card__title,.c-post-card:focus .c-post-card__title{color:#707070}.c-post-card:hover .c-post-card__link,.c-post-card:active .c-post-card__link,.c-post-card:focus .c-post-card__link{color:#cf4344}@media (min-width: 40em){.c-post-card--first .c-post-card__image{margin-bottom:0;outline:2px solid rgba(255,255,255,0.5);outline-offset:-10px}.c-post-card--first .c-post-card__image:before{opacity:.3}.c-post-card--first .c-post-card__meta{display:table;position:absolute;top:50%;width:70%;z-index:100;left:78px;transform:translate(0, -50%);font-weight:400}}@media (min-width: 40em) and (min-width: 64em){.c-post-card--first .c-post-card__meta{width:50%}}@media (min-width: 40em){.c-post-card--first .c-post-card__title{display:table-header-group;font-size:28px;line-height:initial}}@media (min-width: 40em) and (min-width: 64em){.c-post-card--first .c-post-card__title{font-size:38px}}@media (min-width: 40em){.c-post-card--first .c-post-card__link{display:block;color:#fff}.c-post-card--first .c-post-card__author,.c-post-card--first .c-post-card__date{color:#fff}.c-post-card--first .c-post-card--featured__icon{bottom:13px;left:13px}.c-post-card--first:hover .c-post-card__title a,.c-post-card--first:active .c-post-card__title a,.c-post-card--first:focus .c-post-card__title a{color:#fff}.c-post-card--first:hover .c-post-card__image,.c-post-card--first:active .c-post-card__image,.c-post-card--first:focus .c-post-card__image{outline:2px solid rgba(255,255,255,0.6)}.c-post-card--first:hover .c-post-card__image:before,.c-post-card--first:active .c-post-card__image:before,.c-post-card--first:focus .c-post-card__image:before{opacity:.2}}.c-post-card-recent:not(:last-child){margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid #ECF0F1}.c-post-card-recent__image{display:block;position:relative;background-repeat:no-repeat;background-position:center;background-size:contain;background-color:#F9FAFB;margin-bottom:8px}@media (min-width: 40em){.c-post-card-recent__image{transition:opacity 500ms ease-in-out}.c-post-card-recent__image.js-fadein{opacity:0}}@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 0){.c-post-card-recent__image.js-fadein{opacity:1}}@media (min-width: 40em){.c-post-card-recent__image.is-inview{opacity:1}}.c-post-card-recent__image:before{transition:500ms;position:absolute;top:0;height:100%;width:100%;content:'';background-color:#000;opacity:0}.c-post-card-recent__image:after{display:block;content:'';width:100%;padding-bottom:56.25%}.c-post-card-recent__title{margin-bottom:0;font-weight:400;font-size:17px;line-height:26px;transition:500ms}.c-post-card-recent__flaglink{display:inline;color:#323232}.c-post-card-recent__link{display:block;color:#323232}.c-post-card-recent--featured__icon{position:absolute;bottom:7px;left:7px;fill:#fff}.c-post-card-recent__date{display:inline-block;color:#707070;font-size:14px}.c-post-card-recent:hover .c-post-card-recent__image:before,.c-post-card-recent:active .c-post-card-recent__image:before,.c-post-card-recent:focus .c-post-card-recent__image:before{opacity:.1}.c-post-card-recent:hover .c-post-card-recent__title,.c-post-card-recent:active .c-post-card-recent__title,.c-post-card-recent:focus .c-post-card-recent__title{color:#707070}.c-post-card-recent:hover .c-post-card-recent__link,.c-post-card-recent:active .c-post-card-recent__link,.c-post-card-recent:focus .c-post-card-recent__link{color:#cf4344}.c-pagination{text-transform:uppercase}.c-pagination:hover,.c-pagination:active,.c-pagination:focus{color:#cf4344;text-decoration:none}.c-pagination__text{position:relative;font-size:14px;letter-spacing:2px}.c-pagination__text--prev{left:-16px}.c-pagination__text--next{right:-16px}.c-pagination__icon{vertical-align:middle}.c-pagination__icon--prev{left:-8px}.c-pagination__icon--next{right:-8px}.c-post-hero{position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#F9FAFB}.c-post-hero:before{content:'';display:block;padding-bottom:33%}.c-post__date{color:#707070;font-size:14px}.c-post__title{font-weight:400;line-height:initial}@media (min-width: 64em){.c-post__title{font-size:32px}}.c-content{font-family:Lora,"Libre Baskerville",serif}@media (max-width: 39.99em){.c-content img{position:relative;left:50%;max-width:115%;transform:translate(-50%)}}.c-content a:not(.c-btn):hover{text-decoration:underline}.c-content a:not(.c-btn){text-decoration:none;text-decoration-skip:ink}.c-content a:not(.c-btn):hover,.c-content a:not(.c-btn):active,.c-content a:not(.c-btn):focus{color:#cf4344}.c-content h1,.c-content h2,.c-content h3,.c-content h4,.c-content h5,.c-content h6{font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:700;padding-top:16px}.c-content dd:not(:root:root),.c-content ol:not(:root:root),.c-content ul:not(:root:root){-webkit-padding-start:8px}.c-share{display:flex;margin-top:16px;border:1px solid #ECF0F1}.c-share__item{flex:1;text-align:center}.c-share__item:not(:last-child){border-right:1px solid #ECF0F1}.c-share__link{display:block;padding:4px;background-color:#fff;transition:500ms}.c-share__link:hover,.c-share__link:active,.c-share__link:focus{background-color:#F9FAFB}.c-share__icon{vertical-align:middle;fill:#707070}.c-author{padding:32px;margin-bottom:32px;background-color:#F9FAFB}@media (min-width: 64em){.c-author{display:flex;align-items:center}}.c-author__img{float:left;margin-right:16px;border-radius:100%;height:64px;width:64px}@media (min-width: 64em){.c-author__img{margin-right:32px;height:96px;width:96px}}@media (max-width: 39.99em){.c-author__img{margin-bottom:8px}}@media (min-width: 40em){.c-author__body{overflow:hidden}}.c-author__name{margin-bottom:8px;font-family:Roboto,Helvetica,Arial,sans-serif}.c-author__bio{margin-bottom:8px;font-size:17px;font-family:Roboto,Helvetica,Arial,sans-serif;line-height:26px}.c-author-links{font-family:Roboto,Helvetica,Arial,sans-serif}.c-author-links__item{display:inline-block;font-size:17px;line-height:26px}.c-author-links__icon{vertical-align:middle;fill:#323232;transition:500ms}.c-author-links__icon:hover,.c-author-links__icon:active,.c-author-links__icon:focus{fill:#cf4344}.twitter-tweet,.fluid-width-video-wrapper{margin-bottom:16px !important}.c-tags{margin-bottom:8px}.c-tags a{display:inline-block;padding:4px 16px;margin:0 8px 4px 0;font-size:14px;font-weight:400;font-family:Roboto,Helvetica,Arial,sans-serif;line-height:22px;color:#707070;border-radius:3px;background-color:#F9FAFB;transition:500ms}@media (max-width: 39.99em){.c-tags a{margin-bottom:14px}}.c-tags a:hover,.c-tags a:active,.c-tags a:focus{color:#000;text-decoration:none}.c-tag-card{position:relative;margin-bottom:26px;background-color:#F9FAFB}.c-tag-card__image{display:block;background-position:50%;background-repeat:no-repeat;background-size:cover;text-decoration:none}@media (min-width: 40em){.c-tag-card__image{opacity:0;transition:opacity 500ms ease-in-out}.c-tag-card__image.is-inview{opacity:1}}@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 0){.c-tag-card__image{opacity:1}}.c-tag-card__image:before{position:absolute;top:0;height:100%;width:100%;content:'';background-color:rgba(0,0,0,0.3);transition:500ms}.c-tag-card__image:after{display:block;content:'';width:100%;padding-bottom:75%}.c-tag-card__title{position:absolute;bottom:0;left:0;right:0;margin-bottom:0;padding:16px;font-size:19px;font-weight:400;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.25),0 1px 25px rgba(0,0,0,0.75)}.c-tag-card:hover .c-tag-card__image:before,.c-tag-card:active .c-tag-card__image:before,.c-tag-card:focus .c-tag-card__image:before{background-color:rgba(0,0,0,0.1)}.c-btn{display:inline-block;padding:8px 32px;cursor:pointer;transition:500ms;text-align:center;vertical-align:middle;white-space:nowrap;outline:none;line-height:inherit;border:0;color:#fff;white-space:initial;background-color:#1F5F8B;font-size:17px;font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:400}.c-btn:hover,.c-btn:active,.c-btn:focus{color:#fff;text-decoration:none;background-color:#253B6E}.c-btn--full{width:100%}.c-btn--small{padding:4px 16px}.c-btn--radius{border-radius:4px}.c-btn__icon{margin-right:4px;vertical-align:middle;fill:#fff}.c-subscribe{padding:32px;text-align:center;background-color:#F9FAFB}@media (min-width: 64em){.c-subscribe{padding:64px 0}}@media (max-width: 63.99em){.c-subscribe-form__input{margin-bottom:16px}}@media (min-width: 64em){.c-subscribe-form{display:flex;flex-wrap:wrap}.c-subscribe-form .form-group{flex:8}.c-subscribe-form__btn{position:relative;left:-1px;flex:2}}.c-widget{padding:32px;margin-bottom:32px;border:1px solid #ECF0F1}.c-widget__title{padding-bottom:16px;margin-bottom:32px;border-bottom:1px solid #ECF0F1;line-height:initial;letter-spacing:2px;font-size:16px;font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:bold;text-transform:uppercase}.c-widget-instagram{display:flex;flex-wrap:wrap}.c-widget-instagram__item{flex:1 33%;border:1px solid #fff}.c-widget-social__item{text-align:center;display:inline-block}.c-widget-social__link{display:block;padding:0 4px;transition:500ms}.c-widget-social__link:hover,.c-widget-social__link:active,.c-widget-social__link:focus{background-color:#F9FAFB}.c-widget-social__icon{vertical-align:middle;fill:#707070;transition:500ms}.c-widget-social__icon:hover,.c-widget-social__icon:active,.c-widget-social__icon:focus{fill:#cf4344}.c-related{padding:16px 0 0}@media (min-width: 40em){.c-related{padding:32px 0 16px 0}}.c-related__title{padding-bottom:8px;margin-bottom:16px;border-bottom:1px solid #ECF0F1}@media (min-width: 40em){.c-related__title{padding-bottom:16px;margin-bottom:32px}}.c-footer{padding:32px 0 16px 0;background-color:black;border-top:1px solid #ECF0F1}@media (min-width: 64em){.c-footer{padding:64px 0 16px 0}}.c-footer__copy{font-size:14px;margin-top:16px;padding-top:16px;border-top:1px solid #ECF0F1}.c-footer-list{margin-bottom:16px}.c-footer-list li{display:block;margin:0}.c-footer-list a{display:block;padding:0;margin-bottom:4px;font-size:14px}.c-footer-list a:hover,.c-footer-list a:active,.c-footer-list a:focus{color:#cf4344}.c-footer-list a:hover .icon,.c-footer-list a:active .icon,.c-footer-list a:focus .icon{fill:#cf4344}.c-footer-list .icon{fill:#707070;vertical-align:middle;transition:500ms}.u-hidden{display:none}.u-hidden-visually{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.u-font-serif{font-family:Lora,"Libre Baskerville",serif}.u-font-sans-serif{font-family:Roboto,Helvetica,Arial,sans-serif}.u-font-medium{font-size:17px;line-height:26px}.u-font-small{font-size:14px;line-height:22px}.u-font-tiny{font-size:12px;line-height:19px}.u-font-light{font-weight:300}.u-font-regular{font-weight:400}.u-font-bold{font-weight:700}.u-text-left{text-align:left}.u-text-right{text-align:right}.u-text-center{text-align:center}.u-text-justify{text-align:justify}.u-inline{display:inline}.u-block{display:block}.u-inline-block{display:inline-block}.u-left{float:left}.u-right{float:right}.u-clearfix:after{content:'';display:table;clear:both}
+
+  </style>
+<link rel="stylesheet" id="google-fonts-css" href="./How To_ Disable Sleep on Ubuntu Server_files/css" type="text/css" media="all">
+<script type="text/javascript">
+    var base_url = "";
+  </script>
+<script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101244987);
+  </script>
+<script async="" src="./How To_ Disable Sleep on Ubuntu Server_files/js" type="text/javascript"></script>
+
+<script id="ze-snippet" src="./How To_ Disable Sleep on Ubuntu Server_files/snippet.js.download" type="text/javascript"></script>
+
+
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/embed.js.download" data-timestamp="1669132889667"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script charset="utf-8" src="./How To_ Disable Sleep on Ubuntu Server_files/horizon_timeline.5b32f06df3f1186af2ebf11024b09726.js.download"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.3dde841b202e38b98f0e8a3d08c54dd7.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.a0092a9b6d9c06bf965e6c41a81f2c09.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.d08789965a607a028188811eff5e3421.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script async="" id="dsq_recs_scr" src="./How To_ Disable Sleep on Ubuntu Server_files/recommendations.js.download"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/recommendations/styles/recommendations.10022a97346f1c6e3798931bbd8e4bb5.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/common.bundle.57b2d4f1e1a97bb55ce6702dec16a334.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/recommendations/recommendations.bundle.a7942bfa7a9020c903037fbdc08e6ca7.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="./How To_ Disable Sleep on Ubuntu Server_files/alfie_v4.63f1ab6d6b9d5807dc0c94ef3fe0b851.js.download" async="" charset="UTF-8"></script></head>
+<body class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="ei-sprite" style="display:none"><symbol id="ei-archive-icon" viewBox="0 0 50 50"><path d="M42 20h-2v-5c0-.6-.4-1-1-1H11c-.6 0-1 .4-1 1v5H8v-5c0-1.7 1.3-3 3-3h28c1.7 0 3 1.3 3 3v5z"></path><path d="M37 40H13c-1.7 0-3-1.3-3-3V20h2v17c0 .6.4 1 1 1h24c.6 0 1-.4 1-1V20h2v17c0 1.7-1.3 3-3 3z"></path><path d="M29 26h-8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1s-.4 1-1 1z"></path><path d="M8 18h34v2H8z"></path></symbol><symbol id="ei-arrow-down-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M25 34.4l-9.7-9.7 1.4-1.4 8.3 8.3 8.3-8.3 1.4 1.4z"></path><path d="M24 16h2v17h-2z"></path></symbol><symbol id="ei-arrow-left-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M25.3 34.7L15.6 25l9.7-9.7 1.4 1.4-8.3 8.3 8.3 8.3z"></path><path d="M17 24h17v2H17z"></path></symbol><symbol id="ei-arrow-right-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M24.7 34.7l-1.4-1.4 8.3-8.3-8.3-8.3 1.4-1.4 9.7 9.7z"></path><path d="M16 24h17v2H16z"></path></symbol><symbol id="ei-arrow-up-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M33.3 26.7L25 18.4l-8.3 8.3-1.4-1.4 9.7-9.7 9.7 9.7z"></path><path d="M24 17h2v17h-2z"></path></symbol><symbol id="ei-bell-icon" viewBox="0 0 50 50"><path d="M42 36c-6.5 0-7.4-6.3-8.2-11.9C32.9 17.9 32.1 12 25 12s-7.9 5.9-8.8 12.1C15.4 29.7 14.5 36 8 36v-2c4.6 0 5.3-3.9 6.2-10.1.9-6.2 2-13.9 10.8-13.9s9.9 7.7 10.8 13.9C36.7 30.1 37.4 34 42 34v2z"></path><path d="M25 40c-2.8 0-5-2.2-5-5h2c0 1.7 1.3 3 3 3s3-1.3 3-3h2c0 2.8-2.2 5-5 5z"></path><path d="M8 34h34v2H8z"></path><path d="M27 10c0 1.1-.9 1.5-2 1.5s-2-.4-2-1.5.9-2 2-2 2 .9 2 2z"></path></symbol><symbol id="ei-calendar-icon" viewBox="0 0 50 50"><path d="M37 38H13c-1.7 0-3-1.3-3-3V13c0-1.7 1.1-3 2.5-3H14v2h-1.5c-.2 0-.5.4-.5 1v22c0 .6.4 1 1 1h24c.6 0 1-.4 1-1V13c0-.6-.3-1-.5-1H36v-2h1.5c1.4 0 2.5 1.3 2.5 3v22c0 1.7-1.3 3-3 3z"></path><path d="M17 14c-.6 0-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v4c0 .6-.4 1-1 1z"></path><path d="M33 14c-.6 0-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v4c0 .6-.4 1-1 1z"></path><path d="M20 10h10v2H20z"></path><path d="M12 16h26v2H12z"></path><path d="M34 20h2v2h-2z"></path><path d="M30 20h2v2h-2z"></path><path d="M26 20h2v2h-2z"></path><path d="M22 20h2v2h-2z"></path><path d="M18 20h2v2h-2z"></path><path d="M34 24h2v2h-2z"></path><path d="M30 24h2v2h-2z"></path><path d="M26 24h2v2h-2z"></path><path d="M22 24h2v2h-2z"></path><path d="M18 24h2v2h-2z"></path><path d="M14 24h2v2h-2z"></path><path d="M34 28h2v2h-2z"></path><path d="M30 28h2v2h-2z"></path><path d="M26 28h2v2h-2z"></path><path d="M22 28h2v2h-2z"></path><path d="M18 28h2v2h-2z"></path><path d="M14 28h2v2h-2z"></path><path d="M30 32h2v2h-2z"></path><path d="M26 32h2v2h-2z"></path><path d="M22 32h2v2h-2z"></path><path d="M18 32h2v2h-2z"></path><path d="M14 32h2v2h-2z"></path></symbol><symbol id="ei-camera-icon" viewBox="0 0 50 50"><path d="M39 38H11c-1.7 0-3-1.3-3-3V17c0-1.7 1.3-3 3-3h6c.2 0 .5-.2.6-.3l1.1-2.2c.4-.8 1.4-1.4 2.3-1.4h8c.9 0 1.9.6 2.3 1.4l1.1 2.2c.1.2.4.3.6.3h6c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3zM11 16c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h28c.6 0 1-.4 1-1V17c0-.6-.4-1-1-1h-6c-.9 0-1.9-.6-2.3-1.4l-1.1-2.2c-.1-.2-.4-.4-.6-.4h-8c-.2 0-.5.2-.6.3l-1.1 2.2c-.4.9-1.4 1.5-2.3 1.5h-6z"></path><path d="M25 34c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"></path><circle cx="35" cy="18" r="1"></circle><path d="M12 12h4v1h-4z"></path><path d="M25 21v-1c-2.8 0-5 2.2-5 5h1c0-2.2 1.8-4 4-4z"></path></symbol><symbol id="ei-cart-icon" viewBox="0 0 50 50"><path d="M35 34H13c-.3 0-.6-.2-.8-.4s-.2-.6-.1-.9l1.9-4.8L12.1 10H6V8h7c.5 0 .9.4 1 .9l2 19c0 .2 0 .3-.1.5L14.5 32H36l-1 2z"></path><path d="M15.2 29l-.4-2L38 22.2V14H14v-2h25c.6 0 1 .4 1 1v10c0 .5-.3.9-.8 1l-24 5z"></path><path d="M36 40c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path><path d="M12 40c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></symbol><symbol id="ei-chart-icon" viewBox="0 0 50 50"><path d="M18 36h-2V26h-4v10h-2V24h8z"></path><path d="M28 36h-2V20h-4v16h-2V18h8z"></path><path d="M38 36h-2V14h-4v22h-2V12h8z"></path><path d="M8 36h32v2H8z"></path></symbol><symbol id="ei-check-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M23 32.4l-8.7-8.7 1.4-1.4 7.3 7.3 11.3-11.3 1.4 1.4z"></path></symbol><symbol id="ei-chevron-down-icon" viewBox="0 0 50 50"><path d="M25 32.4l-9.7-9.7 1.4-1.4 8.3 8.3 8.3-8.3 1.4 1.4z"></path></symbol><symbol id="ei-chevron-left-icon" viewBox="0 0 50 50"><path d="M27.3 34.7L17.6 25l9.7-9.7 1.4 1.4-8.3 8.3 8.3 8.3z"></path></symbol><symbol id="ei-chevron-right-icon" viewBox="0 0 50 50"><path d="M22.7 34.7l-1.4-1.4 8.3-8.3-8.3-8.3 1.4-1.4 9.7 9.7z"></path></symbol><symbol id="ei-chevron-up-icon" viewBox="0 0 50 50"><path d="M33.3 28.7L25 20.4l-8.3 8.3-1.4-1.4 9.7-9.7 9.7 9.7z"></path></symbol><symbol id="ei-clock-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M30.3 33.7L24 27.4V16h2v10.6l5.7 5.7z"></path></symbol><symbol id="ei-close-o-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M32.283 16.302l1.414 1.415-15.98 15.98-1.414-1.414z"></path><path d="M17.717 16.302l15.98 15.98-1.414 1.415-15.98-15.98z"></path></symbol><symbol id="ei-close-icon" viewBox="0 0 50 50"><path d="M37.304 11.282l1.414 1.414-26.022 26.02-1.414-1.413z"></path><path d="M12.696 11.282l26.022 26.02-1.414 1.415-26.022-26.02z"></path></symbol><symbol id="ei-comment-icon" viewBox="0 0 50 50"><path d="M15 42h-2l1.2-1.6c.8-1.1 1.3-2.5 1.6-4.2C10.8 33.9 8 29.6 8 24c0-8.6 6.5-14 17-14s17 5.4 17 14c0 8.8-6.4 14-17 14h-.7c-1.6 1.9-4.4 4-9.3 4zm10-30c-9.4 0-15 4.5-15 12 0 6.4 3.9 9.4 7.2 10.7l.7.3-.1.8c-.2 1.6-.5 3-1.1 4.2 3.3-.4 5.2-2.1 6.3-3.5l.3-.4H25c13.5 0 15-8.4 15-12C40 16.5 34.4 12 25 12z"></path></symbol><symbol id="ei-credit-card-icon" viewBox="0 0 50 50"><path d="M39 38H11c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h28c1.7 0 3 1.3 3 3v20c0 1.7-1.3 3-3 3zM11 14c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h28c.6 0 1-.4 1-1V15c0-.6-.4-1-1-1H11z"></path><path d="M9 16h32v6H9z"></path><path d="M12 26h1v2h-1z"></path><path d="M14 26h1v2h-1z"></path><path d="M16 26h1v2h-1z"></path><path d="M19 26h1v2h-1z"></path><path d="M21 26h1v2h-1z"></path><path d="M23 26h1v2h-1z"></path><path d="M26 26h1v2h-1z"></path><path d="M28 26h1v2h-1z"></path><path d="M30 26h1v2h-1z"></path><path d="M33 26h1v2h-1z"></path><path d="M35 26h1v2h-1z"></path><path d="M37 26h1v2h-1z"></path></symbol><symbol id="ei-envelope-icon" viewBox="0 0 50 50"><path opacity=".9" d="M31.796 24.244l9.97 9.97-1.415 1.414-9.97-9.97z"></path><path opacity=".9" d="M18.278 24.287l1.414 1.414-9.9 9.9-1.414-1.41z"></path><path d="M25 29.9c-1.5 0-3.1-.6-4.2-1.8L8.3 15.7l1.4-1.4 12.5 12.5c1.6 1.6 4.1 1.6 5.7 0l12.5-12.5 1.4 1.4-12.6 12.5c-1.1 1.1-2.7 1.7-4.2 1.7z"></path><path d="M39 38H11c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h28c1.7 0 3 1.3 3 3v20c0 1.7-1.3 3-3 3zM11 14c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h28c.6 0 1-.4 1-1V15c0-.6-.4-1-1-1H11z"></path></symbol><symbol id="ei-exclamation-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M24 32h2v2h-2z"></path><path d="M25.6 30h-1.2l-.4-8v-6h2v6z"></path></symbol><symbol id="ei-external-link-icon" viewBox="0 0 50 50"><path d="M38.288 10.297l1.414 1.415-14.99 14.99-1.414-1.414z"></path><path d="M40 20h-2v-8h-8v-2h10z"></path><path d="M35 38H15c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h11v2H15c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V24h2v11c0 1.7-1.3 3-3 3z"></path></symbol><symbol id="ei-eye-icon" viewBox="0 0 50 50"><path d="M25 36C13.5 36 8.3 25.9 8.1 25.4c-.1-.3-.1-.6 0-.9C8.3 24.1 13.5 14 25 14s16.7 10.1 16.9 10.6c.1.3.1.6 0 .9-.2.4-5.4 10.5-16.9 10.5zM10.1 25c1.1 1.9 5.9 9 14.9 9s13.7-7.1 14.9-9c-1.1-1.9-5.9-9-14.9-9s-13.7 7.1-14.9 9z"></path><path d="M25 34c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"></path><path d="M25 30c-2.8 0-5-2.2-5-5 0-.6.4-1 1-1s1 .4 1 1c0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3c-.6 0-1-.4-1-1s.4-1 1-1c2.8 0 5 2.2 5 5s-2.2 5-5 5z"></path></symbol><symbol id="ei-gear-icon" viewBox="0 0 50 50"><path d="M25 34c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9zm0-16c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"></path><path d="M27.7 44h-5.4l-1.5-4.6c-1-.3-2-.7-2.9-1.2l-4.4 2.2-3.8-3.8 2.2-4.4c-.5-.9-.9-1.9-1.2-2.9L6 27.7v-5.4l4.6-1.5c.3-1 .7-2 1.2-2.9l-2.2-4.4 3.8-3.8 4.4 2.2c.9-.5 1.9-.9 2.9-1.2L22.3 6h5.4l1.5 4.6c1 .3 2 .7 2.9 1.2l4.4-2.2 3.8 3.8-2.2 4.4c.5.9.9 1.9 1.2 2.9l4.6 1.5v5.4l-4.6 1.5c-.3 1-.7 2-1.2 2.9l2.2 4.4-3.8 3.8-4.4-2.2c-.9.5-1.9.9-2.9 1.2L27.7 44zm-4-2h2.6l1.4-4.3.5-.1c1.2-.3 2.3-.8 3.4-1.4l.5-.3 4 2 1.8-1.8-2-4 .3-.5c.6-1 1.1-2.2 1.4-3.4l.1-.5 4.3-1.4v-2.6l-4.3-1.4-.1-.5c-.3-1.2-.8-2.3-1.4-3.4l-.3-.5 2-4-1.8-1.8-4 2-.5-.3c-1.1-.6-2.2-1.1-3.4-1.4l-.5-.1L26.3 8h-2.6l-1.4 4.3-.5.1c-1.2.3-2.3.8-3.4 1.4l-.5.3-4-2-1.8 1.8 2 4-.3.5c-.6 1-1.1 2.2-1.4 3.4l-.1.5L8 23.7v2.6l4.3 1.4.1.5c.3 1.2.8 2.3 1.4 3.4l.3.5-2 4 1.8 1.8 4-2 .5.3c1.1.6 2.2 1.1 3.4 1.4l.5.1 1.4 4.3z"></path></symbol><symbol id="ei-heart-icon" viewBox="0 0 50 50"><path d="M25 39.7l-.6-.5C11.5 28.7 8 25 8 19c0-5 4-9 9-9 4.1 0 6.4 2.3 8 4.1 1.6-1.8 3.9-4.1 8-4.1 5 0 9 4 9 9 0 6-3.5 9.7-16.4 20.2l-.6.5zM17 12c-3.9 0-7 3.1-7 7 0 5.1 3.2 8.5 15 18.1 11.8-9.6 15-13 15-18.1 0-3.9-3.1-7-7-7-3.5 0-5.4 2.1-6.9 3.8L25 17.1l-1.1-1.3C22.4 14.1 20.5 12 17 12z"></path></symbol><symbol id="ei-image-icon" viewBox="0 0 50 50"><path d="M39 38H11c-1.7 0-3-1.3-3-3V15c0-1.7 1.3-3 3-3h28c1.7 0 3 1.3 3 3v20c0 1.7-1.3 3-3 3zM11 14c-.6 0-1 .4-1 1v20c0 .6.4 1 1 1h28c.6 0 1-.4 1-1V15c0-.6-.4-1-1-1H11z"></path><path d="M30 24c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path><path d="M35.3 37.7L19 22.4 9.7 31l-1.4-1.4 10.7-10 17.7 16.7z"></path><path d="M40.4 32.7L35 28.3 30.5 32l-1.3-1.6 5.8-4.7 6.6 5.4z"></path></symbol><symbol id="ei-like-icon" viewBox="0 0 50 50"><path d="M40 23.2c0-2.1-1.7-3.2-4-3.2h-6.7c.5-1.8.7-3.5.7-5 0-5.8-1.6-7-3-7-.9 0-1.6.1-2.5.6-.3.2-.4.4-.5.7l-1 5.4c-1.1 2.8-3.8 5.3-6 7V36c.8 0 1.6.4 2.6.9 1.1.5 2.2 1.1 3.4 1.1h9.5c2 0 3.5-1.6 3.5-3 0-.3 0-.5-.1-.7 1.2-.5 2.1-1.5 2.1-2.8 0-.6-.1-1.1-.3-1.6.8-.5 1.5-1.4 1.5-2.4 0-.6-.3-1.2-.6-1.7.8-.6 1.4-1.6 1.4-2.6zm-2.1 0c0 1.3-1.3 1.4-1.5 2-.2.7.8.9.8 2.1 0 1.2-1.5 1.2-1.7 1.9-.2.8.5 1 .5 2.2v.2c-.2 1-1.7 1.1-2 1.5-.3.5 0 .7 0 1.8 0 .6-.7 1-1.5 1H23c-.8 0-1.6-.4-2.6-.9-.8-.4-1.6-.8-2.4-1V23.5c2.5-1.9 5.7-4.7 6.9-8.2v-.2l.9-5c.4-.1.7-.1 1.2-.1.2 0 1 1.2 1 5 0 1.5-.3 3.1-.8 5H27c-.6 0-1 .4-1 1s.4 1 1 1h9c1 0 1.9.5 1.9 1.2z"></path><path d="M16 38h-6c-1.1 0-2-.9-2-2V22c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-6-16v14h6V22h-6z"></path></symbol><symbol id="ei-link-icon" viewBox="0 0 50 50"><path d="M24 30.2c0 .2.1.5.1.8 0 1.4-.5 2.6-1.5 3.6l-2 2c-1 1-2.2 1.5-3.6 1.5-2.8 0-5.1-2.3-5.1-5.1 0-1.4.5-2.6 1.5-3.6l2-2c1-1 2.2-1.5 3.6-1.5.3 0 .5 0 .8.1l1.5-1.5c-.7-.3-1.5-.4-2.3-.4-1.9 0-3.6.7-4.9 2l-2 2c-1.3 1.3-2 3-2 4.9 0 3.8 3.1 6.9 6.9 6.9 1.9 0 3.6-.7 4.9-2l2-2c1.3-1.3 2-3 2-4.9 0-.8-.1-1.6-.4-2.3L24 30.2z"></path><path d="M33 10.1c-1.9 0-3.6.7-4.9 2l-2 2c-1.3 1.3-2 3-2 4.9 0 .8.1 1.6.4 2.3l1.5-1.5c0-.2-.1-.5-.1-.8 0-1.4.5-2.6 1.5-3.6l2-2c1-1 2.2-1.5 3.6-1.5 2.8 0 5.1 2.3 5.1 5.1 0 1.4-.5 2.6-1.5 3.6l-2 2c-1 1-2.2 1.5-3.6 1.5-.3 0-.5 0-.8-.1l-1.5 1.5c.7.3 1.5.4 2.3.4 1.9 0 3.6-.7 4.9-2l2-2c1.3-1.3 2-3 2-4.9 0-3.8-3.1-6.9-6.9-6.9z"></path><path d="M20 31c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l10-10c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-10 10c-.2.2-.4.3-.7.3z"></path></symbol><symbol id="ei-location-icon" viewBox="0 0 50 50"><path d="M25 42.5l-.8-.9C23.7 41.1 12 27.3 12 19c0-7.2 5.8-13 13-13s13 5.8 13 13c0 8.3-11.7 22.1-12.2 22.7l-.8.8zM25 8c-6.1 0-11 4.9-11 11 0 6.4 8.4 17.2 11 20.4 2.6-3.2 11-14 11-20.4 0-6.1-4.9-11-11-11z"></path><path d="M25 24c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"></path></symbol><symbol id="ei-lock-icon" viewBox="0 0 50 50"><path d="M34 23h-2v-4c0-3.9-3.1-7-7-7s-7 3.1-7 7v4h-2v-4c0-5 4-9 9-9s9 4 9 9v4z"></path><path d="M33 40H17c-1.7 0-3-1.3-3-3V25c0-1.7 1.3-3 3-3h16c1.7 0 3 1.3 3 3v12c0 1.7-1.3 3-3 3zM17 24c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h16c.6 0 1-.4 1-1V25c0-.6-.4-1-1-1H17z"></path><circle cx="25" cy="28" r="2"></circle><path d="M25.5 28h-1l-1 6h3z"></path></symbol><symbol id="ei-minus-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M16 24h18v2H16z"></path></symbol><symbol id="ei-navicon-icon" viewBox="0 0 50 50"><path d="M10 12h30v4H10z"></path><path d="M10 22h30v4H10z"></path><path d="M10 32h30v4H10z"></path></symbol><symbol id="ei-paperclip-icon" viewBox="0 0 50 50"><path d="M13.8 39.6c-1.5 0-3.1-.6-4.2-1.8-2.3-2.3-2.3-6.1 0-8.5l17-17c3.1-3.1 8.2-3.1 11.3 0 3.1 3.1 3.1 8.2 0 11.3L25.1 36.4 23.7 35l12.7-12.7c2.3-2.3 2.3-6.1 0-8.5-2.3-2.3-6.1-2.3-8.5 0l-17 17c-.8.8-1.2 1.8-1.2 2.8 0 1.1.4 2.1 1.2 2.8 1.6 1.6 4.1 1.6 5.7 0l12.7-12.7c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0L18 29.3l-1.4-1.4 8.5-8.5c1.6-1.6 4.1-1.6 5.7 0 1.6 1.6 1.6 4.1 0 5.7L18 37.8c-1.1 1.2-2.7 1.8-4.2 1.8z"></path></symbol><symbol id="ei-pencil-icon" viewBox="0 0 50 50"><path d="M9.6 40.4l2.5-9.9L27 15.6l7.4 7.4-14.9 14.9-9.9 2.5zm4.3-8.9l-1.5 6.1 6.1-1.5L31.6 23 27 18.4 13.9 31.5z"></path><path d="M17.8 37.3c-.6-2.5-2.6-4.5-5.1-5.1l.5-1.9c3.2.8 5.7 3.3 6.5 6.5l-1.9.5z"></path><path d="M29.298 19.287l1.414 1.414-13.01 13.02-1.414-1.41z"></path><path d="M11 39l2.9-.7c-.3-1.1-1.1-1.9-2.2-2.2L11 39z"></path><path d="M35 22.4L27.6 15l3-3 .5.1c3.6.5 6.4 3.3 6.9 6.9l.1.5-3.1 2.9zM30.4 15l4.6 4.6.9-.9c-.5-2.3-2.3-4.1-4.6-4.6l-.9.9z"></path></symbol><symbol id="ei-play-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M20 33.7V16.3L35 25l-15 8.7zm2-14v10.5l9-5.3-9-5.2z"></path></symbol><symbol id="ei-plus-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M16 24h18v2H16z"></path><path d="M24 16h2v18h-2z"></path></symbol><symbol id="ei-pointer-icon" viewBox="0 0 50 50"><path d="M33 38H21c-.6 0-1-.4-1-1 0-1.5-.7-2.4-1.8-3.8-.6-.7-1.3-1.6-2-2.7-1.9-3-3.6-6.6-4-7.9-.4-1.3-.1-2.2.3-2.7.4-.6 1.2-.9 2.1-.9 1.2 0 2.4 1 3.5 2.3V11c0-1.7 1.3-3 3-3s3 1.3 3 3v4.2c.3-.1.6-.2 1-.2 1.1 0 2 .6 2.5 1.4.4-.3.9-.4 1.4-.4 1.4 0 2.5.9 2.9 2.2.3-.1.7-.2 1.1-.2 1.7 0 3 1.3 3 3v3c0 2.6-.5 4.7-1 6.7s-1 3.9-1 6.3c0 .6-.4 1-1 1zm-11.1-2H32c.1-2.2.6-4 1-5.8.5-2 1-3.9 1-6.2v-3c0-.6-.4-1-1-1s-1 .4-1 1v1c0 .6-.4 1-1 1s-1-.4-1-1v-3c0-.6-.4-1-1-1s-1 .4-1 1v2c0 .6-.4 1-1 1s-1-.4-1-1v-3c0-.6-.4-1-1-1s-1 .4-1 1v2c0 .6-.4 1-1 1s-1-.4-1-1v-9c0-.6-.4-1-1-1s-1 .4-1 1v15c0 .6-.4 1-1 1s-1-.4-1-1v-.8c-.9-2.3-2.8-4.2-3.5-4.2-.2 0-.4 0-.5.1-.1.1-.1.4 0 .9.3 1.1 1.8 4.3 3.8 7.5.6 1 1.2 1.7 1.8 2.5 1.1 1.2 2.1 2.3 2.3 4z"></path></symbol><symbol id="ei-question-icon" viewBox="0 0 50 50"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"></path><path d="M19.8 19.6c.3-.8.6-1.4 1.2-1.9.5-.5 1.1-.9 1.9-1.2s1.6-.4 2.5-.4c.7 0 1.4.1 2 .3.6.2 1.2.5 1.7.9s.9.9 1.1 1.5c.3.6.4 1.3.4 2 0 1-.2 1.8-.6 2.5s-1 1.3-1.6 2l-1.3 1.3c-.3.3-.6.6-.7.9-.2.3-.3.7-.3 1.1-.1.4-.1.7-.1 1.5h-1.6c0-.8 0-1.1.1-1.7.1-.5.3-1 .5-1.5.2-.4.5-.8.9-1.2.4-.4.9-.8 1.4-1.4.5-.5.9-1 1.2-1.5s.5-1.2.5-1.8c0-.5-.1-1-.3-1.4-.2-.4-.5-.8-.8-1.1-.3-.3-.7-.5-1.2-.7-.5-.2-.9-.3-1.4-.3-.7 0-1.3.1-1.8.4-.5.2-1 .6-1.3 1-.3.4-.6.9-.8 1.5s-.4.9-.4 1.6h-1.6c0-.9.1-1.6.4-2.4zM26 32v2h-2v-2h2z"></path></symbol><symbol id="ei-redo-icon" viewBox="0 0 50 50"><path d="M25 38c-7.2 0-13-5.8-13-13s5.8-13 13-13c5.4 0 10.1 3.4 11.9 8.7l-1.9.7c-1.5-4.6-5.4-7.4-10-7.4-6.1 0-11 4.9-11 11s4.9 11 11 11c4.3 0 8.2-2.5 10-6.4l1.8.8C34.7 35 30.1 38 25 38z"></path><path d="M38 22h-8v-2h6v-6h2z"></path></symbol><symbol id="ei-refresh-icon" viewBox="0 0 50 50"><path d="M25 38c-7.2 0-13-5.8-13-13 0-3.2 1.2-6.2 3.3-8.6l1.5 1.3C15 19.7 14 22.3 14 25c0 6.1 4.9 11 11 11 1.6 0 3.1-.3 4.6-1l.8 1.8c-1.7.8-3.5 1.2-5.4 1.2z"></path><path d="M34.7 33.7l-1.5-1.3c1.8-2 2.8-4.6 2.8-7.3 0-6.1-4.9-11-11-11-1.6 0-3.1.3-4.6 1l-.8-1.8c1.7-.8 3.5-1.2 5.4-1.2 7.2 0 13 5.8 13 13 0 3.1-1.2 6.2-3.3 8.6z"></path><path d="M18 24h-2v-6h-6v-2h8z"></path><path d="M40 34h-8v-8h2v6h6z"></path></symbol><symbol id="ei-retweet-icon" viewBox="0 0 50 50"><path d="M38 35h-2V17c0-.6-.4-1-1-1H18v-2h17c1.7 0 3 1.3 3 3v18z"></path><path d="M37 36.5l-6.8-7.8 1.6-1.4 5.2 6.2 5.2-6.2 1.6 1.4z"></path><path d="M32 36H15c-1.7 0-3-1.3-3-3V15h2v18c0 .6.4 1 1 1h17v2z"></path><path d="M18.2 22.7L13 16.5l-5.2 6.2-1.6-1.4 6.8-7.8 6.8 7.8z"></path></symbol><symbol id="ei-sc-facebook-icon" viewBox="0 0 50 50"><path d="M26 20v-3c0-1.3.3-2 2.4-2H31v-5h-4c-5 0-7 3.3-7 7v3h-4v5h4v15h6V25h4.4l.6-5h-5z"></path></symbol><symbol id="ei-sc-github-icon" viewBox="0 0 50 50"><path fill-rule="evenodd" clip-rule="evenodd" d="M25 10c-8.3 0-15 6.7-15 15 0 6.6 4.3 12.2 10.3 14.2.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2-.7-1.7-1.7-2.2-1.7-2.2-1.4-.9.1-.9.1-.9 1.5.1 2.3 1.5 2.3 1.5 1.3 2.3 3.5 1.6 4.4 1.2.1-1 .5-1.6 1-2-3.3-.4-6.8-1.7-6.8-7.4 0-1.6.6-3 1.5-4-.2-.4-.7-1.9.1-4 0 0 1.3-.4 4.1 1.5 1.2-.3 2.5-.5 3.8-.5 1.3 0 2.6.2 3.8.5 2.9-1.9 4.1-1.5 4.1-1.5.8 2.1.3 3.6.1 4 1 1 1.5 2.4 1.5 4 0 5.8-3.5 7-6.8 7.4.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7 6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10z"></path></symbol><symbol id="ei-sc-google-plus-icon" viewBox="0 0 50 50"><path d="M18 23v4.8h7.9c-.3 2.1-2.4 6-7.9 6-4.8 0-8.7-4-8.7-8.8s3.9-8.8 8.7-8.8c2.7 0 4.5 1.2 5.6 2.2l3.8-3.7C24.9 12.4 21.8 11 18 11c-7.7 0-14 6.3-14 14s6.3 14 14 14c8.1 0 13.4-5.7 13.4-13.7 0-.9-.1-1.6-.2-2.3H18z"></path><path d="M48 23h-4v-4h-4v4h-4v4h4v4h4v-4h4z"></path></symbol><symbol id="ei-sc-instagram-icon" viewBox="0 0 50 50"><path d="M25 12c-3.53 0-3.973.015-5.36.078-1.384.063-2.329.283-3.156.604a6.372 6.372 0 0 0-2.302 1.5 6.372 6.372 0 0 0-1.5 2.303c-.321.826-.54 1.771-.604 3.155C12.015 21.027 12 21.47 12 25c0 3.53.015 3.973.078 5.36.063 1.384.283 2.329.604 3.155.333.855.777 1.58 1.5 2.303a6.372 6.372 0 0 0 2.302 1.5c.827.32 1.772.54 3.156.604 1.387.063 1.83.078 5.36.078 3.53 0 3.973-.015 5.36-.078 1.384-.063 2.329-.283 3.155-.604a6.371 6.371 0 0 0 2.303-1.5 6.372 6.372 0 0 0 1.5-2.303c.32-.826.54-1.771.604-3.155.063-1.387.078-1.83.078-5.36 0-3.53-.015-3.973-.078-5.36-.063-1.384-.283-2.329-.605-3.155a6.372 6.372 0 0 0-1.499-2.303 6.371 6.371 0 0 0-2.303-1.5c-.826-.32-1.771-.54-3.155-.604C28.973 12.015 28.53 12 25 12m0 2.342c3.471 0 3.882.014 5.253.076 1.267.058 1.956.27 2.414.448.607.236 1.04.517 1.495.972.455.455.736.888.972 1.495.178.458.39 1.146.448 2.414.062 1.37.076 1.782.076 5.253s-.014 3.882-.076 5.253c-.058 1.268-.27 1.956-.448 2.414a4.028 4.028 0 0 1-.972 1.495 4.027 4.027 0 0 1-1.495.972c-.458.178-1.147.39-2.414.448-1.37.062-1.782.076-5.253.076s-3.883-.014-5.253-.076c-1.268-.058-1.956-.27-2.414-.448a4.027 4.027 0 0 1-1.495-.972 4.03 4.03 0 0 1-.972-1.495c-.178-.458-.39-1.146-.448-2.414-.062-1.37-.076-1.782-.076-5.253s.014-3.882.076-5.253c.058-1.268.27-1.956.448-2.414.236-.607.517-1.04.972-1.495a4.028 4.028 0 0 1 1.495-.972c.458-.178 1.146-.39 2.414-.448 1.37-.062 1.782-.076 5.253-.076"></path><path d="M25 18a7 7 0 1 0 0 14 7 7 0 0 0 0-14m0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m8.7-11.4a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0"></path></symbol><symbol id="ei-sc-linkedin-icon" viewBox="0 0 50 50"><path d="M36.1 12H13.9c-1.1 0-1.9.8-1.9 1.9v22.2c0 1 .9 1.9 1.9 1.9h22.2c1.1 0 1.9-.8 1.9-1.9V13.9c0-1.1-.9-1.9-1.9-1.9zM20 34h-4V22h4v12zm-2-13.6c-1.3 0-2.4-1.1-2.4-2.4 0-1.3 1.1-2.4 2.4-2.4 1.3 0 2.4 1.1 2.4 2.4 0 1.3-1.1 2.4-2.4 2.4zM34 34h-4v-6c0-1.6-.4-3.2-2-3.2s-2 1.6-2 3.2v6h-4V22h4v1.4h.2c.5-1 1.8-1.8 3.3-1.8 3.7 0 4.5 2.4 4.5 5.4v7z"></path></symbol><symbol id="ei-sc-odnoklassniki-icon" viewBox="0 0 50 50"><path d="M25 26c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm0-12.2c-2.3 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2-1.9-4.2-4.2-4.2z"></path><path d="M33.6 26.8c-.7-.9-1.9-1-2.8-.4 0 0-2.2 1.6-5.8 1.6-3.6 0-5.8-1.6-5.8-1.6-.9-.7-2.1-.5-2.8.4-.7.9-.5 2.1.4 2.8.1.1 2.2 1.7 5.7 2.2l-5.3 5.4c-.8.8-.8 2.1 0 2.8.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6l5-5.1 5 5.1c.4.4.9.6 1.4.6.5 0 1-.2 1.4-.6.8-.8.8-2 0-2.8l-5.3-5.4c3.5-.6 5.6-2.2 5.7-2.2.9-.7 1.1-2 .4-2.8z"></path></symbol><symbol id="ei-sc-pinterest-icon" viewBox="0 0 50 50"><path d="M25 10c-8.3 0-15 6.7-15 15 0 6.4 4 11.8 9.5 14-.1-1.2-.2-3 .1-4.3.3-1.2 1.8-7.5 1.8-7.5s-.4-.9-.4-2.2c0-2.1 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.1 0 1.3-.8 3.2-1.2 5-.4 1.5.7 2.7 2.2 2.7 2.7 0 4.7-2.8 4.7-6.9 0-3.6-2.6-6.1-6.3-6.1-4.3 0-6.8 3.2-6.8 6.5 0 1.3.5 2.7 1.1 3.4.1.1.1.3.1.4-.1.5-.4 1.5-.4 1.7-.1.3-.2.3-.5.2-1.9-.9-3-3.6-3-5.8 0-4.7 3.4-9.1 9.9-9.1 5.2 0 9.2 3.7 9.2 8.7 0 5.2-3.3 9.3-7.8 9.3-1.5 0-2.9-.8-3.4-1.7 0 0-.8 2.9-.9 3.6-.3 1.3-1.3 2.9-1.9 3.9 1.4.5 2.9.7 4.4.7 8.3 0 15-6.7 15-15s-6.7-15-15-15z"></path></symbol><symbol id="ei-sc-skype-icon" viewBox="0 0 50 50"><path d="M38 27.3c.1-.8.2-1.6.2-2.4 0-1.8-.3-3.5-1-5.1-.7-1.6-1.6-3-2.8-4.2-1.2-1.2-2.6-2.2-4.2-2.8-1.6-.7-3.4-1-5.1-1-.8 0-1.7.1-2.5.2-1.1-.6-2.4-.9-3.7-.9-2.1 0-4.1.8-5.5 2.3-1.5 1.5-2.3 3.4-2.3 5.5 0 1.3.3 2.6 1 3.8-.1.7-.2 1.5-.2 2.3 0 1.8.3 3.5 1 5.1.7 1.6 1.6 3 2.8 4.2 1.2 1.2 2.6 2.2 4.2 2.8 1.6.7 3.4 1 5.1 1 .8 0 1.6-.1 2.3-.2 1.2.7 2.5 1 3.9 1 2.1 0 4.1-.8 5.5-2.3 1.5-1.5 2.3-3.4 2.3-5.5 0-1.3-.3-2.6-1-3.8zM25.1 33c-4.7 0-6.8-2.3-6.8-4 0-.9.7-1.5 1.6-1.5 2 0 1.5 2.9 5.2 2.9 1.9 0 3-1 3-2.1 0-.6-.3-1.4-1.6-1.7l-4.2-1c-3.4-.8-4-2.7-4-4.4 0-3.6 3.3-4.9 6.5-4.9 2.9 0 6.3 1.6 6.3 3.7 0 .9-.8 1.4-1.7 1.4-1.7 0-1.4-2.4-4.9-2.4-1.7 0-2.7.8-2.7 1.9 0 1.1 1.4 1.5 2.5 1.7l3.1.7c3.4.8 4.2 2.7 4.2 4.6.1 2.9-2.1 5.1-6.5 5.1z"></path></symbol><symbol id="ei-sc-soundcloud-icon" viewBox="0 0 50 50"><path d="M40 24h-.2c-.9-4.6-5-8-9.8-8-3.1 0-5.9 1.4-7.7 3.7-.2.3-.3.6-.3 1.2l-.4 9.1.4 5.5c0 .3.3.5.5.5H40c3.3 0 6-2.7 6-6s-2.7-6-6-6z"></path><path d="M18.9 20c-.3 0-.5.2-.5.5l-.8 9v1l.8 5c0 .3.3.5.6.5h.2c.3 0 .5-.2.6-.5l.8-5c0-.3.1-.7 0-1l-.8-9c0-.3-.3-.5-.5-.5h-.4z"></path><path d="M14.9 21c-.3 0-.5.2-.5.5l-.8 8v1l.8 5c0 .3.3.5.6.5h.2c.3 0 .5-.2.6-.5l.8-5c0-.3.1-.7 0-1l-.8-8c0-.3-.3-.5-.5-.5h-.4z"></path><path d="M11 24c-.3 0-.5.2-.6.5l-.8 5v1l.8 5c0 .3.3.5.6.5s.5-.2.6-.5l.8-5v-1l-.8-5c-.1-.3-.3-.5-.6-.5z"></path><path d="M7 23c-.3 0-.5.2-.6.5l-.9 6v1l.8 5c.2.3.4.5.7.5.3 0 .5-.2.6-.5l.8-5c0-.3.1-.7 0-1l-.9-6c0-.3-.2-.5-.5-.5z"></path><path d="M3.3 26c-.3 0-.5.2-.6.5l-.6 3c-.1.3-.1.7 0 1l.6 4c.1.3.3.5.6.5s.5-.2.6-.5l.6-4v-1l-.6-3c-.1-.3-.3-.5-.6-.5z"></path></symbol><symbol id="ei-sc-telegram-icon" viewBox="0 0 50 50"><path d="M37.1 13L9.4 24c-.9.3-.8 1.6.1 1.9l7 2.2 2.8 8.8c.2.7 1.1.9 1.6.4l4.1-3.8 7.8 5.7c.6.4 1.4.1 1.6-.6l5.4-23.2c.3-1.7-1.2-3-2.7-2.4zM20.9 29.8L20 35l-2-7.2L37.5 15 20.9 29.8z"></path></symbol><symbol id="ei-sc-tumblr-icon" viewBox="0 0 50 50"><path d="M30.9 32.4c-.5.2-1.5.5-2.3.5-2.2.1-2.7-1.6-2.7-2.8v-8.7h5.6v-4.2H26V10h-4.1c-.1 0-.2.1-.2.2-.2 2.2-1.3 6-5.5 7.5v3.6H19v9.1c0 3.1 2.3 7.6 8.4 7.5 2.1 0 4.3-.9 4.8-1.6l-1.3-3.9z"></path></symbol><symbol id="ei-sc-twitter-icon" viewBox="0 0 50 50"><path d="M39.2 16.8c-1.1.5-2.2.8-3.5 1 1.2-.8 2.2-1.9 2.7-3.3-1.2.7-2.5 1.2-3.8 1.5-1.1-1.2-2.7-1.9-4.4-1.9-3.3 0-6.1 2.7-6.1 6.1 0 .5.1.9.2 1.4-5-.2-9.5-2.7-12.5-6.3-.5.7-.8 1.7-.8 2.8 0 2.1 1.1 4 2.7 5-1 0-1.9-.3-2.7-.8v.1c0 2.9 2.1 5.4 4.9 5.9-.5.1-1 .2-1.6.2-.4 0-.8 0-1.1-.1.8 2.4 3 4.2 5.7 4.2-2.1 1.6-4.7 2.6-7.5 2.6-.5 0-1 0-1.4-.1 2.4 1.9 5.6 2.9 9 2.9 11.1 0 17.2-9.2 17.2-17.2V20c1.2-.9 2.2-1.9 3-3.2z"></path></symbol><symbol id="ei-sc-vimeo-icon" viewBox="0 0 50 50"><path d="M38 19.6c-.1 2.7-2 6.4-5.6 11.1-3.8 4.9-7 7.4-9.6 7.4-1.6 0-3-1.5-4.1-4.5-.7-2.7-1.5-5.5-2.2-8.2-.8-3-1.7-4.5-2.7-4.5-.2 0-.9.4-2.2 1.3l-1.3-1.7c1.4-1.2 2.7-2.4 4-3.6 1.8-1.6 3.2-2.4 4.1-2.5 2.2-.2 3.5 1.3 4 4.4.5 3.4.9 5.5 1.1 6.4.6 2.8 1.3 4.2 2.1 4.2.6 0 1.5-.9 2.6-2.8 1.2-1.8 1.8-3.2 1.9-4.2.2-1.6-.5-2.4-1.9-2.4-.7 0-1.3.2-2 .5 1.4-4.5 4-6.6 7.8-6.5 2.8.1 4.2 1.9 4 5.6z"></path></symbol><symbol id="ei-sc-vk-icon" viewBox="0 0 50 50"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.1 35.9h2s.6-.1.9-.4c.3-.3.3-.9.3-.9s0-2.6 1.2-3c1.2-.4 2.8 2.6 4.4 3.7 1.2.9 2.1.7 2.1.7l4.4-.1s2.3-.1 1.2-2c-.1-.1-.6-1.3-3.3-3.8-2.8-2.6-2.4-2.1.9-6.6 2-2.7 2.8-4.3 2.6-5.1-.2-.7-1.7-.5-1.7-.5h-5s-.4-.1-.6.1c-.3.2-.4.5-.4.5s-.8 2.1-1.8 3.9c-2.2 3.7-3.1 3.9-3.4 3.7-.8-.5-.6-2.2-.6-3.3 0-3.6.6-5.1-1.1-5.5-.5-.1-.9-.2-2.3-.2-1.8 0-3.3 0-4.1.4-.6.3-1 .9-.7.9.3 0 1.1.2 1.5.7.4.9.4 2.4.4 2.4s.3 4.3-.7 4.8c-.7.4-1.6-.4-3.6-3.8-1-1.7-1.8-3.7-1.8-3.7s-.1-.4-.4-.6c-.3-.2-.8-.3-.8-.3H10s-.7 0-1 .3c-.2.3 0 .8 0 .8s3.7 8.6 7.9 13c3.9 4.2 8.2 3.9 8.2 3.9z"></path></symbol><symbol id="ei-sc-youtube-icon" viewBox="0 0 50 50"><path d="M39.7 18.6s-.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C31.3 14 25 14 25 14s-6.3 0-10.5.3c-.6.1-1.9.1-3 1.3-.9.9-1.2 3-1.2 3S10 21 10 23.4v2.2c0 2.4.3 4.9.3 4.9s.3 2.1 1.2 3c1.1 1.2 2.6 1.2 3.3 1.3 2.4.1 10.2.2 10.2.2s6.3 0 10.5-.3c.6-.1 1.9-.1 3-1.3.9-.9 1.2-3 1.2-3s.3-2.4.3-4.8v-2.2c0-2.4-.3-4.8-.3-4.8zm-17.8 9.8V20l8.1 4.2-8.1 4.2z"></path></symbol><symbol id="ei-search-icon" viewBox="0 0 50 50"><path d="M23 36c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13-5.8 13-13 13zm0-24c-6.1 0-11 4.9-11 11s4.9 11 11 11 11-4.9 11-11-4.9-11-11-11z"></path><path d="M32.682 31.267l8.98 8.98-1.414 1.414-8.98-8.98z"></path></symbol><symbol id="ei-share-apple-icon" viewBox="0 0 50 50"><path d="M30.3 13.7L25 8.4l-5.3 5.3-1.4-1.4L25 5.6l6.7 6.7z"></path><path d="M24 7h2v21h-2z"></path><path d="M35 40H15c-1.7 0-3-1.3-3-3V19c0-1.7 1.3-3 3-3h7v2h-7c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V19c0-.6-.4-1-1-1h-7v-2h7c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3z"></path></symbol><symbol id="ei-share-google-icon" viewBox="0 0 50 50"><path d="M15 30c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"></path><path d="M35 20c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"></path><path d="M35 40c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"></path><path d="M19.007 25.885l12.88 6.44-.895 1.788-12.88-6.44z"></path><path d="M30.993 15.885l.894 1.79-12.88 6.438-.894-1.79z"></path></symbol><symbol id="ei-spinner-2-icon" viewBox="0 0 50 50"><circle cx="25" cy="10" r="2"></circle><circle opacity=".3" cx="25" cy="40" r="2"></circle><circle opacity=".3" cx="32.5" cy="12" r="2"></circle><circle opacity=".3" cx="17.5" cy="38" r="2"></circle><circle opacity=".93" cx="17.5" cy="12" r="2"></circle><circle opacity=".3" cx="32.5" cy="38" r="2"></circle><circle opacity=".65" cx="10" cy="25" r="2"></circle><circle opacity=".3" cx="40" cy="25" r="2"></circle><circle opacity=".86" cx="12" cy="17.5" r="2"></circle><circle opacity=".3" cx="38" cy="32.5" r="2"></circle><circle opacity=".44" cx="12" cy="32.5" r="2"></circle><circle opacity=".3" cx="38" cy="17.5" r="2"></circle></symbol><symbol id="ei-spinner-3-icon" viewBox="0 0 50 50"><path d="M41.9 23.9c-.3-6.1-4-11.8-9.5-14.4-6-2.7-13.3-1.6-18.3 2.6-4.8 4-7 10.5-5.6 16.6 1.3 6 6 10.9 11.9 12.5 7.1 2 13.6-1.4 17.6-7.2-3.6 4.8-9.1 8-15.2 6.9-6.1-1.1-11.1-5.7-12.5-11.7-1.5-6.4 1.5-13.1 7.2-16.4 5.9-3.4 14.2-2.1 18.1 3.7 1 1.4 1.7 3.1 2 4.8.3 1.4.2 2.9.4 4.3.2 1.3 1.3 3 2.8 2.1 1.3-.8 1.2-2.5 1.1-3.8 0-.4.1.7 0 0z"></path></symbol><symbol id="ei-spinner-icon" viewBox="0 0 50 50"><path d="M25 18c-.6 0-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v8c0 .6-.4 1-1 1z"></path><path opacity=".3" d="M25 42c-.6 0-1-.4-1-1v-8c0-.6.4-1 1-1s1 .4 1 1v8c0 .6-.4 1-1 1z"></path><path opacity=".3" d="M29 19c-.2 0-.3 0-.5-.1-.4-.3-.6-.8-.3-1.3l4-6.9c.3-.4.8-.6 1.3-.3.4.3.6.8.3 1.3l-4 6.9c-.2.2-.5.4-.8.4z"></path><path opacity=".3" d="M17 39.8c-.2 0-.3 0-.5-.1-.4-.3-.6-.8-.3-1.3l4-6.9c.3-.4.8-.6 1.3-.3.4.3.6.8.3 1.3l-4 6.9c-.2.2-.5.4-.8.4z"></path><path opacity=".93" d="M21 19c-.3 0-.6-.2-.8-.5l-4-6.9c-.3-.4-.1-1 .3-1.3.4-.3 1-.1 1.3.3l4 6.9c.3.4.1 1-.3 1.3-.2.2-.3.2-.5.2z"></path><path opacity=".3" d="M33 39.8c-.3 0-.6-.2-.8-.5l-4-6.9c-.3-.4-.1-1 .3-1.3.4-.3 1-.1 1.3.3l4 6.9c.3.4.1 1-.3 1.3-.2.1-.3.2-.5.2z"></path><path opacity=".65" d="M17 26H9c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1s-.4 1-1 1z"></path><path opacity=".3" d="M41 26h-8c-.6 0-1-.4-1-1s.4-1 1-1h8c.6 0 1 .4 1 1s-.4 1-1 1z"></path><path opacity=".86" d="M18.1 21.9c-.2 0-.3 0-.5-.1l-6.9-4c-.4-.3-.6-.8-.3-1.3.3-.4.8-.6 1.3-.3l6.9 4c.4.3.6.8.3 1.3-.2.3-.5.4-.8.4z"></path><path opacity=".3" d="M38.9 33.9c-.2 0-.3 0-.5-.1l-6.9-4c-.4-.3-.6-.8-.3-1.3.3-.4.8-.6 1.3-.3l6.9 4c.4.3.6.8.3 1.3-.2.3-.5.4-.8.4z"></path><path opacity=".44" d="M11.1 33.9c-.3 0-.6-.2-.8-.5-.3-.4-.1-1 .3-1.3l6.9-4c.4-.3 1-.1 1.3.3.3.4.1 1-.3 1.3l-6.9 4c-.1.2-.3.2-.5.2z"></path><path opacity=".3" d="M31.9 21.9c-.3 0-.6-.2-.8-.5-.3-.4-.1-1 .3-1.3l6.9-4c.4-.3 1-.1 1.3.3.3.4.1 1-.3 1.3l-6.9 4c-.2.2-.3.2-.5.2z"></path></symbol><symbol id="ei-star-icon" viewBox="0 0 50 50"><path d="M15.2 40.6c-.2 0-.4-.1-.6-.2-.4-.3-.5-.7-.4-1.1l3.9-12-10.2-7.5c-.4-.3-.5-.7-.4-1.1s.5-.7 1-.7h12.7L25 5.9c.1-.4.5-.7 1-.7s.8.3 1 .7L30.9 18h12.7c.4 0 .8.2 1 .6s0 .9-.4 1.1L34 27.1l3.9 12c.1.4 0 .9-.4 1.1s-.8.3-1.2 0L26 33l-10.2 7.4c-.2.1-.4.2-.6.2zM26 30.7c.2 0 .4.1.6.2l8.3 6.1-3.2-9.8c-.1-.4 0-.9.4-1.1l8.3-6.1H30.1c-.4 0-.8-.3-1-.7L26 9.5l-3.2 9.8c-.1.4-.5.7-1 .7H11.5l8.3 6.1c.4.3.5.7.4 1.1L17.1 37l8.3-6.1c.2-.1.4-.2.6-.2z"></path></symbol><symbol id="ei-tag-icon" viewBox="0 0 50 50"><path d="M22 40.1c-.9 0-1.7-.3-2.3-.9l-8.9-8.9c-1.2-1.2-1.2-3.3 0-4.5l11.9-11.9c1-1 3-1.8 4.5-1.8h7.6c1.8 0 3.2 1.4 3.2 3.2v7.6c0 1.5-.8 3.4-1.8 4.5L24.3 39.2c-.6.6-1.4.9-2.3.9zM27.2 14c-1 0-2.4.6-3 1.3L12.3 27.2c-.5.5-.5 1.2 0 1.7l8.9 8.9c.5.4 1.2.4 1.7 0l11.9-11.9c.7-.7 1.3-2.1 1.3-3v-7.6c0-.7-.5-1.2-1.2-1.2h-7.7z"></path><path d="M30 24c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></symbol><symbol id="ei-trash-icon" viewBox="0 0 50 50"><path d="M20 18h2v16h-2z"></path><path d="M24 18h2v16h-2z"></path><path d="M28 18h2v16h-2z"></path><path d="M12 12h26v2H12z"></path><path d="M30 12h-2v-1c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1v1h-2v-1c0-1.7 1.3-3 3-3h4c1.7 0 3 1.3 3 3v1z"></path><path d="M31 40H19c-1.6 0-3-1.3-3.2-2.9l-1.8-24 2-.2 1.8 24c0 .6.6 1.1 1.2 1.1h12c.6 0 1.1-.5 1.2-1.1l1.8-24 2 .2-1.8 24C34 38.7 32.6 40 31 40z"></path></symbol><symbol id="ei-trophy-icon" viewBox="0 0 50 50"><path d="M28.6 29.4c3-2.3 7.4-5.7 7.4-18.4v-1H14v1c0 12.7 4.5 16.1 7.4 18.4 1.7 1.3 2.6 2 2.6 3.6v3c-1.6.2-3.2.8-3.8 2H18c-1.1 0-2 .9-2 2h18c0-1.1-.9-2-2-2h-2.2c-.6-1.2-2.1-1.8-3.8-2v-3c0-1.6.8-2.3 2.6-3.6zm-3.6.5c-.6-.8-1.5-1.5-2.3-2.1-2.7-2.1-6.4-4.9-6.6-15.8h18c-.2 10.8-3.9 13.7-6.6 15.8-1 .7-1.9 1.3-2.5 2.1z"></path><path d="M18.8 27C18.7 27 8 24.7 8 13v-1h7v2h-5c.6 9.2 9.1 11 9.2 11l-.4 2z"></path><path d="M31.2 27l-.4-2c.4-.1 8.6-1.9 9.2-11h-5v-2h7v1c0 11.7-10.7 14-10.8 14z"></path></symbol><symbol id="ei-undo-icon" viewBox="0 0 50 50"><path d="M25 38c-5.1 0-9.7-3-11.8-7.6l1.8-.8c1.8 3.9 5.7 6.4 10 6.4 6.1 0 11-4.9 11-11s-4.9-11-11-11c-4.6 0-8.5 2.8-10.1 7.3l-1.9-.7c1.9-5.2 6.6-8.6 12-8.6 7.2 0 13 5.8 13 13s-5.8 13-13 13z"></path><path d="M20 22h-8v-8h2v6h6z"></path></symbol><symbol id="ei-unlock-icon" viewBox="0 0 50 50"><path d="M18 23h-2v-4c0-5 4-9 9-9 4.5 0 8.4 3.4 8.9 7.9l-2 .2c-.4-3.5-3.4-6.1-6.9-6.1-3.9 0-7 3.1-7 7v4z"></path><path d="M33 40H17c-1.7 0-3-1.3-3-3V25c0-1.7 1.3-3 3-3h16c1.7 0 3 1.3 3 3v12c0 1.7-1.3 3-3 3zM17 24c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h16c.6 0 1-.4 1-1V25c0-.6-.4-1-1-1H17z"></path><circle cx="25" cy="28" r="2"></circle><path d="M25.5 28h-1l-1 6h3z"></path></symbol><symbol id="ei-user-icon" viewBox="0 0 50 50"><path d="M25.1 42c-9.4 0-17-7.6-17-17s7.6-17 17-17 17 7.6 17 17-7.7 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.8-15-15-15z"></path><path d="M15.3 37.3l-1.8-.8c.5-1.2 2.1-1.9 3.8-2.7 1.7-.8 3.8-1.7 3.8-2.8v-1.5c-.6-.5-1.6-1.6-1.8-3.2-.5-.5-1.3-1.4-1.3-2.6 0-.7.3-1.3.5-1.7-.2-.8-.4-2.3-.4-3.5 0-3.9 2.7-6.5 7-6.5 1.2 0 2.7.3 3.5 1.2 1.9.4 3.5 2.6 3.5 5.3 0 1.7-.3 3.1-.5 3.8.2.3.4.8.4 1.4 0 1.3-.7 2.2-1.3 2.6-.2 1.6-1.1 2.6-1.7 3.1V31c0 .9 1.8 1.6 3.4 2.2 1.9.7 3.9 1.5 4.6 3.1l-1.9.7c-.3-.8-1.9-1.4-3.4-1.9-2.2-.8-4.7-1.7-4.7-4v-2.6l.5-.3s1.2-.8 1.2-2.4v-.7l.6-.3c.1 0 .6-.3.6-1.1 0-.2-.2-.5-.3-.6l-.4-.4.2-.5s.5-1.6.5-3.6c0-1.9-1.1-3.3-2-3.3h-.6l-.3-.5c0-.4-.7-.8-1.9-.8-3.1 0-5 1.7-5 4.5 0 1.3.5 3.5.5 3.5l.1.5-.4.5c-.1 0-.3.3-.3.7 0 .5.6 1.1.9 1.3l.4.3v.5c0 1.5 1.3 2.3 1.3 2.4l.5.3v2.6c0 2.4-2.6 3.6-5 4.6-1.1.4-2.6 1.1-2.8 1.6z"></path></symbol></svg>
+
+
+<script async="" src="./How To_ Disable Sleep on Ubuntu Server_files/js(1)" type="text/javascript"></script>
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88087-2');
+</script>
+<div class="js-off-canvas-container c-off-canvas-container">
+<header class="c-header
+                c-header--has-cover 
+               ">
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--3-4-s o-grid__col--1-4-l">
+<div class="c-logo">
+<a href="https://www.unixtutorial.org/">
+<img class="c-logo__img" src="./How To_ Disable Sleep on Ubuntu Server_files/unix-tutorial-logo.png" alt="Unix Tutorial">
+</a>
+</div>
+</div>
+<div class="o-grid__col o-grid__col--1-4-s o-grid__col--3-4-l">
+<div class="js-off-canvas-content c-off-canvas-content">
+<label class="js-off-canvas-toggle c-off-canvas-toggle c-off-canvas-toggle--close">
+<span class="c-off-canvas-toggle__icon"></span>
+</label>
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--4-4-s o-grid__col--3-4-l">
+<ul class="c-nav o-plain-list">
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/commands">COMMANDS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/projects">PROJECTS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/videos">VIDEOS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/software">SOFTWARE</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/reference">REFERENCE</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/contact">CONTACT</a></li>
+</ul>
+</div>
+<div class="o-grid__col o-grid__col--4-4-s o-grid__col--1-4-l">
+<ul class="o-plain-list c-social-nav">
+<li class="c-social-nav__item">
+<a href="https://www.github.com/greys" aria-label="GitHub" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-github icon--s c-social-nav__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-github-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-social-nav__item">
+<a href="https://www.unixtutorial.tv/" aria-label="YouTube" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-youtube icon--s c-social-nav__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-youtube-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-social-nav__item">
+<a href="https://www.facebook.com/unixtutorial" aria-label="Facebook" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-facebook icon--s c-social-nav__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-facebook-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-social-nav__item">
+<a class="toggle-search-button js-search-toggle" href="https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/#" aria-label="Search">
+<div class="icon icon--ei-search icon--s c-social-nav__icon"><svg class="icon__cnt"><use xlink:href="#ei-search-icon"></use></svg></div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="js-off-canvas-toggle c-off-canvas-toggle" aria-label="Toggle navigation">
+<span class="c-off-canvas-toggle__icon"></span>
+</label>
+</div>
+</div>
+</header>
+<div id="search-form" class="c-search js-search">
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l o-grid__col--center">
+<div id="search-searchbar"></div>
+</div>
+</div>
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--4-4-s o-grid__col--3-4-m o-grid__col--2-4-l o-grid__col--center">
+<div class="c-search-results js-search-results"></div>
+<div class="post-list" id="search-hits">
+</div>
+</div>
+</div>
+<div class="c-search__close js-search-close">
+<div class="icon icon--ei-close icon--s "><svg class="icon__cnt"><use xlink:href="#ei-close-icon"></use></svg></div>
+</div>
+</div>
+
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/instantsearch.min.js.download" type="text/javascript"></script>
+
+<link rel="stylesheet" href="./How To_ Disable Sleep on Ubuntu Server_files/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="./How To_ Disable Sleep on Ubuntu Server_files/instantsearch.min.css">
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/moment.min.js.download" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="./How To_ Disable Sleep on Ubuntu Server_files/instantsearch-theme-algolia.min.css">
+<script type="text/javascript">
+// Instanciating InstantSearch.js with Algolia credentials
+const searchUT = instantsearch({
+  appId: 'GKU3JL7LWJ',
+  indexName: 'unixtutorial',
+  apiKey: 'a084ea3d50779352a6efa11a5f9a9eb7'
+});
+
+const hitTemplate = function(hit) {
+  let date = '';
+  if (hit.date) {
+    date = moment.unix(hit.date).format('MMM D, YYYY');
+  }
+
+  let url = `${hit.url}#${hit.anchor}`;
+
+  const title = hit._highlightResult.title.value;
+
+  let breadcrumbs = '';
+  if (hit._highlightResult.headings) {
+    breadcrumbs = hit._highlightResult.headings.map(match => {
+      return `<span class="post-breadcrumb">${match.value}</span>`
+    }).join(' > ')
+  }
+
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="post-item">
+      <span class="post-meta">${date}</span>
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
+      <div class="post-snippet">${content}</div>
+    </div>
+  `;
+}
+
+
+searchUT.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Type to search',
+    poweredBy: true // This is required if you're on the free Community plan
+  })
+);
+
+searchUT.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+console.log('greys');
+
+var searchForm = document.getElementById('search-form');
+var searchActivated = false
+
+console.log(searchForm.className)
+if (searchForm.classList.contains('active')){
+    console.log('active')
+  // Starting the search
+  searchUT.start();
+}
+else (console.log('not active (not starting search)'))
+
+</script>
+<style>
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.ais-search-box--input {
+}
+
+.post-item {
+  margin-bottom: 30px;
+}
+.post-link .ais-Highlight {
+  color: #111;
+  font-style: normal;
+  text-decoration: underline;
+}
+.post-breadcrumbs {
+  color: #424242;
+  display: block;
+}
+.post-breadcrumb {
+  font-size: 18px;
+  color: #424242;
+}
+.post-breadcrumb .ais-Highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+.post-snippet .ais-Highlight {
+  color: #2a7ae2;
+  font-style: normal;
+  font-weight: bold;
+}
+.post-snippet img {
+  display: none;
+}
+</style>
+<meta itemprop="og:image" content="https://www.unixtutorial.org/images/posts/ubuntu-19-10-wallpaper.png">
+
+<div class="o-wrapper">
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--2-3-m">
+<article class="c-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+<time class="c-post__date" datetime="2020-02-26T08:45:00+00:00" itemprop="datePublished">26 Feb 2020</time>
+<h1 class="c-post__title">How To: Disable Sleep on Ubuntu Server</h1>
+<div class="c-content">
+<p><img src="./How To_ Disable Sleep on Ubuntu Server_files/ubuntu-19-10-wallpaper.png" alt="Ubuntu 19.10">
+<em>Ubuntu 19.10</em></p>
+<p>You may remember that I have a small automation server in my home office that’s <a href="https://www.unixtutorial.org/ubiquiti-unifi-controller-on-ubuntu-18-10/">running Ubiquiti UniFi Controller software</a> and where I <a href="https://www.unixtutorial.org/upgrade-ubiquiti-unifi-on-ubuntu-19-04/">upgraded UniFi Controller on Ubuntu 19.04</a>.</p>
+<p>I noticed that this server hasn’t been terribly available since upgrade to Ubuntu 19.04: more than once I went looking for the server and it was offline.</p>
+<p>Now that I’m finally progressing with <a href="https://www.unixtutorial.org/projects-centralised-rsyslog/">centralized RSyslog setup</a> at home, I noticed that the UniFi controller server was reporting the following in logs recently:</p>
+<figure class="highlight"><pre><code class="language-command" data-lang="command">Feb 25 22:15:38 server NetworkManager[737]: &lt;info&gt; [1582668938.0193] manager: sleep: sleep requested (sleeping: no enabled: yes)
+Feb 25 22:15:38 server NetworkManager[737]: &lt;info&gt; [1582668938.0239] manager: NetworkManager state is now ASLEEP
+Feb 25 22:15:38 server whoopsie[1025]: [22:15:38] offline
+Feb 25 22:15:38 server gnome-shell[956]: Screen lock is locked down, not locking
+Feb 25 22:15:38 server systemd[1]: Reached target Sleep.
+Feb 25 22:15:38 server systemd[1]: Starting Suspend...
+Feb 25 22:15:38 server kernel: [ 1235.212537] PM: suspend entry (s2idle)
+Feb 25 22:15:38 server systemd-sleep[1705]: Suspending system...</code></pre></figure>
+<p>So, it appears the power management has improved enough to start bringing this server to sleep every hour or so.</p>
+<p>Since this is a recent enough version of Ubuntu, I figured there should be a way to disable power management using <a href="https://www.unixtutorial.org/commands/systemctl">systemctl</a>. Turns out, there is.</p>
+<h2 id="confirm-sleep-status-with-systemd">Confirm Sleep Status with systemd</h2>
+<p><strong>IMPORTANT</strong>: I didn’t run this command on server, so this is example from another system: I’m running it on my XPS laptop with Ubuntu, just to show you expected output.</p>
+<p>As you can see, my laptop rests well and often:</p>
+<figure class="highlight"><pre><code class="language-command" data-lang="command">greys@xps:~ $ systemctl status sleep.target
+● sleep.target - Sleep
+Loaded: loaded (/lib/systemd/system/sleep.target; static; vendor preset: enabled)
+Active: inactive (dead)
+Docs: man:systemd.special(7)
+Feb 24 13:18:08 xps systemd[1]: Reached target Sleep.
+Feb 26 13:29:31 xps systemd[1]: Stopped target Sleep.
+Feb 26 13:29:57 xps systemd[1]: Reached target Sleep.
+Feb 26 13:30:19 xps systemd[1]: Stopped target Sleep.</code></pre></figure>
+<h2 id="disable-sleep-in-ubuntu-with-systemd">Disable Sleep in Ubuntu with systemd</h2>
+<p>This is what I did on my server:</p>
+<figure class="highlight"><pre><code class="language-command" data-lang="command">root@server:/ # sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+Created symlink /etc/systemd/system/sleep.target → /dev/null.
+Created symlink /etc/systemd/system/suspend.target → /dev/null.
+Created symlink /etc/systemd/system/hibernate.target → /dev/null.
+Created symlink /etc/systemd/system/hybrid-sleep.target → /dev/null.
+root@server:/etc/pm/sleep.d#</code></pre></figure>
+<p>This is obviously a very simple way of disabling power management, but I like it because it’s standard and logical enough – there’s no need to edit config files or create cronjobs manually controlling sleep functionality.</p>
+<p>The service is dead, no power management is happening and most importantly, my server has been up for 12 hours now.</p>
+<figure class="highlight"><pre><code class="language-command" data-lang="command">greys@server:~$ systemctl status sleep.target
+● sleep.target
+Loaded: masked (Reason: Unit sleep.target is masked.)
+Active: inactive (dead)</code></pre></figure>
+<h2 id="re-enabling-sleep-in-ubuntu-with-systemctl">(re) Enabling Sleep in Ubuntu with systemctl</h2>
+<p>When the time comes and I would like to re-enable power management and sleep/hibernation, this will be the command I’ll run:</p>
+<figure class="highlight"><pre><code class="language-command" data-lang="command">root@server:/etc/pm/sleep.d# sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target</code></pre></figure>
+<p>That’s all for now. Have a great day!</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li>Ubuntu 19.10</li>
+<li>Dell XPS with Ubuntu Linux</li>
+<li><a href="https://www.unixtutorial.org/ubiquiti-unifi-controller-on-ubuntu-18-10/">Ubiquiti Unifi Controller on Ubuntu 18.x</a></li>
+<li><a href="https://www.unixtutorial.org/upgrade-ubiquiti-unifi-on-ubuntu-19-04/">Upgrading Unifi on Ubuntu 19.04</a></li>
+<li>Syslog logs with colours</li>
+</ul>
+</div>
+<div class="c-tags">
+</div>
+<div class="o-grid">
+<div class="o-grid__col o-grid__col--full">
+<ul class="c-share o-plain-list">
+<li class="c-share__item">
+<a class="c-share__link" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=How%20To:%20Disable%20Sleep%20on%20Ubuntu%20Server&amp;url=https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/&amp;via=&amp;related=">
+<div class="icon icon--ei-sc-twitter icon--s c-share__icon c-share__icon--twitter"><svg class="icon__cnt"><use xlink:href="#ei-sc-twitter-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-share__item">
+<a class="c-share__link" title="Share on Facebook" href="https://facebook.com/sharer.php?u=https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/">
+<div class="icon icon--ei-sc-facebook icon--s c-share__icon c-share__icon--facebook"><svg class="icon__cnt"><use xlink:href="#ei-sc-facebook-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-share__item">
+<a class="c-share__link" title="Share on Google+" href="https://plus.google.com/share?url=https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, &#39;google-share&#39;,&#39;width=580, height=296&#39;);return false;">
+<div class="icon icon--ei-sc-google-plus icon--s c-share__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-google-plus-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-share__item">
+<a class="c-share__link" title="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/&amp;media=https://www.unixtutorial.org/images/posts/ubuntu-19-10-wallpaper.png&amp;description=How%20To:%20Disable%20Sleep%20on%20Ubuntu%20Server" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, &#39;google-share&#39;, &#39;width=580, height=296&#39;); return false;">
+<div class="icon icon--ei-sc-pinterest icon--s c-share__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-pinterest-icon"></use></svg></div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<hr>
+<hr>
+<section class="disqus">
+<div id="disqus_recommendations" style="margin-bottom: 12px;"><iframe id="dsq-app9037" name="dsq-app9037" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource.html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 270px !important; display: inline !important; box-sizing: border-box !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div><div id="disqus_thread"><iframe id="dsq-app7749" name="dsq-app7749" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(1).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 1255px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = 'https://www.unixtutorial.org/disable-sleep-on-ubuntu-server/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = '//glebreys.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>
+</section>
+</article>
+</div>
+<div class="o-grid__col o-grid__col--1-3-m">
+<div class="c-sidebar">
+<div class="c-widget">
+<h3 class="c-widget__title">Keep Learning</h3>
+Follow me on Facebook, Twitter or Telegram:
+<ul class="c-widget-social o-plain-list">
+<li class="c-widget-social__item">
+<a href="https://www.facebook.com/unixtutorial" class="c-widget-social__link" aria-label="Facebook" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-facebook icon--s c-widget-social__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-facebook-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-widget-social__item">
+<a href="https://twitter.com/unixtutorial" class="c-widget-social__link" aria-label="Twitter" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-twitter icon--s c-widget-social__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-twitter-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-widget-social__item">
+<a href="https://t.me/unixtutorial" class="c-widget-social__link" aria-label="Telegram" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-telegram icon--s c-widget-social__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-telegram-icon"></use></svg></div>
+</a>
+</li>
+<li class="c-widget-social__item">
+<a href="https://www.unixtutorial.tv/" class="c-widget-social__link" aria-label="YouTube" target="_blank" rel="noopener">
+<div class="icon icon--ei-sc-youtube icon--s c-widget-social__icon"><svg class="icon__cnt"><use xlink:href="#ei-sc-youtube-icon"></use></svg></div>
+</a>
+</li>
+</ul>
+</div>
+<div class="c-widget">
+<script async="" type="text/javascript" src="./How To_ Disable Sleep on Ubuntu Server_files/carbon.js.download" id="_carbonads_js"></script>
+</div>
+<div class="c-widget">
+<h5 class="c-widget__title">Recommended</h5>
+I learn with Educative:
+<a href="https://www.educative.io/unlimited?aff=BZYe"><img src="./How To_ Disable Sleep on Ubuntu Server_files/educative.png" alt="Educative"></a>
+I'm also a fan of SetApp for macOS:
+<a href="https://go.setapp.com/invite/greys1"><img src="./How To_ Disable Sleep on Ubuntu Server_files/setapp.png" alt="SetApp for macOS"></a>
+</div>
+<div class="c-widget">
+<h5 class="c-widget__title">IT Consultancy</h5>
+I'm a principal consultant with <a href="https://www.techstack.ie/">Tech Stack Solutions</a>. I help with cloud architectrure, AWS deployments and automated management of Unix/Linux infrastructure. <a href="https://www.unixtutorial.org/contact">Get in touch!</a>
+</div>
+<div class="c-widget">
+<h5 class="c-widget__title">Recent Articles</h5>
+
+<div class="c-post-card-recent">
+<a href="https://www.unixtutorial.org/awk-delimiters-video/" class="js-fadein c-post-card-recent__image" style="background-image: url(/images/youtube/youtube-awk-delimiters.png)" aria-label="Video: awk delimiters">
+</a>
+<div class="c-post-card-recent__date">17 Nov 2022</div>
+<h3 class="c-post-card-recent__title">
+<a href="https://www.unixtutorial.org/awk-delimiters-video/" class="c-post-card-recent__link">Video: awk delimiters</a>
+</h3>
+</div>
+<div class="c-post-card-recent">
+<a href="https://www.unixtutorial.org/macos-13-ventura/" class="js-fadein c-post-card-recent__image" style="background-image: url(/images/software/macos-13-ventura.png)" aria-label="macOS Ventura 13.0">
+</a>
+<div class="c-post-card-recent__date">25 Oct 2022</div>
+<h3 class="c-post-card-recent__title">
+<a href="https://www.unixtutorial.org/macos-13-ventura/" class="c-post-card-recent__link">macOS Ventura 13.0</a>
+</h3>
+</div>
+<div class="c-post-card-recent">
+<a href="https://www.unixtutorial.org/generating-ed25519-ssh-key-video/" class="js-fadein c-post-card-recent__image" style="background-image: url(/images/youtube/youtube-generate-ed25519-ssh.png)" aria-label="Video: How To Generate ed25519 key">
+</a>
+<div class="c-post-card-recent__date">21 Oct 2022</div>
+<h3 class="c-post-card-recent__title">
+<a href="https://www.unixtutorial.org/generating-ed25519-ssh-key-video/" class="c-post-card-recent__link">Video: How To Generate ed25519 key</a>
+</h3>
+</div>
+</div>
+
+<div class="c-widget">
+<h3 class="c-widget__title">Recent Tweets</h3>
+<div class="twitter-timeline twitter-timeline-rendered" style="display: flex; max-width: 100%; margin-top: 0px; margin-bottom: 0px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 318px; height: 400px; display: block; flex-grow: 1;" title="Twitter Timeline" src="./How To_ Disable Sleep on Ubuntu Server_files/glebreys.html"></iframe></div> <script async="" src="./How To_ Disable Sleep on Ubuntu Server_files/widgets.js.download" charset="utf-8" type="text/javascript"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="c-footer">
+<div class="o-grid">
+<div class="
+        o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-4-l
+      ">
+<a href="https://www.unixtutorial.org/" class="u-block u-font-bold">Unix Tutorial</a>
+<a href="https://www.techstack.ie/" class="u-block u-font-regular">Tech Stack</a>
+<a href="https://www.linkedin.com/company/techstacksolutions" class="u-block u-font-regular">Tech Stack Solutions</a>
+</div>
+<div class="
+        o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-4-l
+      ">
+<ul class="c-footer-list o-plain-list">
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/commands">COMMANDS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/projects">PROJECTS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/videos">VIDEOS</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/software">SOFTWARE</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/reference">REFERENCE</a></li>
+<li class="c-nav__item"><a class="c-nav__link" href="https://www.unixtutorial.org/contact">CONTACT</a></li>
+</ul>
+</div>
+<div class="
+        o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-4-l
+      ">
+<ul class="c-footer-list o-plain-list">
+<li>
+<a href="https://www.facebook.com/unixtutorial" target="_blank">
+<div class="icon icon--ei-sc-facebook icon--s "><svg class="icon__cnt"><use xlink:href="#ei-sc-facebook-icon"></use></svg></div>
+Facebook
+</a>
+</li>
+<li>
+<a href="https://twitter.com/unixtutorial" target="_blank">
+<div class="icon icon--ei-sc-twitter icon--s "><svg class="icon__cnt"><use xlink:href="#ei-sc-twitter-icon"></use></svg></div>
+Twitter
+</a>
+</li>
+</ul>
+</div>
+<div class="
+        o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-4-l
+      ">
+<ul class="c-footer-list o-plain-list">
+<li>
+<a href="https://www.unixtutorial.org/archives" class="u-block u-font-regular">Blog Archives</a>
+</li>
+<li>
+<a href="https://www.unixtutorial.org/basic-unix-commands" class="u-block u-font-regular">Basic Unix Commands</a>
+</li>
+<li>
+<a href="https://www.unixtutorial.org/advanced-unix-commands" class="u-block u-font-regular">Advanced Unix Commands</a>
+</li>
+<li>
+<a href="https://www.unixtutorial.org/linux-commands" class="u-block u-font-regular">Linux Commands</a>
+</li>
+<li>
+<a href="https://www.unixtutorial.org/solaris-commands" class="u-block u-font-regular">Solaris Commands</a>
+</li>
+<li>
+<a href="https://www.unixtutorial.org/macos-commands" class="u-block u-font-regular">macOS Commands</a>
+</li>
+</ul>
+</div>
+<div class="o-grid__col o-grid__col--full">
+<div class="c-footer__copy">
+<span class="u-font-small u-text-center u-block">© 2022 Unix Tutorial</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/jquery-3.1.1.min.js.download" type="text/javascript">            </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/jquery.viewportchecker.min.js.download" type="text/javascript">  </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/jquery.ghostHunter.min.js.download" type="text/javascript">      </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/evil-icons.min.js.download" type="text/javascript">              </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/jquery.fitvids.js.download" type="text/javascript">              </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/instafeed.min.js.download" type="text/javascript">               </script>
+<script src="./How To_ Disable Sleep on Ubuntu Server_files/app.js.download" type="text/javascript">                         </script>
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="./How To_ Disable Sleep on Ubuntu Server_files/widget_iframe.644279d1635fd969e87af94a98bd232b.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe data-product="web_widget" title="No content" role="presentation" tabindex="-1" allow="microphone *" aria-hidden="true" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(2).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><iframe style="display: none;" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(3).html"></iframe><iframe style="display: none;" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(4).html"></iframe><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" style="color-scheme: light; width: 108px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 0px; overflow: visible; opacity: 1; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; right: 0px;" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(5).html"></iframe></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./How To_ Disable Sleep on Ubuntu Server_files/saved_resource(6).html"></iframe></body></html>
